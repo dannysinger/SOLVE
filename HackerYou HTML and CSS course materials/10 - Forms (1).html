@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>10 - Forms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+html,body{color:black}*:not('#mkdbuttons'){margin:0;padding:0}#wrapper{font:15px helvetica,arial,freesans,clean,sans-serif;-webkit-font-smoothing:subpixel-antialiased;line-height:1.7;padding:3px;background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}p{margin:1em 0}a{color:#4183c4;text-decoration:none}#wrapper{background-color:#fff;padding:30px;margin:15px;font-size:15px;line-height:1.6}#wrapper>*:first-child{margin-top:0 !important}#wrapper>*:last-child{margin-bottom:0 !important}@media screen{#wrapper{box-shadow:0 0 0 1px #cacaca, 0 0 0 4px #eee}}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.7;cursor:text;position:relative;margin:1em 0 15px;padding:0}h1{font-size:2.5em;border-bottom:1px solid #ddd}h2{font-size:2em;border-bottom:1px solid #eee}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{color:#777;font-size:1em}p,blockquote,table,pre{margin:15px 0}ul{padding-left:30px}ol{padding-left:30px}ol li ul:first-of-type{margin-top:0px}hr{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:4px;margin:15px 0;padding:0}#wrapper>h2:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child+h2{margin-top:0;padding-top:0}#wrapper>h3:first-child,#wrapper>h4:first-child,#wrapper>h5:first-child,#wrapper>h6:first-child{margin-top:0;padding-top:0}a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p,ul li>:first-child,ol li>:first-child{margin-top:0}dl{padding:0}dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px}dl dt:first-child{padding:0}dl dt>:first-child{margin-top:0}dl dt>:last-child{margin-bottom:0}dl dd{margin:0 0 15px;padding:0 15px}dl dd>:first-child{margin-top:0}dl dd>:last-child{margin-bottom:0}blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{border-collapse:collapse;border-spacing:0;font-size:100%;font:inherit}table th{font-weight:bold;border:1px solid #ccc;padding:6px 13px}table td{border:1px solid #ccc;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;font-family:Consolas, 'Liberation Mono', Courier, monospace;font-size:12px;color:#333}pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent}.highlight pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:14px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px;margin:26px 0}pre code,pre tt{background-color:transparent;border:none}.poetry pre{font-family:Georgia, Garamond, serif !important;font-style:italic;font-size:110% !important;line-height:1.6em;display:block;margin-left:1em}.poetry pre code{font-family:Georgia, Garamond, serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;vertical-align:super;position:relative}sub{vertical-align:sub;top:-1px}@media print{body{background:#fff}img,pre,blockquote,table,figure{page-break-inside:avoid}#wrapper{background:#fff;border:none}code{background-color:#fff;color:#333 !important;padding:0 .2em;border:1px solid #DEDEDE}pre{background:#fff}pre code{background-color:#fff !important;overflow:visible}}@media screen{body.inverted{color:#eee !important;border-color:#555;box-shadow:none}.inverted #wrapper,.inverted hr,.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt,.inverted blockquote{color:#eee !important;border-color:#555;box-shadow:none}.inverted td,.inverted th{background:#333}.inverted pre,.inverted code,.inverted tt{background:#eee !important;color:#111}.inverted h2{border-color:#555555}.inverted hr{border-color:#777;border-width:1px !important}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eeeeee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eeeeee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}.inverted{background:#0b2531;background:#252a2a}.inverted #wrapper{background:#252a2a}.inverted a{color:#acd1d5}}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k,.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .gt{color:#a00}.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .il{color:#099}.highlight .gc{color:#999;background-color:#EAF2F5}.type-csharp .highlight .k,.type-csharp .highlight .kt{color:#00F}.type-csharp .highlight .nf{color:#000;font-weight:normal}.type-csharp .highlight .nc{color:#2B91AF}.type-csharp .highlight .nn{color:#000}.type-csharp .highlight .s,.type-csharp .highlight .sc{color:#A31515}
+
+</style>
+</head>
+
+  <body class="normal">
+    <div id="wrapper">
+      <h1 id="forms">10 - Forms</h1>
+
+<style type="text/css">.white {color:white; border-bottom: 1px solid black;} .white:hover {color:black;}</style>
+
+<h2 id="week-4-review-navigations">Week 4 Review: Navigations</h2>
+<ol>
+  <li>What element do we use to create navigations?
+    <ol>
+      <li><span class="white">Unordered lists</span></li>
+    </ol>
+  </li>
+  <li>Why do we use it?
+    <ol>
+      <li><span class="white">Unordered lists allow us to have full control over the look and feel of a navigation verses just inline links</span></li>
+    </ol>
+  </li>
+  <li>How do we style a list’s bullets?
+    <ol>
+      <li><span class="white">list-style-type</span></li>
+    </ol>
+  </li>
+  <li>How do we have no bullets?
+    <ol>
+      <li><span class="white">list-style-type:none;</span></li>
+    </ol>
+  </li>
+  <li>How do we change the list items from vertical to side by side?
+    <ol>
+      <li><span class="white">display:inline; OR float: left;</span></li>
+    </ol>
+  </li>
+  <li>What is the difference between the above two?
+    <ol>
+      <li><span class="white">display inline allows us to center elements while float left or right doesn’t</span></li>
+    </ol>
+  </li>
+  <li>How do we solve the ‘natural space between list items’ issue when we have <code>display:inline</code>
+    <ol>
+      <li><span class="white">Set the parent to font-size:0; and then then reset the font size on the list item or link</span></li>
+    </ol>
+  </li>
+  <li>What HTML sturcture do we use to create dropdown navs?
+    <ol>
+      <li><span class="white">nested unordered lists</span></li>
+    </ol>
+  </li>
+  <li>
+    <p>Which of the following is correct? Why?</p>
+
+    <pre><code> &lt;ul&gt;
+     &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+         &lt;ul class="sub-nav"&gt;
+             &lt;li&gt;&lt;a href="#"&gt;Things I like&lt;/a&gt;&lt;/li&gt;
+             &lt;li&gt;&lt;a href="#"&gt;Pictures of me&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+     &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+
+ &lt;!-- OR --&gt;
+
+ &lt;ul&gt;
+     &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;
+         &lt;ul class="sub-nav"&gt;
+             &lt;li&gt;&lt;a href="#"&gt;Things I like&lt;/a&gt;&lt;/li&gt;
+             &lt;li&gt;&lt;a href="#"&gt;Pictures of me&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+     &lt;/li&gt;
+     &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+</code></pre>
+
+    <ol>
+      <li><span class="white">The second one because we must have the ul nested inside of the parent li</span></li>
+    </ol>
+  </li>
+  <li>How would we turn the previous nav into a dropdown? What CSS would we use?
+    <ol>
+      <li><span class="white">lets do it together!</span></li>
+    </ol>
+  </li>
+  <li>Why do we apply most styles on the link and not the list item?
+    <ol>
+      <li><span class="white">We want  maxiumum clickable area for our links, list items arent clickable</span></li>
+    </ol>
+  </li>
+  <li>What position do we apply to the sub menu to make it dropdown? What musst we do to the parent?
+    <ol>
+      <li><span class="white">The dropdown must be absolute, the parent li must be relative</span></li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="next-few-classes">Next Few Classes</h2>
+<ul>
+  <li>Today we are working on HTML forms</li>
+  <li>After today, the next few classes will be spent working on our second mini project. I will have a ~45 min lesson at the start of each class with short tips.</li>
+  <li>Next week we will also pepper in a few lessons about
+    <ul>
+      <li>Integrating social networks</li>
+      <li>Hosting your site</li>
+      <li>Design best practices / inspiration resources</li>
+      <li>Fav Icons</li>
+      <li>Icons fonts (font awesome)</li>
+      <li>Sublime Text Snippets</li>
+    </ul>
+  </li>
+  <li>I also want to prepare some review exercises for you. What do you need extra practice with?</li>
+</ul>
+
+<h2 id="linking-within-a-page-or-when-its-okay-to-use-ids">Linking within a page (or when its okay to use ids!)</h2>
+<p>Ever wonder how link to a certain point within a page?</p>
+
+<p>So far our links have been linking to an entirely different page, something like this:</p>
+
+<pre><code>&lt;a href="about.html"&gt;About&lt;/a&gt;
+</code></pre>
+
+<p>However we are able to use a page hash to link to where a certain element starts. Ever see a link that looks like this:</p>
+
+<pre><code>http://mysite.com/about.html#foods
+</code></pre>
+
+<p>When you visit it, it automagically links to the header called food! How does it know?</p>
+
+<p>This is where we finally get to use ids! Since you should only ever use an ID once, it makes sense that we would use them to define a specific spot in our page.</p>
+
+<p>Lets say we have a h2 element like this in a document called <code>about.html</code>:</p>
+
+<pre><code>&lt;h2 id="food"&gt;Foods I like&lt;/h2&gt;
+</code></pre>
+
+<p>If we are currently inside of <code>about.html</code>, we can link to that part of the document simply by doing this:</p>
+
+<pre><code>&lt;a href="#food"&gt;See Foods I like&lt;/a&gt;
+</code></pre>
+
+<p>If we are on another page and want to link to that specific spot:</p>
+
+<pre><code>&lt;a href="about.html#food"&gt;See Foods I like on another page&lt;/a&gt;
+</code></pre>
+
+<p>You can link to any element with an ID, such as a div, span or blockquote but you will generally use heading tags.</p>
+
+<p>Open up <code>link-within.html</code> and create a navigation based on the available markup. It can be a single level navigation - no dropdowns required.</p>
+
+<h2 id="html-forms-and-inputs">HTML Forms and Inputs</h2>
+<p>There is one part of HTML markup that we haven’t talked about yet, and that is HTML Form.</p>
+
+<p>Put simply, forms are a collection of inputs that are used to take in information from a user. When submitted, that information is sent to a server and then the server analyzes the data and does something with it.</p>
+
+<p>There are two major parts to forms:</p>
+
+<ol>
+  <li><strong>inputs</strong> - Inputs are ways that we can collect information from a user. The most common inputs are plain text boxes that might ask you for something like your email address, password or name. There are many types of inputs which we will look into in a second.</li>
+  <li><strong>The form itself</strong> - The form is how we how we group <strong>sets of inputs</strong> together. All inputs inside of a form tag belong to that form and will be sent over the internet when that form is <strong>Submitted</strong></li>
+</ol>
+
+<p>Lets take an example of twitter.com and break it down:</p>
+
+<p><img src="http://f.cl.ly/items/3B3u1Y251y1E322q3P0x/Screen%20Shot%202012-10-17%20at%2012.37.19%20PM.png" alt="" /></p>
+
+<p>We see here two different forms:</p>
+
+<ol>
+  <li>The sign in form</li>
+  <li>The register forms</li>
+</ol>
+
+<p>They both have different types of inputs depending on what you want to do.</p>
+
+<p>The first one has 4 inputs: an email input, a password input, a check box for if you want it to to remember your password and a submit button.</p>
+
+<p>The second one has 4 as well: Name, email, password and a submit button.</p>
+
+<p>When the log in form is submitted, it send the information in the inputs to the servers at twitter.com who then check if the information if correct. If it is, they display your dashboard, if not they show you an error screen.</p>
+
+<p>The important thing to note here is that we use a form to send information from the <strong>browser</strong> to the <strong>server</strong>.</p>
+
+<h2 id="the-server-side">The Server side</h2>
+<p>When we work with forms, we start to dip into what we call <strong>server side technologies</strong>, which means a computer in the cloud computes what it is sent based on some logic on the server. In our last example, twitter will check its database to make sure that 1) There is someone by the username of <code>drewminns</code> and 2) the password supplied is a match of the one they have on file for the user <code>drewminns</code>.</p>
+
+<p>With just HTML and CSS, we can’t really do much with forms. That is because the HTML only creates the form and the browser only sends the information to the server. Once it hits the server, its up to them to do what they want with it. Such things include:</p>
+
+<ul>
+  <li>checks if username and password match</li>
+  <li>uploads a photo</li>
+  <li>post a new listing to craigslist</li>
+  <li>add a comment on a blog post</li>
+  <li>post a tweet / update to a users timeline</li>
+</ul>
+
+<p>We wont be touching on any serverside languages in this course, but if you do want to explore what happens once you submit the form to the server, you look into learning a language such as Ruby (Ruby on Rails framework), PHP (Code Igniter/WordPress), Python(Django), NodeJS (JavaScript on the server), ASP /.NET ( Microsoft products).</p>
+
+<p>Lucky for us there are services that do the entire server side part for us. In our final project, you can use a service called <strong>Wufoo</strong> to do the email form sending for us.</p>
+
+<h2 id="the-form-tag">The Form Tag</h2>
+<p>The form tag itself is very simple. It takes a number of <strong>attributes</strong> to specify some information about the form. Lets take a look an example contact form.</p>
+
+<pre><code>&lt;form action="sendEmail.php" method="POST" class="myForm" autocomplete="off" name="myForm"&gt;
+	... inputs go here ...
+&lt;/form&gt;
+</code></pre>
+
+<ol>
+  <li><strong>action</strong> is the address of a serverside file that will handle the information sent to it. In this example I have a php file called sendEmail.php</li>
+  <li><strong>method</strong> - Generally POST or GET which are two ways of sending information to a server. POST used when sending passwords. You generally wont need to worry about this until you get into developing with a serverside language.</li>
+  <li><strong>class</strong> - Just like any other element, we can add classes (and an id) to a form</li>
+  <li><strong>autocomplete</strong> - This can be applied to the entire form or a specific input. It disables the autocomplete that your browser might fill in for you. There are also two others called <strong>autocorrect</strong> and <strong>autocapitalize</strong> which you can set to off if you are developing for that pesky autocorrecting iphone.</li>
+  <li><strong>name</strong> can be applied to both the form and its inputs. It’s basically a way of referencing the form when you get into both JavaScript and server side languages</li>
+</ol>
+
+<h2 id="inputs">Inputs</h2>
+<p>Inputs are the second piece of the pie in HTML forms. They collect the inputted information, usually text, from the user.</p>
+
+<p>Note that inputs are <strong>self closing</strong> - just like images. There is no need to close an input tag.</p>
+
+<h3 id="input-typetext">Input type=”text”</h3>
+
+<p>The most basic and most common input is a text input</p>
+
+<pre><code>&lt;input type="text"&gt;
+</code></pre>
+
+<p>Makes: <input type="text" name="firstName" /></p>
+
+<p>As we would with a div, span or any other element, we can add a class to our inputs and then use CSS to style it:</p>
+
+<pre><code>&lt;input type="text" class="myInput" name="firstName"&gt;
+
+&lt;style type="text/css"&gt;
+	.myInput {
+		padding:10px;
+		border:2px solid blue;
+		width:400px;
+		font-size:40px;
+		color:green;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<p><input type="text" class="myInput" name="firstName" style="padding:10px; border:2px solid blue; width:400px; font-size:40px;color:green;" /></p>
+
+<h3 id="input-typepassword">Input type=”password”</h3>
+<p>Exactly like input type=”text” but changes characters to dots so the password isn’t revealed to sly and sneaky snoopers</p>
+
+<p><input type="password" /></p>
+
+<h3 id="input-typesubmit">Input type=”submit”</h3>
+
+<p>Input type=submit is technically an input, but you would probably think of it as a button. The submit input is the magic button that submits the form and sends the information to the server.</p>
+
+<pre><code>&lt;input type="submit"&gt;
+</code></pre>
+
+<p><input type="submit" /></p>
+
+<p>You can style the submit button in any way you want, the above is just a default styling for your browser. More on this in a bit.</p>
+
+<p>You can use the <code>value</code> attribute to change the text inside of the button.</p>
+
+<pre><code>&lt;input type="submit" value="Heyo! I've finished the form so you can send it now!"&gt;
+</code></pre>
+
+<p><input type="submit" value="Heyo! I've finished the form so you can send it now!" /></p>
+
+<h3 id="input-typeemail">Input type=”email”</h3>
+
+<p>Part of HTML5, this is a new input. It works exactly like a text input but it will validate the input for a properly formatted email address. This is pretty new so if the browser doesn’t support it, it will just fall back to a text input.</p>
+
+<pre><code>&lt;input type="email" name="email"&gt;
+</code></pre>
+
+<p>Try submit this form with an invalid email address</p>
+
+<form> <input type="email" /> <input type="submit" /> </form>
+<p>​</p>
+
+<p><img src="http://wes.io/KEjD/Screen%20Shot%202012-10-17%20at%201.34.48%20PM.png" alt="" /></p>
+
+<h3 id="input-typesearch">Input type=search</h3>
+
+<p>Again, exactly like input text, but in newer browsers it provides a × to clear the search box as well as some different styling.</p>
+
+<pre><code>&lt;input type="search"&gt;
+</code></pre>
+
+<p><input type="search" name="q" /></p>
+
+<h3 id="input-typefile">Input type=file</h3>
+
+<p>This input allows the user to select a file from their computer.</p>
+
+<pre><code>&lt;input type="file" name="profilePicture"&gt;
+</code></pre>
+
+<p><input type="file" name="profilePicture" /></p>
+
+<p>You  can also pass it <strong>multiple=”true”</strong> to allow for multiple file selection</p>
+
+<h3 id="input-typecolor">Input type=color</h3>
+<p>Another new input as of HTML5 - will fall back to input text if not available.</p>
+
+<pre><code>&lt;input type="color" name="bgColor"&gt;
+</code></pre>
+
+<p><input type="color" name="bgColor" /></p>
+
+<h3 id="input-typerange">Input type=range</h3>
+
+<p>Allows you to implement sliders - handy for when users need to gauge something based on a numerical value. I use this sometimes to get a zoom % from the user when zooming into photos.</p>
+
+<pre><code>&lt;input type="range" name="zoomLevel"&gt;
+</code></pre>
+
+<p><input type="range" name="zoomLevel" style="width:100%;" /></p>
+
+<p>You can set the max and min values as well as a step value.</p>
+
+<pre><code>&lt;input type="range" name="zoomLevel" min="30" max="150" step="10"&gt;
+</code></pre>
+
+<p><input type="range" name="zoomLevel" min="0" max="250" step="20" style="width:100%;" /></p>
+
+<h3 id="textarea">textarea</h3>
+
+<p>Textarea is the weird cousin of the bunch, its not an input tag and it allows for multiple lines. It <strong>does</strong> need to be closed</p>
+
+<pre><code>&lt;textarea name="bio" cols="30" rows="10"&gt;&lt;/textarea&gt;
+</code></pre>
+
+<textarea name="bio" cols="30" rows="10"></textarea>
+
+<p>Here we see two new attributes: <strong>cols and rows</strong>. This value is the # of characters the text area can hold vertically and horizontally.</p>
+
+<p>For some reason, valid HTML requires we input cols and rows as part of the tag even though we can use CSS width/height to do this. If you leave them out, they will fallback to 20/2 cols and rows respectively. I wont tell anyone if you leave them out, no harm done.</p>
+
+<h3 id="radio-buttons">Radio Buttons</h3>
+
+<p>Radio buttons are useful for when you want users to select from a list of options but only click one. We can group them together by giving them the <strong>same name value</strong></p>
+
+<pre><code>Small &lt;input type="radio" name="shirtSize" value="small"&gt;
+Medium &lt;input type="radio" name="shirtSize" value="medium"&gt;
+Large &lt;input type="radio" name="shirtSize" value="large" checked="true"&gt;
+</code></pre>
+
+<p>Small <input type="radio" name="shirtSize" value="small" />
+Medium <input type="radio" name="shirtSize" value="medium" />
+Large <input type="radio" name="shirtSize" value="large" checked="true" /></p>
+
+<p>See how I set the <code>checked="true"</code> to the third one? Thats how I can set the default selected radio button. You may sometimes also see</p>
+
+<pre><code>&lt;input type="radio" name="shirtSize" value="large" checked&gt;
+&lt;!-- OR --&gt;
+&lt;input type="radio" name="shirtSize" value="large" checked="checked"&gt;
+</code></pre>
+
+<p>Both are valid and work the same as <code>checked=true</code></p>
+
+<h3 id="checkboxes">checkboxes</h3>
+<p>Very similar to radio buttons but with the ability to check multiple values</p>
+
+<pre><code>salsa &lt;input type="checkbox" name="topping" value="salsa"&gt;
+avacado &lt;input type="checkbox" name="topping" value="avacado" checked&gt;
+hotsauce &lt;input type="checkbox"name="topping" value="hotsauce"&gt;
+ranch &lt;input type="checkbox" name="topping" value="ranch" checked&gt;
+lemon &lt;input type="checkbox" name="topping" value="lemon"&gt;
+</code></pre>
+
+<p>salsa <input type="checkbox" name="topping" value="salsa" />
+avacado <input type="checkbox" name="topping" value="avacado" checked="" />
+hotsauce <input type="checkbox" name="topping" value="hotsauce" />
+ranch <input type="checkbox" name="topping" value="ranch" checked="" />
+lemon <input type="checkbox" name="topping" value="lemon" /></p>
+
+<p>Note how each one has the same <strong>name</strong> but different <strong>value</strong></p>
+
+<h3 id="dropdown-select">Dropdown Select</h3>
+<p>This one is a little different because it contains multiple elements - you can think of it as similar to an unordered list.</p>
+
+<p>First we have a <code>&lt;select&gt;&lt;/select&gt;</code> tag and inside of that, we define the available options with the <code>&lt;option&gt;&lt;/option&gt;</code> tag.</p>
+
+<pre><code>&lt;select name="country"&gt;
+	&lt;option value="canada"&gt;Canada&lt;/option&gt;
+	&lt;option value="usa"&gt;'Merica&lt;/option&gt;
+	&lt;option value="france"&gt;France&lt;/option&gt;
+	&lt;option value="germany"&gt;Germany&lt;/option&gt;
+	&lt;option value="netherlands" selected&gt;Holland&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+<p><select name="country">
+	<option value="canada">Canada</option>
+	<option value="usa">'Merica</option>
+	<option value="france">France</option>
+	<option value="germany">Germany</option>
+	<option value="netherlands" selected="">Holland</option>
+</select></p>
+
+<p>In the above example, the <strong>value</strong> is what gets sent to the server and he text in between the the option tags is what the user sees.</p>
+
+<p>Note that we cannot use any HTML inside of an option tag.</p>
+
+<h3 id="input-x-webkit-speech">Input x-webkit-speech</h3>
+
+<p>Kind of a fun and useful attribute you can add to your HTML is <code>x-webkit-speech</code> which allows users to speak their text inputs. This only works on chrome at the moment.</p>
+
+<pre><code>&lt;input type="text" x-webkit-speech="true"&gt;
+</code></pre>
+
+<p><input type="text" x-webkit-speech="true" style="font-size:25px; width:100%;" /></p>
+
+<h3 id="making-an-input-required">Making an input required</h3>
+<p>Another handy part of HTML5 allows us to easily make an input required. Before this we needed to use JavaScript to check if inputs were valid, now we just pass the required attribute</p>
+
+<pre><code>&lt;input type="text" name="firstName" required="true"&gt;
+</code></pre>
+
+<p><input type="text" name="firstName" required="true" /></p>
+
+<h3 id="other-attributes">Other attributes</h3>
+
+<h4 id="placeholder">Placeholder</h4>
+<p>If you want to have default text in your input that clears when a user starts typing, use the <strong>placeholder</strong> atrribute.</p>
+
+<pre><code>&lt;input type="email" name="emailAddress" placeholder="Please enter your email address"&gt;
+</code></pre>
+
+<p><input type="email" name="emailAddress" placeholder="Please enter your email address" style="width:100%; font-size:20px;" /></p>
+
+<h4 id="character-limit">Character Limit</h4>
+<p>Limit the number of characters a box will take. Useful for limiting how long a username can be.</p>
+
+<pre><code>&lt;input type="text" name="userName" placeholder="max 6 chars please" maxlength="6"&gt;
+</code></pre>
+
+<p><input type="text" name="userName" placeholder="max 6 chars please" maxlength="6" /></p>
+
+<h4 id="default-value">Default Value</h4>
+<p>You can set the default value on any input by simply setting the value attribute</p>
+
+<pre><code>&lt;input type="text" name="phoneNumber" value="416-"&gt;
+</code></pre>
+
+<p><input type="text" name="phoneNumber" value="416-" /></p>
+
+<p>Note: there is also an input for phone numbers called <code>&lt;input type="tel"&gt;</code></p>
+
+<h4 id="disabled">Disabled</h4>
+<p>Disable an input</p>
+
+<pre><code>&lt;input type="text" value="you cant edit me!" disabled&gt;
+</code></pre>
+
+<p><input type="text" value="you cant edit me!" disabled="" /></p>
+
+<h4 id="hidden">Hidden</h4>
+<p>Hide an input with input type=”hidden”. This is similar to display:none, but the better way to go about it in the case that your CSS doesn’t load.</p>
+
+<p>This input is often used to store meta data related to the page. Sometimes codes that mean nothing to the user:</p>
+
+<pre><code>&lt;input type="hidden" value="3Xrg54@Scds!"&gt;
+</code></pre>
+
+<p>Gives us:</p>
+
+<p><input type="hidden" value="3Xrg54@Scds!" /></p>
+
+<p>[lol]</p>
+
+<h2 id="labels">Labels</h2>
+<p>There is a third type of element that is associated with HTML forms and that is the <code>&lt;label&gt;&lt;/label&gt;</code> tag.</p>
+
+<p>A label is used to simply label an input. We can still use all our regular HTML - paragraphs, headings, strong, etc.. - inside of forms, but its best practice to use a label when naming an input.</p>
+
+<p>A basic form might look like this:</p>
+
+<pre><code>&lt;form action="login.php"&gt;
+	&lt;label for="username"&gt;Your Username:&lt;/label&gt;
+	&lt;input type="text" name="username"&gt;
+
+	&lt;label for="userpass"&gt;Password&lt;/label&gt;
+	&lt;input type="password" name="userpass"&gt;
+
+	&lt;input type="submit" value="log me in!"&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>Makes:</p>
+
+<form action="login.php">
+	<label for="username">Your Username:</label>
+	<input type="text" name="username" />
+
+	<label for="userpass">Password</label>
+	<input type="password" name="userpass" />
+
+	<input type="submit" value="log me in!" />
+</form>
+
+<p>We use the <strong>for</strong> attribute to associate the label with the input. This is purely to make the forms accessible for screen readers.</p>
+
+<p>We can also assign an <strong>id</strong> on checkboxes and radio buttons that matches the <strong>for</strong> of the label. Then, when we click the label, the checkbox/radio will select itself:</p>
+
+<p><label for="wes">Wes</label>
+<input type="checkbox" name="wes" id="wes" /></p>
+
+<p><label for="drew">Drew</label>
+<input type="checkbox" name="drew" id="drew" /></p>
+
+<pre><code>&lt;label for="wes"&gt;Wes&lt;/label&gt;
+&lt;input type="checkbox" name="wes" id="wes"&gt;
+
+&lt;label for="drew"&gt;Drew&lt;/label&gt;
+&lt;input type="checkbox" name="drew" id="drew"&gt;
+</code></pre>
+
+<p>It may seem wrong, but sometimes you will have code that looks like this:</p>
+
+<pre><code>&lt;label for="mayo"&gt;Mayo&lt;/label&gt;
+&lt;input type="checkbox" name="mayo" class="mayo" id="mayo"&gt;
+</code></pre>
+
+<p>totally okay! Or should I say you mayo do this.</p>
+
+<p><img src="http://pleated-jeans.com/wp-content/uploads/2012/05/when-someone-says-a-bad-joke-about-you.gif" alt="" /></p>
+
+<h3 id="css-and-formsinputs">CSS and forms/inputs</h3>
+<p>Whew! That was a lot to take in. Let’s start coding some CSS to make them look a little nicer.</p>
+
+<p>Before we jump into that, lets take a look at a new type of selector that we can use.</p>
+
+<p>Selecting all inputs is easy:</p>
+
+<pre><code>input {
+
+}
+</code></pre>
+
+<p>Or we could add a class to the ones that we want:</p>
+
+<pre><code>input.emailAddress {
+
+}
+</code></pre>
+
+<p>But we can also select them based on their type</p>
+
+<pre><code>input[type=email] {
+
+}
+</code></pre>
+
+<p>This can be useful to set browser defaults. For simplicity’s sake, we will stick with classes today.</p>
+
+<p>Open up <code>form.html</code> in your browser and you’ll see a basic form similar to the one on twitter. Lets see how we can use CSS to match it to pretty much the exact style of twitter.</p>
+
+<p>Most inputs and forms are just like any other element, so we can use whatever CSS we want on them.</p>
+
+<p>Before we go on, we should note that at this time, you cannot style the look and feel of radio buttons, dropdown selects, file inputs, or checkboxes. There are sneaky Javascript ways to fake this, but no pure CSS solution.</p>
+
+<h2 id="exercise">Exercise</h2>
+
+<p>Getting the hang of both CSS and HTML with forms takes practice, open up <code>inputs-exercise.html</code> and work through the problems, matching both the HTML/functionality as well as the CSS look and feel.</p>
+
+
+
+    </div>
+
+
+  </body>
+
+</html>

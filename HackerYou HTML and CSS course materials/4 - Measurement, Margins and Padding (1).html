@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>4 - Measurement, Margins and Padding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+html,body{color:black}*:not('#mkdbuttons'){margin:0;padding:0}#wrapper{font:15px helvetica,arial,freesans,clean,sans-serif;-webkit-font-smoothing:subpixel-antialiased;line-height:1.7;padding:3px;background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}p{margin:1em 0}a{color:#4183c4;text-decoration:none}#wrapper{background-color:#fff;padding:30px;margin:15px;font-size:15px;line-height:1.6}#wrapper>*:first-child{margin-top:0 !important}#wrapper>*:last-child{margin-bottom:0 !important}@media screen{#wrapper{box-shadow:0 0 0 1px #cacaca, 0 0 0 4px #eee}}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.7;cursor:text;position:relative;margin:1em 0 15px;padding:0}h1{font-size:2.5em;border-bottom:1px solid #ddd}h2{font-size:2em;border-bottom:1px solid #eee}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{color:#777;font-size:1em}p,blockquote,table,pre{margin:15px 0}ul{padding-left:30px}ol{padding-left:30px}ol li ul:first-of-type{margin-top:0px}hr{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:4px;margin:15px 0;padding:0}#wrapper>h2:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child+h2{margin-top:0;padding-top:0}#wrapper>h3:first-child,#wrapper>h4:first-child,#wrapper>h5:first-child,#wrapper>h6:first-child{margin-top:0;padding-top:0}a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p,ul li>:first-child,ol li>:first-child{margin-top:0}dl{padding:0}dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px}dl dt:first-child{padding:0}dl dt>:first-child{margin-top:0}dl dt>:last-child{margin-bottom:0}dl dd{margin:0 0 15px;padding:0 15px}dl dd>:first-child{margin-top:0}dl dd>:last-child{margin-bottom:0}blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{border-collapse:collapse;border-spacing:0;font-size:100%;font:inherit}table th{font-weight:bold;border:1px solid #ccc;padding:6px 13px}table td{border:1px solid #ccc;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;font-family:Consolas, 'Liberation Mono', Courier, monospace;font-size:12px;color:#333}pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent}.highlight pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:14px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px;margin:26px 0}pre code,pre tt{background-color:transparent;border:none}.poetry pre{font-family:Georgia, Garamond, serif !important;font-style:italic;font-size:110% !important;line-height:1.6em;display:block;margin-left:1em}.poetry pre code{font-family:Georgia, Garamond, serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;vertical-align:super;position:relative}sub{vertical-align:sub;top:-1px}@media print{body{background:#fff}img,pre,blockquote,table,figure{page-break-inside:avoid}#wrapper{background:#fff;border:none}code{background-color:#fff;color:#333 !important;padding:0 .2em;border:1px solid #DEDEDE}pre{background:#fff}pre code{background-color:#fff !important;overflow:visible}}@media screen{body.inverted{color:#eee !important;border-color:#555;box-shadow:none}.inverted #wrapper,.inverted hr,.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt,.inverted blockquote{color:#eee !important;border-color:#555;box-shadow:none}.inverted td,.inverted th{background:#333}.inverted pre,.inverted code,.inverted tt{background:#eee !important;color:#111}.inverted h2{border-color:#555555}.inverted hr{border-color:#777;border-width:1px !important}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eeeeee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eeeeee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}.inverted{background:#0b2531;background:#252a2a}.inverted #wrapper{background:#252a2a}.inverted a{color:#acd1d5}}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k,.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .gt{color:#a00}.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .il{color:#099}.highlight .gc{color:#999;background-color:#EAF2F5}.type-csharp .highlight .k,.type-csharp .highlight .kt{color:#00F}.type-csharp .highlight .nf{color:#000;font-weight:normal}.type-csharp .highlight .nc{color:#2B91AF}.type-csharp .highlight .nn{color:#000}.type-csharp .highlight .s,.type-csharp .highlight .sc{color:#A31515}
+
+</style>
+</head>
+
+  <body class="normal">
+    <div id="wrapper">
+      <style>
+.white {
+	color:white;
+	border-bottom:1px solid #000;
+}
+.white:hover {
+	color:black;
+}
+</style>
+
+<h2 id="selector-exercise--review">Selector Exercise &amp; Review</h2>
+<p>Review:</p>
+
+<ol>
+  <li>How to we select elements?
+    <ul>
+      <li><span class="white">simply type the element name</span></li>
+    </ul>
+  </li>
+  <li>How do we select all paragraphs?
+    <ul>
+      <li><span class="white">p {…}</span></li>
+    </ul>
+  </li>
+  <li>How do we select classes?
+    <ul>
+      <li><span class="white">With a dot notation</span></li>
+      <li><span class="white">div.wrapper {…}</span></li>
+    </ul>
+  </li>
+  <li>How does <code>div.wrapper</code> read?
+    <ul>
+      <li><span class="white">div with the class of wrapper</span></li>
+    </ul>
+  </li>
+  <li>How does <code>.error</code> read?
+    <ul>
+      <li><span class="white">anything with the class of error</span></li>
+    </ul>
+  </li>
+  <li>How do we select elements with a single class (human)?
+    <ul>
+      <li><span class="white">p.human {…}</span></li>
+    </ul>
+  </li>
+  <li>How do we select elements with multiple classes (food and human)?
+    <ul>
+      <li><span class="white">p.human.food {…}</span></li>
+    </ul>
+  </li>
+  <li>How do we write multiple selectors, for a single rule?
+    <ul>
+      <li><span class="white">We use a comma</span></li>
+      <li><span class="white">p.food, span.error {…}</span></li>
+    </ul>
+  </li>
+  <li>how does <code>p.food, span.error {...}</code> read?
+    <ul>
+      <li><span class="white">paragraph with the class of food AND span with the class of error</span></li>
+    </ul>
+  </li>
+  <li>What is a parent child selector?
+    <ul>
+      <li><span class="white">We can narrow down our searching to a parent element and then search within that element</span></li>
+    </ul>
+  </li>
+  <li>When is a parent child selector useful?
+    <ul>
+      <li><span class="white">We often do no want to append a class to every single child element when we can just write a selector for its parent</span></li>
+    </ul>
+  </li>
+  <li>Give me an example of the above:
+    <ul>
+      <li><span class="white">ul.groceries li {…}</span></li>
+    </ul>
+  </li>
+  <li>How do you select all links within a div with the class of sidebar?
+    <ul>
+      <li><span class="white">div.sidebar a {…}</span></li>
+    </ul>
+  </li>
+  <li>What is a pseudo selector?
+    <ul>
+      <li><span class="white">Targeting an element in specific state</span></li>
+      <li><span class="white">most common is a:hover {…} to select links only when hovered</span></li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="selector-quick-reference">Selector Quick reference:</h2>
+<p><strong>Select a specific type of element</strong> = the element name</p>
+
+<p><code>p</code> selects all paragraph tags</p>
+
+<p><strong>Select a specific type of element with a class</strong></p>
+
+<p><code>p.warning</code> selects only paragraph tags with the class of error</p>
+
+<p><strong>Select any type of element with a class</strong></p>
+
+<p><code>.warning</code> selects any element with the class of warning.</p>
+
+<p><strong>Select element with multiple classes</strong> = multiple dots:</p>
+
+<p><code>div.food.human</code> must both have a class of food and human</p>
+
+<p><strong>Select elements with either/or</strong> = comma delimited</p>
+
+<p><code>div.food, div.human</code> gets both div with the class of food <em>and</em> div with the class of human.</p>
+
+<p><strong>select child elements of a child element</strong> = space</p>
+
+<p><code>ul.groceries a</code> selects all links within an unordered list with the class of groceries</p>
+
+<p>They can go multiple levels deep:</p>
+
+<p><code>ul.groceries a span</code> selects all spans <em>within</em> a link <em>within</em> an unordered list with the class of groceries</p>
+
+<h3 id="last-weeks-exercise">Last week’s exercise</h3>
+<p>Questions about the selector exercise? Problems? Let’s talk about what makes sense and what doesn’t.</p>
+
+<h2 id="need-a-website">Need a website?</h2>
+<p>We at HackerYou are all about promoting your online presence. If you’re interested in grabbing a domain and hosting, we recommend using <a href="http://bluehost.com">Bluehost</a> and have an affiliate link.</p>
+
+<p><a href="http://www.bluehost.com/track/hackeryou">http://www.bluehost.com/track/hackeryou</a></p>
+
+<h2 id="starting-the-styling">Starting the Styling!</h2>
+<p>Now that we have a good handle on selectors, we can get to work on writing the styles (or <strong>properties</strong> and <strong>values</strong> as we call them) for those selected elements.</p>
+
+<p><img src="http://wes.io/J3WP/diagrams.png" alt="Diagram" /></p>
+
+<p>I’m sure you have already picked up on a few, or even know a few from previous experience. color sets the font colour, font-size sets the font size. You may have even picked up on a few such as width and height.</p>
+
+<p>Let’s start off by saying that there are hundreds of possible properties and each of those have at least a handful of possible values. You’ll get the hang of them as you go, but there is absolutely nothing wrong with googling for them. In fact I still do it daily and its encouraged!</p>
+
+<h3 id="measurement-units">Measurement Units</h3>
+<p>A large part of CSS is declaring what the size of something will be. It may be the width of a div, the amount of padding or the size of a font. There are a number of ways to declare sizes on the web - and no there are no CMs or inches on the web.</p>
+
+<ol>
+  <li>
+    <p><strong>px -  pixels</strong> are probably the most popular way to size widths, heights and fonts on the web. Its the easiest one to understand because our monitors are measured in pixels. Font sizes from photoshop also line up exactly with pixel sizes. As a general rule of thumb, a website (that isn’t responsive) should never be wider than 1000 pixels so it can fit on every type of monitor.</p>
+  </li>
+  <li>
+    <p><strong>% - Percentages</strong> - Another popular way to size up your fonts and elements is by using percentages of an element’s parent. You can imagine how this works. A wrapper div with 100% width and two children - sidebar of 25% and the main content of 75%. This also works for fonts. If the parent has a font size of 20px, a 50% font size would be 10px. Percentages will be really helpful when we get into responsive design.</p>
+  </li>
+  <li>
+    <p><strong>em - Ems</strong> - Almost identical to the percentage approach of having scalable units. We set a base font size on the body and then all text on the page is based of of that. The problem with ems in that it multiplies off of its parent, so any nested text will quickly get out of hand. Sizing fonts with ems is a bit of a tricky subject to wrap your head around so for simplicity’s sake we will be sticking with px and percentages.</p>
+  </li>
+  <li>
+    <p><strong>rem - Rems</strong> - Root  ems are the solution to the problems that ems cause. With Rems we set a base size on the body, say a base of 10. And then everything else can be based off of that. Need font size 20? Set it to 2rems. The nice thing about this, is if we ever want to bump up or down font sizes on the entire site, we just need to adjust the body. <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">More info on Rems</a></p>
+  </li>
+  <li>
+    <p><strong>keywords</strong> - sometimes we will be able to supply keywords for sizes of elements and fonts. You will see the keywords <strong>auto</strong> and <strong>inherit</strong> most often. Auto allows an element to automatically size itself based on both its surroundings and content and inherit allows an element to inherit the style from its parent. We will talk about this more in future exercises.</p>
+  </li>
+  <li>
+    <p><strong>cm, in, ex, pt, pc</strong> - I thought I said there were no cms or inches in the web? Well there are are few other measurements that are meant primarily for printing documents. To be honest I’ve never used any of these measurements and you probably will never have to either.</p>
+  </li>
+</ol>
+
+<h3 id="widths-and-heights">Widths and Heights</h3>
+<p>Let us start things off easy and work a little with width and height. Lets make a quick document with four divs (<strong>see css-width-height.html</strong> for the answer, but let’s code ours from the ground up.):</p>
+
+<pre><code>&lt;div class="box1"&gt;&lt;/div&gt;
+&lt;div class="box2"&gt;&lt;/div&gt;
+&lt;div class="box3"&gt;&lt;/div&gt;
+&lt;div class="box4"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>And then a little CSS so we can tell each box apart:</p>
+
+<pre><code>&lt;style type="text/css"&gt;
+	.box1 {
+		background:red;
+	}
+	.box2 {
+		background:blue;
+	}
+	.box3 {
+		background:green;
+	}
+	.box4 {
+		background:orange;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<p>So what does that look like so far? Nothing! Because there is no content, no width and no height in our boxes, they aren’t taking up any room. We can fix that by adding some content to each box:</p>
+
+<pre><code>&lt;div class="box1"&gt;Box #1&lt;/div&gt;
+&lt;div class="box2"&gt;Box #2&lt;/div&gt;
+&lt;div class="box3"&gt;Box #3&lt;/div&gt;
+&lt;div class="box4"&gt;Box #4&lt;/div&gt;
+</code></pre>
+
+<p><small>Note: in a normal document you should never put text inside a div without first wrapping it in a tag (such as <code>&lt;p&gt;</code>p tags<code>&lt;/p&gt;</code></small>) but we are leaving them out for simplicity :)</p>
+
+<h4 id="auto-width">Auto Width</h4>
+
+<p>Now we have something that looks like the screen below. You’ll notice that they extend the <strong>entire width</strong> of the browser while the text is only a few characters long. Why? This is because <strong>divs are block elements and have a width of auto</strong> by default!</p>
+
+<p><img src="http://wes.io/JGZb/Screen%20Shot%202012-09-06%20at%2011.37.53%20AM.png" alt="" /></p>
+
+<h4 id="specifying-width-and-height">Specifying Width and Height</h4>
+
+<p>Lets try a few different ways of specifying width and height:</p>
+
+<pre><code>&lt;style type="text/css"&gt;
+	.box1 {
+		background:red;
+		width: 200px;
+		height:200px;
+	}
+	.box2 {
+		background:blue;
+		width:100%;
+		height:90px;
+	}
+	.box3 {
+		background:green;
+		width:2000px;
+		height:150px;
+	}
+	.box4 {
+		background:orange;
+		width:500px;
+		height:100%;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<p>Produces the following:</p>
+
+<p><img src="http://wes.io/JGk7/Screen%20Shot%202012-09-06%20at%2011.46.52%20AM.png" alt="" /></p>
+
+<ol>
+  <li>Box 1 is 200px by 200px - makes sense..</li>
+  <li>Box 2 is spanning 100% of the browser and 90px high - good!</li>
+  <li>Box 3 is 150px high and 2000px wide - much wider than my screen so we have to scroll right to see the entire box.</li>
+  <li>Box 4 is 500px wide - good - and 100% height - <strong>Woah, hold on</strong>. Why isn’t box 4 taking up the rest of the room in the browser?</li>
+</ol>
+
+<p>If 100% width takes up the entire width of the browser, shouldn’t 100% height take up the entire height? That would make sense, but its one of the many quirks of CSS. Giving an element 100% height means it will take up 100% of it’s own content height - not the browsers. As a proof of concept, lets add a <strong>box 5</strong> inside box 4 and give it a width and height of 150px;</p>
+
+<p><img src="http://wes.io/JGxM/Screen%20Shot%202012-09-06%20at%2011.58.58%20AM.png" alt="" /></p>
+
+<p>Because its child <strong>Box 5</strong> is 150px high, <strong>Box 4</strong> reacts and changes its height to 150px + the height of the text ‘Box #4’</p>
+
+<h3 id="padding-and-margin">Padding and Margin</h3>
+<p>Along with your pals width and height, two of your CSS best friends will be <strong>padding</strong> and <strong>margin</strong></p>
+
+<p>These two properties do what you might think - provide space between elements on your page so everything isn’t squished together.</p>
+
+<p>The only difference between the two is that margin adds space on the <strong>outside</strong> of an element while padding adding space on the <strong>inside</strong> of the element. It can be tough to remember which one does what so a stupid little trick I used was saying “<strong>Padding</strong> protects your <strong>insides</strong>”.</p>
+
+<h4 id="giving-it-a-shot">Giving it a shot</h4>
+<p>Let’s give it a shot with some real markup. Start off with three basic divs: (See file <strong>css-margin-padding.html</strong>)</p>
+
+<pre><code>&lt;div class="box1"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.&lt;/div&gt;
+&lt;div class="box2"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.&lt;/div&gt;
+&lt;div class="box3"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.&lt;/div&gt;
+</code></pre>
+
+<p>And some styling similar to the last one:</p>
+
+<pre><code>&lt;style type="text/css"&gt;
+	.box1 {
+		background:red;
+	}
+	.box2 {
+		background:blue;
+	}
+	.box3 {
+		background:green;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<p>No big surprises here:</p>
+
+<p><img src="http://wes.io/JH4L/Screen%20Shot%202012-09-06%20at%202.08.04%20PM.png" alt="" /></p>
+
+<p>Go ahead and add some margin to box1, padding to box2 and both to box3:</p>
+
+<pre><code>&lt;style type="text/css"&gt;
+	.box1 {
+		background:red;
+		margin:20px;
+	}
+	.box2 {
+		background:blue;
+		padding:20px;
+	}
+	.box3 {
+		background:green;
+		padding:20px;
+		margin:20px;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<p><img src="http://wes.io/JHf6/Screen%20Shot%202012-09-06%20at%202.10.52%20PM.png" alt="" /></p>
+
+<ol>
+  <li>Box 1 has 20px of margin outside the red, but the text is still squished inside the box.</li>
+  <li>Box 2 has 20px of padding inside the blue, but its right up against the side of the browser.</li>
+  <li>Box 3 has both, allowing for enough space between both the text as well as the blue element above it.</li>
+</ol>
+
+<h4 id="one-step-further">One step further</h4>
+
+<p>In the last examples, we supplied a single value of 20px. What if we want to add margin/padding just to a single side? We can just append <code>-[side]</code> to the property.</p>
+
+<pre><code>.box1 {
+	/* Specific margin values */
+	margin-top: 10px;
+	margin-right: 5%;
+	margin-bottom:10px;
+	margin-left: 25px;
+	/* Same goes for padding */
+	padding-top:10px;
+	padding-right:20px;
+	padding-bottom:25px;
+	padding-left:5%;
+}
+</code></pre>
+
+<h3 id="exercise">Exercise</h3>
+
+<p>Its time to get comfortable with margin, padding and widths of elements as well as brush up on our selector writing.</p>
+
+<p>Open <code>css-margin-padding-exercise.html</code> in your code editor and browser. You will find a set of instructions.</p>
+
+<p>Open <code>css-margin-padding-exercise-ANSWER.html</code> in your browser to see what you are working towards.</p>
+
+<h4 id="thats-too-much-typing---css-shorthand">Thats too much typing! - CSS Shorthand</h4>
+
+<p>8 lines just for padding and margin? Seems like a lot of typing! Luckily we have something call <strong>CSS shorthand</strong> for specify padding and margin values (among other properties which we will learn about later). We can just supply the four values with spaces inbetween:</p>
+
+<pre><code>.box1 {
+	margin: 10px 5% 10px 25px;
+	padding: 10px 20px 25px 5%;
+}
+</code></pre>
+
+<p><strong>The Order</strong> of the above is <strong>top, right, bottom left</strong>. You can remember it easily because its the same direction as a compass or a clock. I prefer to remember <strong>TROUBLE</strong> or <strong>TRBL</strong> (top, right bottom, left). Stupid, I know, but it works!</p>
+
+<p>You may also set the <strong>top and bottom</strong> and <strong>right and left</strong> at the same time with the two number syntax:</p>
+
+<pre><code>.box1 {
+	margin:10px 20px; /* renders the same as 10px 20px 10px 20px */
+}
+</code></pre>
+
+<p>Occasionally you will see three numbers which sets <strong>left and right</strong> with a single value. This is confusing and doesn’t save much typing, I recommend against it.</p>
+
+<pre><code>.box1 {
+	margin:10px 20px 50px; /* renders the same as 10px 20px 50px 20px */
+}
+</code></pre>
+
+<h4 id="centering-elements-with-margins">Centering elements with margins</h4>
+
+<p>Often we will want to center our website on a page. Since CSS doesnt have a center property for elements, we just use <strong>auto margins</strong> on the left and right to do this.</p>
+
+<pre><code>.wrapper {
+	margin:0 auto;
+}
+</code></pre>
+
+<p>This will set the <code>top</code> and <code>bottom</code> margins to zero (you could set it to anything you want) and then the <code>left</code> and <code>right</code> to auto, which centers the element within the browser.</p>
+
+<h3 id="borders">Borders</h3>
+
+<p>Borders work very much the same way padding and margin do except that we have three properties instead of one.</p>
+
+<pre><code>.box1 {
+	border-width:10px;
+	border-color:red;
+	border-style:solid;
+}
+</code></pre>
+
+<p>Width and color are pretty self explanatory. The <strong>border style</strong> allows you to set various styles of borders:</p>
+
+<div style="border:10px solid #D12026; margin:5px;">solid</div>
+<div style="border:10px dotted #D12026; margin:5px;">dotted</div>
+<div style="border:10px dashed #D12026; margin:5px;">dashed</div>
+<div style="border:10px groove #D12026; margin:5px;">groove</div>
+<div style="border:10px ridge #D12026; margin:5px;">ridge</div>
+<div style="border:10px inset #D12026; margin:5px;">inset</div>
+<div style="border:10px outset #D12026; margin:5px;">outset</div>
+
+<h4 id="targeting-single-sides">Targeting Single Sides</h4>
+<p>Just like padding and margin, we can target single sides, just add the side like so:</p>
+
+<pre><code>.box1 {
+	border-[side]-width:10px;
+	border-[side]-color:10px;
+	border-[side]-style:10px;
+}
+</code></pre>
+
+<h4 id="common-shorthand">Common Shorthand</h4>
+<p>Chances are you won’t be using the above code too much as you usually want the border to be the same <code>size</code>, <code>style</code> and <code>color</code> all the way around your element. If this is the case, we can use the commonly used border property and feed it each item separated by a space:</p>
+
+<pre><code>.box1 {
+	border:3px dotted red; /* [width] [style] [color] Much more sane */
+}
+</code></pre>
+
+<h4 id="exercise-1">Exercise</h4>
+
+<p>Take a few minutes with <code>css-margin-padding-exercise.html</code> again and try and change the layout to:</p>
+
+<ol>
+  <li>Add borders to at least three elements</li>
+  <li>Make the wrapper have a different border for each side</li>
+  <li>Center the <code>.moreinfo</code> div properly</li>
+  <li>Play around with margin and padding shorthand to make things look nicer</li>
+</ol>
+
+<h3 id="the-box-model">The Box Model</h3>
+
+<p>Sweet, now that we are equipped with width, height, padding, margin and borders, its important to learn about the <strong>box model</strong>. (See <strong><code>css-box-model.html</code></strong>);</p>
+
+<p>Lets start off with a simple 150px x 150px box:</p>
+
+<div style="width:150px;height:150px; background:#D12026;">I'm a 150px150px box!</div>
+
+<p>Now let’s add some padding so that text isn’t all squished.</p>
+
+<div style="width:150px;height:150px; background:#D12026;padding:20px;">I'm a 150px150px box with 20px of padding!</div>
+
+<p>Finally add a border:</p>
+
+<div style="width:150px;height:150px; background:#D12026;padding:20px; border:10px solid black;">I'm a 150px150px box with 20px of padding and a 10px black border!</div>
+
+<p>Notice anything weird? The boxes grow as we add <strong>padding</strong> and <strong>border</strong>. Suddenly our 150px box isn’t 150px anymore!</p>
+
+<p>Shouldn’t the padding and border take away from the 150 pixels? This is another CSS Quirk that is quite an annoyance in web development. The <strong>CSS box model</strong> by default works in such a way that if we want the final element to be 150px, we have to take into consideration that padding and borders add their values on top of that.</p>
+
+<h4 id="new-techniques-with-css3---border-box">New techniques with CSS3 - border-box</h4>
+
+<p>Lucky for us, CSS3 has brought us relief from this. If your project is going to be supported only on Internet Explorer 8 and up (and I recommend this), then we can use box-sizing:border-box;</p>
+
+<p>By specifying <code>* { box-sizing: border-box }</code> at the top of our CSS, we tell all elements (hence the wildcard * selector) to take <strong>padding</strong> and <strong>border</strong> away from the set width and height. Go ahead and uncomment the selector in <code>css-box-model.html</code> to see how it works.</p>
+
+<p><small><strong>Note:</strong> This is fairly new in the web development world, so chances are most projects you run into in the wild will be using the <strong>old</strong> box model. Its helpful to know both.</small></p>
+
+<p><strong>Without <code>* { box-sizing: border-box }</code></strong>
+<img src="http://wes.io/JHEe/Screen%20Shot%202012-09-06%20at%203.24.11%20PM.png" alt="" /></p>
+
+<p><strong>With <code>* { box-sizing: border-box }</code></strong></p>
+
+<p><img src="http://wes.io/JGjL/Screen%20Shot%202012-09-06%20at%203.38.46%20PM.png" alt="" /></p>
+
+<h5 id="box-sizing-going-forward">Box Sizing Going forward</h5>
+
+<p>Because this new box model is <em>so much easier</em> to use, it’s often helpful to convert our entire document to <code>box-sizing:border-box</code>. The way we do this, is by using the <code>*</code> selector and applying this to <em>everything in the document</em></p>
+
+<pre><code>*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+</code></pre>
+
+<p>Keep this handy as you will need to use this snippet is almost every project.</p>
+
+<p><small>Read more on the topic at <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">Paul Irish’s Blog</a></small></p>
+
+
+
+    </div>
+
+
+  </body>
+
+</html>

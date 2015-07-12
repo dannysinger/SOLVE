@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Me</title>
+    
+<style>
+    
+ *{
+     border:1px solid black;
+     font-size:1em;
+     padding:0;
+ }
+html{
+    min-height:100%;
+}
+body{
+    margin:0;
+    font-family:helvetica neue;
+    font-weight:300;
+    height:100%;
+}
+.content-centered{
+    margin:0 auto;
+    padding: 0 0.938rem;
+    /*box-sizing*/
+    background-color:red;
+}
+/*For Background Stretch*/
+.content-centered{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+}
+    h1{
+        text-align:center;
+    }
+    li{
+        display:block;
+        text-align:center;
+        margin: 0 auto;
+        max-width:100%;
+    }
+    ul{
+        margin-top:3em;
+    }
+    .From, .Hobbies, .Music, .Life{
+        display:none;
+    }
+section{
+    background-color:bisque;
+}
+    </style>
+    <script src="jQuery.min.js"></script>
+    <script>
+        
+$(document).ready(function() {
+    $("li").on("click", function() {
+    $(this).next("section").slideToggle("fast")
+    });
+});
+        
+    </script>
+</head>
+<body>
+       
+          <div class="content-centered">
+             
+             <h1>Hi I'm</h1>
+             
+             <h1>Danny!</h1>
+
+              <ul><li>Where I'm From</li>
+            
+             <section class = "From">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non recusandae, a nisi molestias, quo culpa. Officia tempore delectus, obcaecati odio molestias sunt maxime alias, laborum doloremque esse optio beatae amet!</section>
+              
+               <li>Hobbies</li> 
+               
+               <section class = "Hobbies">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quidem, enim impedit! Ea veritatis mollitia, dolore ullam et quas commodi aliquid fugit tenetur voluptatem asperiores consequatur eius blanditiis veniam nulla.</section>
+               
+               <li>Music</li> 
+               
+               <section class="Music">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quo voluptatibus cum, unde veniam qui. Adipisci error, ab officia vitae quisquam corporis eaque maxime eligendi iste maiores minima, reiciendis, rerum!</section>
+               
+               <li>Life</li>
+               
+               <section class="Life">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, magnam illo, commodi itaque porro inventore molestias rem voluptatibus iure, quam tenetur id perferendis, neque explicabo. Impedit similique obcaecati necessitatibus beatae.
+               </section>
+               
+               </ul>
+              
+          </div>
+          
+</body>
+</html>

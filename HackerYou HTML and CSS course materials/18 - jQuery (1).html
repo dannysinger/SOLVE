@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>18 - jQuery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+html,body{color:black}*:not('#mkdbuttons'){margin:0;padding:0}#wrapper{font:15px helvetica,arial,freesans,clean,sans-serif;-webkit-font-smoothing:subpixel-antialiased;line-height:1.7;padding:3px;background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}p{margin:1em 0}a{color:#4183c4;text-decoration:none}#wrapper{background-color:#fff;padding:30px;margin:15px;font-size:15px;line-height:1.6}#wrapper>*:first-child{margin-top:0 !important}#wrapper>*:last-child{margin-bottom:0 !important}@media screen{#wrapper{box-shadow:0 0 0 1px #cacaca, 0 0 0 4px #eee}}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.7;cursor:text;position:relative;margin:1em 0 15px;padding:0}h1{font-size:2.5em;border-bottom:1px solid #ddd}h2{font-size:2em;border-bottom:1px solid #eee}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{color:#777;font-size:1em}p,blockquote,table,pre{margin:15px 0}ul{padding-left:30px}ol{padding-left:30px}ol li ul:first-of-type{margin-top:0px}hr{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:4px;margin:15px 0;padding:0}#wrapper>h2:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child+h2{margin-top:0;padding-top:0}#wrapper>h3:first-child,#wrapper>h4:first-child,#wrapper>h5:first-child,#wrapper>h6:first-child{margin-top:0;padding-top:0}a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p,ul li>:first-child,ol li>:first-child{margin-top:0}dl{padding:0}dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px}dl dt:first-child{padding:0}dl dt>:first-child{margin-top:0}dl dt>:last-child{margin-bottom:0}dl dd{margin:0 0 15px;padding:0 15px}dl dd>:first-child{margin-top:0}dl dd>:last-child{margin-bottom:0}blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{border-collapse:collapse;border-spacing:0;font-size:100%;font:inherit}table th{font-weight:bold;border:1px solid #ccc;padding:6px 13px}table td{border:1px solid #ccc;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;font-family:Consolas, 'Liberation Mono', Courier, monospace;font-size:12px;color:#333}pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent}.highlight pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:14px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px;margin:26px 0}pre code,pre tt{background-color:transparent;border:none}.poetry pre{font-family:Georgia, Garamond, serif !important;font-style:italic;font-size:110% !important;line-height:1.6em;display:block;margin-left:1em}.poetry pre code{font-family:Georgia, Garamond, serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;vertical-align:super;position:relative}sub{vertical-align:sub;top:-1px}@media print{body{background:#fff}img,pre,blockquote,table,figure{page-break-inside:avoid}#wrapper{background:#fff;border:none}code{background-color:#fff;color:#333 !important;padding:0 .2em;border:1px solid #DEDEDE}pre{background:#fff}pre code{background-color:#fff !important;overflow:visible}}@media screen{body.inverted{color:#eee !important;border-color:#555;box-shadow:none}.inverted #wrapper,.inverted hr,.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt,.inverted blockquote{color:#eee !important;border-color:#555;box-shadow:none}.inverted td,.inverted th{background:#333}.inverted pre,.inverted code,.inverted tt{background:#eee !important;color:#111}.inverted h2{border-color:#555555}.inverted hr{border-color:#777;border-width:1px !important}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eeeeee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eeeeee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}.inverted{background:#0b2531;background:#252a2a}.inverted #wrapper{background:#252a2a}.inverted a{color:#acd1d5}}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k,.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .gt{color:#a00}.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .il{color:#099}.highlight .gc{color:#999;background-color:#EAF2F5}.type-csharp .highlight .k,.type-csharp .highlight .kt{color:#00F}.type-csharp .highlight .nf{color:#000;font-weight:normal}.type-csharp .highlight .nc{color:#2B91AF}.type-csharp .highlight .nn{color:#000}.type-csharp .highlight .s,.type-csharp .highlight .sc{color:#A31515}
+
+</style>
+</head>
+
+  <body class="normal">
+    <div id="wrapper">
+      <h1 id="introduction-to-javascript-and-jquery">Introduction to JavaScript and jQuery</h1>
+
+<p>Today we are going to take a peek at JavaScript. While we won’t leave today being JavaScript professionals, we should have a pretty good idea of what JavaScript can do, and when we should be using it.</p>
+
+<p>This is an extremely high level view of view of JavaScript. If what we cover today interests you, I encourage you to explore jQuey and JavaScript further. JavaScript is a tool of a intermediate to advanced Front End developer while HTML and CSS are tools of designers and beginner front end developers. </p>
+
+<h2 id="what-is-javascript">What is JavaScript</h2>
+
+<p>JavaScript is the cool cousin of HTML and CSS. It is a programming language used to add a level of interactivity into website, making the website a little more dynamic than possible with just HTML and CSS. Is is also used for animation, website logic and conditionals. Here are a few examples of when you would use JavaScript in a website:</p>
+
+<ul>
+  <li>Events — What “events” do we have in CSS? We change change things when we <code>:hover</code> an element. There is also the <code>:checked</code> selector for checkboxes, but that is about it. With JavaScript, we can <strong>do anything</strong> when <strong>anything happens</strong>. Click, right click, dropdown select, mouse move, window resize, scroll…</li>
+  <li>Changing CSS — JavaScript is able to dynamically apply/ change CSS.</li>
+  <li>Animations — before CSS animations were around, animation on the web was done by quickly changing CSS styles to produce an animation effect</li>
+  <li>Interactivity — Instead of reloading the website everytime we need to show new content, can we dynamically show it? Think about how facebook or twitter show your status update right away</li>
+  <li>AJAX — We are able to go out to our or another server and request informations. Think of loading tweets/new facebook posts without refreshing the page. </li>
+  <li>Conditionals — JavaScript is a full blown programming language, which means that we can do analysis and conditionally execute javascript. </li>
+</ul>
+
+<p><code>
+	if(tweet.length &gt; 140) {
+		alert("Tweet is too long!");
+	}
+</code>
+If you are interested in getting started with JavaScript, I recommend getting the small book “JavaScript the good parts” which will give you a good overview of JavaScript and programming in general. 	</p>
+
+<h2 id="what-is-jquery-then">What is jQuery then?</h2>
+
+<p>JavaScript the language was written in a week for the Netscape browser. Microsoft copied it with their implementation of “jScript”. Needless to say, JavaScript is a really weird language with way more quirks than CSS. Writing cross-browser JavaScript is really hard and extremely prone to bugs. </p>
+
+<p>So, there is a library called <strong>jQuery</strong> that makes writing JavaScript much much easier. jQuery is written in JavaScript, but we use the jQuery syntax instead of JavaScript. Take changing the background of an element with a class of <code>box</code> to blue:</p>
+
+<pre><code>document.getElementsByClassName('box')[0].style.color = "blue";
+</code></pre>
+
+<p>vs</p>
+
+<pre><code>$('.box').css('color','blue');
+</code></pre>
+
+<h2 id="javascript-or-css">JavaScript or CSS?!?</h2>
+
+<p>In the recent years, CSS3 has taken over many things that we used to do with JavaScript. So, you may find yourself in a case where you could use either. CSS is always preferred however if you need older browser support for things like animations and odd/even rows, you may use JavaScript.</p>
+
+<h2 id="loading-javascript">Loading JavaScript</h2>
+
+<p>Just like CSS, we can load in external JavaScript. Instead of the link tag, we use the <code>script</code> tag. It takes a <code>src</code> attribute and must be closed. </p>
+
+<pre><code>&lt;script src="myScript.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>You may sometimes see the type attribute included, it isn’t required:</p>
+
+<pre><code>&lt;script src="myScript.js" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Often times, Google will host JavaScript libraries for us. The benefit of this is speed. If I already have the jQuery library loaded for drewminns.com, when they visit hackeryou.com, it will already be cached in the browser.</p>
+
+<pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Just like css, we can also write JavaScript	right inside our page:</p>
+
+<pre><code>&lt;script&gt;
+	alert("Hello there!")
+&lt;/script&gt;
+</code></pre>
+
+<p>Best case, you would always load JavaScript files right before the closing <code>&lt;/body&gt;</code> tag. Loading them in the <code>&lt;head&gt;</code> works too but isn’t as fast.</p>
+
+<h2 id="loading-jquery-and-the-document-ready">Loading jQuery and the document ready</h2>
+
+<p>To load jQuery, you simply just include the script tag as we have above.</p>
+
+<pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Then we write a little bit of code called the document ready:</p>
+
+<pre><code>$(function() {
+	// Document is ready! All your code goes inside.
+	// You only need one of these per page
+});	
+</code></pre>
+
+<p>The document ready is absolutely critical to your jQuery working properly. Javascript works by interacting with the website, so when we run JavaScript, the website needs to be 100% loaded before we do anything. </p>
+
+<p>So, by wrapping our code in a document ready, it will wait until the entire website has finished loading before executing. Otherwise it would fire way too early and we would get unexpected results.</p>
+
+<p>Your page only ever needs a single document ready. For now, put all your jQuery code inside of it. When you get into more advanced JavaScript, you will research other loading techniques. </p>
+
+<p>See a very basic example using the alert box in <code>js1.html</code></p>
+
+<h2 id="selectors">Selectors</h2>
+<p>jQuery boils down to <code>select somethingg</code> and then <code>do something with it</code>. jQuery uses CSS selectors, so its easy to write our own. </p>
+
+<p>jQuery uses <code>$('')</code> to wrap selectors and make it a ‘Jquery Object’. So our regular old css selectors transferred to jQuery look like this:</p>
+
+<p><code>h1</code>  →<code> $('h1')</code></p>
+
+<p><code>.box</code> → <code>$('.box')</code></p>
+
+<p><code>.nav ul li</code> → <code>$('.nav ul li')</code></p>
+
+<h2 id="methods">Methods</h2>
+
+<p>Once we have <strong>selected</strong> an element, we can then use what we called <strong>methods</strong> to do something with that selector. There are hundreds of methods we can use here, we will take a look at a few of them. The rest are available on <a href="http://api.jquery.com/jQuery/">http://api.jquery.com/jQuery/</a>.</p>
+
+<p>We can test jQuery on the HackerYou website by entering it into the <code>console</code> tab when in dev tools</p>
+
+<p><img src="http://wes.io/PWqp/content" alt="" /></p>
+
+<h3 id="fadeout-and-fadein">fadeOut and fadeIn</h3>
+
+<p>Does what it says. Try the following in the console for HackerYou</p>
+
+<pre><code>$('h1 span').fadeOut();
+
+then
+
+$('h1 span').fadeIn();
+</code></pre>
+
+<h2 id="events">Events</h2>
+
+<p>Events are a huge part of jQuery. Instead of just doing something on hover, we can <strong>bind</strong> to any browser even and do something when that happens. The most common one is click. Events look like this:</p>
+
+<pre><code>$('a.clickMe').click(function() {
+	alert("You clicked me!");
+});
+</code></pre>
+
+<p>You may also bind to events using the <code>on</code> method, which may be more readable for you.</p>
+
+<pre><code>$('a.clickMe').on('click',function() {
+	alert("You clicked me!");
+});
+</code></pre>
+
+<p>You can also bind to multiple events at once. For instance, the iPhone and iPad have a 300ms delay when you tap a button, which causes noticeable lag. Instead we can bind to <code>touchstart</code> which fires as soon as your finger touches the screen:</p>
+
+<pre><code>$('a.clickMe').on('click touchstart',function() {
+	alert("You clicked me or tapped!");
+});
+</code></pre>
+
+<p>There are tons of events you can listen to, let’s take a look at a few:</p>
+
+<p><a href="http://api.jquery.com/category/events/">http://api.jquery.com/category/events/</a></p>
+
+<pre><code>When a **link** with the class of **clickMe** is clicked, alert "you clicked me".
+</code></pre>
+
+<p>Open <code>js2.html</code> for an example with boxes</p>
+
+<h2 id="toggling-classes">Toggling Classes</h2>
+
+<p>Toggling classes is one of the most useful parts of jQuery. We can dynamically add and remove a class name to elements when an event is fired.</p>
+
+<p>Let’s do an example together opening and closing divs. The answer is provided in <code>js3.html</code> but we will work off a copy of <code>js2.html</code>.</p>
+
+<h3 id="toggling-other-elements">Toggling other elements</h3>
+
+<p>We can also click one element, and target another using <code>.next()</code>, <code>.parent()</code>, or <code>.children()</code>. </p>
+
+<p>Let’s work through <code>js4.html</code> together. </p>
+
+<h2 id="slidetoggle">slideToggle()</h2>
+
+<p>Sometimes we simply just want to show/hide a div. For this, we can use <code>.slideToggle()</code> which will dynamically show/hide the selected div</p>
+
+<h2 id="css">CSS</h2>
+
+<p>While best practice is to add a class and then style it in the css. We can apply CSS directly with <code>.css()</code></p>
+
+<pre><code>$('h1').css('color','blue');
+
+$('.box').css('width','200px');
+
+and even multiple values. Note the curly braces and lack of trailing comma on the last line
+
+$('.box').css({
+	'width','200px',
+	'height' : '300px',
+	'background' : 'red'
+});
+</code></pre>
+
+<h2 id="exercise">Exercise</h2>
+<p>Let’s create an iTunes/spotfiy interface that visually shows when you select and play a song. We will start with the HTMl/CSS already done for us in albums.html.</p>
+
+<ol>
+  <li>When we click an album, it should stop any currently playing song and play the album we clicked.</li>
+  <li>Let’s extend it to allow for “selecting”, which when you click any amount of albums, they become selected with a grey background. This is done by adding the class “selected”.</li>
+  <li>Finally, we have a problem with clicking. We are playing and selecting on the same event of click. Let’s migrate ‘playing’ to a double click and leave ‘selecting’ to a single click</li>
+</ol>
+
+<h2 id="plugins">Plugins</h2>
+
+<p>Many people have built plugins with jQuery that allow you to add functionality to your website. Everything from sliders to galleries to paralax scrolling effects. They range from easy to implement to huge monsters so be cautious when adding too many to a website.</p>
+
+<p>You can view the plugin directory at <a href="http://plugins.jquery.com/">http://plugins.jquery.com/</a>. Some of my favourite include:</p>
+
+<ul>
+  <li><a href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a></li>
+  <li><a href="http://jquery.malsup.com/cycle/">http://jquery.malsup.com/cycle/</a></li>
+  <li><a href="http://flexslider.woothemes.com/">http://flexslider.woothemes.com/</a></li>
+  <li><a href="http://benalman.com/news/2010/03/jquery-equalizebottoms-plugin-15/">http://benalman.com/news/2010/03/jquery-equalizebottoms-plugin-15/</a></li>
+</ul>
+
+
+
+    </div>
+
+
+  </body>
+
+</html>

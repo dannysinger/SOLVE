@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>12 - Social Embedding, Font Awesome and SVGs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+html,body{color:black}*:not('#mkdbuttons'){margin:0;padding:0}#wrapper{font:15px helvetica,arial,freesans,clean,sans-serif;-webkit-font-smoothing:subpixel-antialiased;line-height:1.7;padding:3px;background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}p{margin:1em 0}a{color:#4183c4;text-decoration:none}#wrapper{background-color:#fff;padding:30px;margin:15px;font-size:15px;line-height:1.6}#wrapper>*:first-child{margin-top:0 !important}#wrapper>*:last-child{margin-bottom:0 !important}@media screen{#wrapper{box-shadow:0 0 0 1px #cacaca, 0 0 0 4px #eee}}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.7;cursor:text;position:relative;margin:1em 0 15px;padding:0}h1{font-size:2.5em;border-bottom:1px solid #ddd}h2{font-size:2em;border-bottom:1px solid #eee}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{color:#777;font-size:1em}p,blockquote,table,pre{margin:15px 0}ul{padding-left:30px}ol{padding-left:30px}ol li ul:first-of-type{margin-top:0px}hr{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:4px;margin:15px 0;padding:0}#wrapper>h2:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child+h2{margin-top:0;padding-top:0}#wrapper>h3:first-child,#wrapper>h4:first-child,#wrapper>h5:first-child,#wrapper>h6:first-child{margin-top:0;padding-top:0}a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p,ul li>:first-child,ol li>:first-child{margin-top:0}dl{padding:0}dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px}dl dt:first-child{padding:0}dl dt>:first-child{margin-top:0}dl dt>:last-child{margin-bottom:0}dl dd{margin:0 0 15px;padding:0 15px}dl dd>:first-child{margin-top:0}dl dd>:last-child{margin-bottom:0}blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{border-collapse:collapse;border-spacing:0;font-size:100%;font:inherit}table th{font-weight:bold;border:1px solid #ccc;padding:6px 13px}table td{border:1px solid #ccc;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;font-family:Consolas, 'Liberation Mono', Courier, monospace;font-size:12px;color:#333}pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent}.highlight pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:14px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px;margin:26px 0}pre code,pre tt{background-color:transparent;border:none}.poetry pre{font-family:Georgia, Garamond, serif !important;font-style:italic;font-size:110% !important;line-height:1.6em;display:block;margin-left:1em}.poetry pre code{font-family:Georgia, Garamond, serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;vertical-align:super;position:relative}sub{vertical-align:sub;top:-1px}@media print{body{background:#fff}img,pre,blockquote,table,figure{page-break-inside:avoid}#wrapper{background:#fff;border:none}code{background-color:#fff;color:#333 !important;padding:0 .2em;border:1px solid #DEDEDE}pre{background:#fff}pre code{background-color:#fff !important;overflow:visible}}@media screen{body.inverted{color:#eee !important;border-color:#555;box-shadow:none}.inverted #wrapper,.inverted hr,.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt,.inverted blockquote{color:#eee !important;border-color:#555;box-shadow:none}.inverted td,.inverted th{background:#333}.inverted pre,.inverted code,.inverted tt{background:#eee !important;color:#111}.inverted h2{border-color:#555555}.inverted hr{border-color:#777;border-width:1px !important}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eeeeee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eeeeee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}.inverted{background:#0b2531;background:#252a2a}.inverted #wrapper{background:#252a2a}.inverted a{color:#acd1d5}}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k,.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .gt{color:#a00}.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .il{color:#099}.highlight .gc{color:#999;background-color:#EAF2F5}.type-csharp .highlight .k,.type-csharp .highlight .kt{color:#00F}.type-csharp .highlight .nf{color:#000;font-weight:normal}.type-csharp .highlight .nc{color:#2B91AF}.type-csharp .highlight .nn{color:#000}.type-csharp .highlight .s,.type-csharp .highlight .sc{color:#A31515}
+
+</style>
+</head>
+
+  <body class="normal">
+    <div id="wrapper">
+      <h1 id="social-embedding-font-awesome-and-svgs">12 - Social Embedding, Font Awesome and SVGs</h1>
+
+<p>Today we will continue to work on our projects.</p>
+
+<h2 id="review">Review</h2>
+
+<style type="text/css">
+	.white {
+		color:white;
+		border-bottom: 1px solid black;
+	}
+	.white:hover {
+		color:black;
+	}
+</style>
+
+<ol>
+  <li>What is a form tag?
+    <ol>
+      <li><span class="white">A form tag wraps and groups inputs together for a single purpose - signing into a website or editing a profile for example</span></li>
+    </ol>
+  </li>
+  <li>What is an input?
+    <ol>
+      <li><span class="white">An input is an area to collect a single piece of information form the user, many inputs go inside of a form tag</span></li>
+    </ol>
+  </li>
+  <li>name 10 different kinds of inputs and what they are for
+    <ol>
+      <li><span class="white">Check the notes :) </span></li>
+    </ol>
+  </li>
+  <li>What type of input creates a “send” or “login” button?
+    <ol>
+      <li><span class="white">input with a type=”submit”</span></li>
+    </ol>
+  </li>
+  <li>What happens if an older browser encounters a new input, like email?
+    <ol>
+      <li><span class="white">It will fallback to input with a type=”text”</span></li>
+    </ol>
+  </li>
+  <li>What elements are allowed inside of the form tag?
+    <ol>
+      <li><span class="white">Any type of element!</span></li>
+    </ol>
+  </li>
+  <li>For accessibility, what attribute do we use to name our inputs?
+    <ol>
+      <li><span class="white"> for </span></li>
+    </ol>
+  </li>
+  <li>For the previous question, how do we associate one with an input?
+    <ol>
+      <li><span class="white">We set the <code>for</code> attribute to match the inputs <code>name</code> attribute</span></li>
+    </ol>
+  </li>
+  <li>What attribute do we use to set the default text?
+    <ol>
+      <li><span class="white">placeholder</span></li>
+    </ol>
+  </li>
+  <li>What attribute do we use to set a unique identifier for the server side?
+    <ol>
+      <li><span class="white">name</span></li>
+    </ol>
+  </li>
+  <li>What attribute do we use to specify where the form is sent?
+    <ol>
+      <li><span class="white">action - for example if we have a PHP script that sends the email call “sendEmail.php” - we would set it to wherever the path is</span></li>
+    </ol>
+  </li>
+  <li>How do we group checkboxes or radio buttons together?
+    <ol>
+      <li><span class="white">We set the same name value on all of the grouped ones</span></li>
+    </ol>
+  </li>
+  <li>What is the difference between an input and textarea?
+    <ol>
+      <li><span class="white">inputs are for single line inputs and textareas are for multi lines</span></li>
+    </ol>
+  </li>
+  <li>How do we set a checkbox or radio to be selected by default?
+    <ol>
+      <li><span class="white">set the attribute checked=”true”</span></li>
+    </ol>
+  </li>
+  <li>What kind of input is a slider? What attributes can it have?
+    <ol>
+      <li><span class="white">Range, we can set the min, max, value (default value), and step</span></li>
+    </ol>
+  </li>
+  <li>What element do we use to create a dropdown menu? 
+    <ol>
+      <li><span class="white"> select tag</span></li>
+    </ol>
+  </li>
+  <li>What elements do we use within the above element?
+    <ol>
+      <li><span class="white"> option tags</span></li>
+    </ol>
+  </li>
+  <li>Name 10 different attributes that inputs or forms can use
+    <ol>
+      <li><span class="white">autocomplete, autocapitalize, autocorrect, name, type, for, class, action, method, placeholder, required, checked, value, min, max, step</span></li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="working-with-embeddable-media">Working with embeddable media</h2>
+
+<p>Its quite common to embed some sort of (social) media into your website - it can take your website to the next level without having to code any of our own serverside langs or JavaScript.</p>
+
+<p>Most social networking sites have something called an <strong>API</strong> or <strong>Application Programming Interface</strong> that allows you to access their site’s info (tweets, likes, usernames, pictures…) problematically. Lets go through a few of the popular sites and learn how to embed.</p>
+
+<h3 id="twitter">Twitter</h3>
+<p>There are two different kinds of embedding we can do with twitter: <strong>widgets</strong> and <strong>buttons</strong> </p>
+
+<h3 id="tweet-buttons">Tweet Buttons</h3>
+<p>Similar to the widget, we can have tweet buttons on our site. You don’t need to sign in for this one, so go on over to <a href="https://twitter.com/about/resources/buttons">https://twitter.com/about/resources/buttons</a></p>
+
+<p>You can choose any type of button that you like - tweet, follow, hashtag or mention.</p>
+
+<p>There are a few options here. We can set the share URL if we want the URL to be shared to be another page than we want to embed it on. So if we want to share “MyWebsite.com” when we are on “MyWebsite.com/about.html” we would set it here. Otherwise let it go automatically.</p>
+
+<p>I recommend filling out the Text tweet to something like “Check out my @thisishackeryou site”.</p>
+
+<p>The Via is a way to give props to the site you got it from. So globe and mail might set their twitter shares to VIA @globeandmail</p>
+
+<p>The <strong>recommended</strong> is kind of a neat way to get more followers. When one is finished tweeting a link from your website, it can suggest people to follow.</p>
+
+<p>The Hash tag is pretty straightforward.</p>
+
+<p>Additionally you can set a large button and opt out of tailoring.</p>
+
+<p>Finally we are done and get a chunk of code that looks like this:</p>
+
+<pre><code>&lt;a href="https://twitter.com/share" class="twitter-share-button" data-via="drewisthe"&gt;Tweet&lt;/a&gt;
+&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");&lt;/script&gt;
+</code></pre>
+
+<p>There are two parts here and as a best practice, we are going to separate them. The reason we do this is because sometimes we might want multiple tweet buttons on a page. For example a blog might have 10 posts on a page, each with a tweet button.</p>
+
+<p>From your experience in HTML, you can probably pick out which line is the HTML link. <strong>Put this line where you want the tweet button to appear</strong></p>
+
+<p>The other line is the javascript that turns your normal link into a tweet button. <strong>Put this line just before your closing <code>&lt;/body&gt;</code> tag</strong>. This will make sure that we only load the JavaScript once, regardless of how many buttons we have on our page.</p>
+
+<h4 id="widgets">Widgets</h4>
+<p>A twitter widget allows you to embed your tweet stream into your webpage. To get started, simply log into twitter and visit <a href="https://twitter.com/settings/widgets">https://twitter.com/settings/widgets</a> and click ‘create new’.</p>
+
+<p>Fill out the settings based on what you require. The tricky part / downside here is that you have to specify the domain name that you will be running it on. If you don’t know the URL right now, then you’ll have to go back and edit your widget once completed.</p>
+
+<p>Note: Because JavaScript needs to run in a server environment, and not just by viewing  plain <code>.html</code> files, we won’t be able to see the widget when working locally. There are local servers that you can get running. If you are interested in getting this working, there is a great plugin for sublime called <code>SimpleServer</code> that will let you do this.</p>
+
+<p>Once you have completed it, you’ll have two lines of code that look something like this:</p>
+
+<pre><code>&lt;a class="twitter-timeline" href="https://twitter.com/drewisthe" data-widget-id="525301621924691968"&gt;Tweets by @drewisthe&lt;/a&gt;
+&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");&lt;/script&gt;
+</code></pre>
+
+<p>Paste this wherever you wish to have your twitter box and you are off to the races. <strong>Note that if you already have a twitter button, you dont need the second line</strong>. The Javascript will already be embedded into your page and you will simply just need the first HTML line!</p>
+
+<p>Since twitter uses an element called an <code>&lt;iframe&gt;</code>. An iframe is basically a way of framing other websites into your own website. You are able to see all that websites content, but we don’t have access to it via CSS. </p>
+
+<h3 id="facebook">Facebook</h3>
+
+<p>Facebook is very similar to twitter in process. There is a little snippet of JavaScript that we add to our page as well as some HTML to embed the widget/like button.</p>
+
+<p>Head on over to <a href="http://developers.facebook.com/docs/reference/plugins/like/">http://developers.facebook.com/docs/reference/plugins/like/</a> and fill out the required information.</p>
+
+<p>This is the page for the <strong>like button</strong>:</p>
+
+<p><img src="http://wes.io/W2Pp/content" alt="" /></p>
+
+<p>If you wish to have a <strong>like box</strong>, then click that in the sidebar.</p>
+
+<p><img src="http://wes.io/W2ED/content" alt="" /></p>
+
+<p>When done, click “Get Code” and a popup will show.</p>
+
+<p><img src="http://wes.io/W2LA/content" alt="" /></p>
+
+<p>The first part is the JavaScript. Facebook suggests we put this right after the opening <code>&lt;body&gt;</code> tag so go ahead and do that.</p>
+
+<p>Then you can put the second snippet of HTML wherever you wish to have the like button.</p>
+
+<h3 id="youtube">Youtube</h3>
+<p>Whew, those last two were tough. Lets do something a lot easier.</p>
+
+<p>To embed a youtube video, simply visit any youtube video URL and click the <strong>share</strong> button under the player.</p>
+
+<p><img src="http://wes.io/KUXr/Screen%20Shot%202012-10-29%20at%2012.07.01%20PM.png" alt="" /></p>
+
+<p>That will open up a pane with a few features, click the <strong>embed</strong> button and it will spit out a chunk of code.</p>
+
+<p>There are a few options you can use here, but otherwise go ahead and paste that code anywhere into your HTML document.</p>
+
+<pre><code>&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/Uc4NvjzdHZ8" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+</code></pre>
+
+<p>Makes:</p>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/Uc4NvjzdHZ8" frameborder="0" allowfullscreen=""></iframe>
+
+<p>If you are a keener, you’ll figure out that you just need to swap the youtube video ID out each time you want to embed a video.</p>
+
+<h3 id="vimeo">Vimeo</h3>
+
+<p>Vimeo is almost exactly the same except there are a few more options allowed.</p>
+
+<p>Vimeo videos all have a distinct url that consists of their video ID. If you are watching a video on vimeo you’ll see that the url looks something like this: <code>http://vimeo.com/31455885</code></p>
+
+<p><code>31455885</code> is the video ID.</p>
+
+<p>To emebed a video, we use the HTML code</p>
+
+<pre><code>&lt;iframe src="http://player.vimeo.com/video/VIDEO_ID" width="WIDTH" height="HEIGHT" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+</code></pre>
+
+<iframe src="http://player.vimeo.com/video/31455885" width="500" height="300" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+<p>Replace VIDEO_ID with the video id and with WIDTH and HEIGHT accordingly.</p>
+
+<p>There are also a number of additional paramters that we can specify. View <a href="http://developer.vimeo.com/player/embedding">http://developer.vimeo.com/player/embedding</a> for all the documentation.</p>
+
+<p>To add a paramater, simply append <code>?</code> onto the end of the URL and then specify the params and value. Here is an example to take the title off the embedded video</p>
+
+<pre><code>&lt;iframe src="http://player.vimeo.com/video/42358247?title=0" width="500" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+</code></pre>
+
+<p>For multiple parameters add an ampersand in between each one</p>
+
+<pre><code>&lt;iframe src="http://player.vimeo.com/video/42358247?title=0&amp;autoplay=1" width="500" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+</code></pre>
+
+<table class="params">
+          <tbody>
+              <tr>
+                  <td class="param">title</td>
+                  <td>Show the title on the video. Defaults to <code>1</code>.</td>
+              </tr>
+              <tr>
+                  <td class="param">byline</td>
+                  <td>Show the user’s byline on the video. Defaults to <code>1</code>.</td>
+              </tr>
+              <tr>
+                  <td class="param">portrait</td>
+                  <td>Show the user’s portrait on the video. Defaults to <code>1</code>.</td>
+              </tr>
+              <tr>
+                  <td class="param">color</td>
+                  <td>Specify the color of the video controls. Defaults to <code>00adef</code>. Make sure that you don’t include the #.</td>
+              </tr>
+              <tr>
+                  <td class="param">autoplay</td>
+                  <td>Play the video automatically on load. Defaults to <code>0</code>. Note that this won’t work on some devices.</td>
+              </tr>
+              <tr>
+                  <td class="param">loop</td>
+                  <td>Play the video again when it reaches the end. Defaults to <code>0</code>.</td>
+              </tr>
+              <tr>
+                  <td class="param">api</td>
+                  <td>Set to <code>1</code> to enable the <a href="/player/js-api">Javascript API</a>.</td>
+              </tr>
+              <tr>
+                  <td class="param">player_id</td>
+                  <td>An unique id for the player that will be passed back with all Javascript API responses.</td>
+              </tr>
+          </tbody>
+      </table>
+
+<h3 id="have-fun-embedding">Have fun embedding!</h3>
+
+<p>Almost all sharing buttons are the same, feel free to embed other sites:</p>
+
+<ul>
+  <li>weather network</li>
+  <li>pinterest</li>
+  <li>soundcloud</li>
+  <li>bandcamp</li>
+</ul>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+
+<h2>
+	<i class="fa fa-spin fa-lg fa-hand-o-right" style="color:#bada55;"></i>
+	Font Awesome
+	<i class="fa fa-twitter" style="color:#55acee;"></i>
+	<i class="fa fa-bomb" style="color:gold;"></i>
+</h2>
+
+<p>Icon fonts are an amazing way to get any number of icons easily into your website. </p>
+
+<p>Rather than downloading an image, and changing the size and colour in photoshop, you can easily embed an icon “font” which will provide you with a set of commonly used icons. From there we can change the size and colour just as they are regular text.</p>
+
+<p><a href="http://fontawesome.io/">http://fontawesome.io/</a> is the most popular, but there are many available. </p>
+
+<p>The way to install font awesome to your site is to download the CSS file and the font files. An even easier way is to use the CDN version, which is all hosted and packaged for us. So just put this in your head:</p>
+
+<pre><code>&lt;link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"&gt;
+</code></pre>
+
+<p>Now to use an icon, we do it in HTML and use the <code>&lt;i&gt;</code> tag. It was previously the italic tag, but we jacked it for icons. </p>
+
+<p>We need to give the i tag <strong>two classes</strong>: fa and fa-whatever-the-icon-name.</p>
+
+<p>For example, to get twitter, we use:</p>
+
+<pre><code>&lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
+</code></pre>
+
+<p><i class="fa fa-twitter"></i></p>
+
+<p>to get a rocket:</p>
+
+<pre><code>&lt;i class="fa fa-rocket"&gt;&lt;/i&gt;
+</code></pre>
+
+<p><i class="fa fa-rocket"></i></p>
+
+<p>For a full list, visit <a href="http://fortawesome.github.io/Font-Awesome/icons/">http://fortawesome.github.io/Font-Awesome/icons/</a></p>
+
+<p>These can go inside links or any other element</p>
+
+<pre><code>&lt;a href="#" class="buyNow"&gt;Buy now! &lt;i class="fa fa-money"&gt;&lt;/i&gt;&lt;/a&gt;
+</code></pre>
+
+<p><a href="#" class="buyNow">Buy now! <i class="fa fa-money"></i></a></p>
+
+<p>and can be styled just like any other element. You can use a parent child selector or give it your own class.</p>
+
+<pre><code>&lt;style&gt;
+	a.buyNow i {
+		color:green;
+		font-size: 50px;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<style>
+	a.buyNow i {
+		color:green;
+		font-size: 50px;
+	}
+</style>
+
+<p>For different sizes without using your own CSS, simply add a class of <code>fa-2x</code> or all the way up to <code>fa-5x</code></p>
+
+<p><i class="fa fa-rebel fa-2x"></i>
+<i class="fa fa-rebel fa-3x"></i>
+<i class="fa fa-rebel fa-4x"></i>
+<i class="fa fa-rebel fa-5x"></i></p>
+
+<pre><code>&lt;i class="fa fa-rebel fa-2x"&gt;&lt;/i&gt;
+&lt;i class="fa fa-rebel fa-3x"&gt;&lt;/i&gt;
+&lt;i class="fa fa-rebel fa-4x"&gt;&lt;/i&gt;
+&lt;i class="fa fa-rebel fa-5x"&gt;&lt;/i&gt;
+</code></pre>
+
+<p>To have spinning icons, simply add a class of <code>fa-spin</code> to any element</p>
+
+<p><i class="fa fa-cog fa-3x fa-spin"></i></p>
+
+<pre><code>&lt;i class="fa fa-cog fa-3x fa-spin"&gt;&lt;/i&gt;
+</code></pre>
+
+<p>To have stacked icons, put a <code>span</code> around the <code>i</code> tags you’d like to use and give it a class of <code>fa-stack</code>. Inside the span, place the icons you’d like to be stacked and size them accordingly.</p>
+
+<p><span class="fa-stack fa-2x">
+	<i class="fa fa-square fa-stack-2x"></i>
+	<i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+</span></p>
+
+<h2 id="svgs">SVGs</h2>
+
+<p>SVG stands for scalable vector graphic. That means you can scale it to any size and it will not become pixelated. You can also change the colour of an SVG without photoshop.</p>
+
+<p>In IE9+ (and everywhere else) SVGs work just like normal images. We can just use it in an image tag:</p>
+
+<pre><code>&lt;img src="http://wes.io/W2cA/hamster.svg"&gt;
+</code></pre>
+
+<p><img src="http://wes.io/W2cA/hamster.svg" /></p>
+
+<p>SVGs are just code at the end of the day, so we can open .svg images in sublime text and change the colour.</p>
+
+<p>When you have it open, you will need to add a new attribute called “fill” and set it to your colour:</p>
+
+<p><img src="http://wes.io/W2TT/content" alt="" /></p>
+
+<p><img src="http://wes.io/W2cn/hammy.svg" alt="" /></p>
+
+<h2 id="today">Today</h2>
+<p>The rest of today’s class will be spent working on our project. </p>
+
+<p>I’ve seen some very creative and ambitious designs so far and I’m looking forward to reviewing them all. Please don’t be afraid to ask how to so something that is outside your comfort zone - thats how you learn the most! If a website has a feature you like, ask us how to replicate it!</p>
+
+
+
+    </div>
+
+
+  </body>
+
+</html>

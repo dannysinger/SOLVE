@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>3 - CSS Selectors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+html,body{color:black}*:not('#mkdbuttons'){margin:0;padding:0}#wrapper{font:15px helvetica,arial,freesans,clean,sans-serif;-webkit-font-smoothing:subpixel-antialiased;line-height:1.7;padding:3px;background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}p{margin:1em 0}a{color:#4183c4;text-decoration:none}#wrapper{background-color:#fff;padding:30px;margin:15px;font-size:15px;line-height:1.6}#wrapper>*:first-child{margin-top:0 !important}#wrapper>*:last-child{margin-bottom:0 !important}@media screen{#wrapper{box-shadow:0 0 0 1px #cacaca, 0 0 0 4px #eee}}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.7;cursor:text;position:relative;margin:1em 0 15px;padding:0}h1{font-size:2.5em;border-bottom:1px solid #ddd}h2{font-size:2em;border-bottom:1px solid #eee}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{color:#777;font-size:1em}p,blockquote,table,pre{margin:15px 0}ul{padding-left:30px}ol{padding-left:30px}ol li ul:first-of-type{margin-top:0px}hr{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:4px;margin:15px 0;padding:0}#wrapper>h2:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child+h2{margin-top:0;padding-top:0}#wrapper>h3:first-child,#wrapper>h4:first-child,#wrapper>h5:first-child,#wrapper>h6:first-child{margin-top:0;padding-top:0}a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p,ul li>:first-child,ol li>:first-child{margin-top:0}dl{padding:0}dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px}dl dt:first-child{padding:0}dl dt>:first-child{margin-top:0}dl dt>:last-child{margin-bottom:0}dl dd{margin:0 0 15px;padding:0 15px}dl dd>:first-child{margin-top:0}dl dd>:last-child{margin-bottom:0}blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{border-collapse:collapse;border-spacing:0;font-size:100%;font:inherit}table th{font-weight:bold;border:1px solid #ccc;padding:6px 13px}table td{border:1px solid #ccc;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;font-family:Consolas, 'Liberation Mono', Courier, monospace;font-size:12px;color:#333}pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent}.highlight pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:14px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px;margin:26px 0}pre code,pre tt{background-color:transparent;border:none}.poetry pre{font-family:Georgia, Garamond, serif !important;font-style:italic;font-size:110% !important;line-height:1.6em;display:block;margin-left:1em}.poetry pre code{font-family:Georgia, Garamond, serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;vertical-align:super;position:relative}sub{vertical-align:sub;top:-1px}@media print{body{background:#fff}img,pre,blockquote,table,figure{page-break-inside:avoid}#wrapper{background:#fff;border:none}code{background-color:#fff;color:#333 !important;padding:0 .2em;border:1px solid #DEDEDE}pre{background:#fff}pre code{background-color:#fff !important;overflow:visible}}@media screen{body.inverted{color:#eee !important;border-color:#555;box-shadow:none}.inverted #wrapper,.inverted hr,.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt,.inverted blockquote{color:#eee !important;border-color:#555;box-shadow:none}.inverted td,.inverted th{background:#333}.inverted pre,.inverted code,.inverted tt{background:#eee !important;color:#111}.inverted h2{border-color:#555555}.inverted hr{border-color:#777;border-width:1px !important}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eeeeee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eeeeee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}.inverted{background:#0b2531;background:#252a2a}.inverted #wrapper{background:#252a2a}.inverted a{color:#acd1d5}}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k,.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .gt{color:#a00}.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .il{color:#099}.highlight .gc{color:#999;background-color:#EAF2F5}.type-csharp .highlight .k,.type-csharp .highlight .kt{color:#00F}.type-csharp .highlight .nf{color:#000;font-weight:normal}.type-csharp .highlight .nc{color:#2B91AF}.type-csharp .highlight .nn{color:#000}.type-csharp .highlight .s,.type-csharp .highlight .sc{color:#A31515}
+
+</style>
+</head>
+
+  <body class="normal">
+    <div id="wrapper">
+      <style>.white {color:white; border-bottom:1px solid black;} .white:hover {color:black;}</style>
+
+<h2 id="this-week">This Week</h2>
+<p>Today we are going to take a deep dive into CSS Selectors. We will have many examples and learn to write our own selectors.</p>
+
+<p>Next class, we will spend the entire class learning and applying properties and values we can use to make our website look the way we want covering floats, widths, heights, colors and more!</p>
+
+<h2 id="first-two-classes-review">First two classes review</h2>
+
+<ol>
+  <li>We Write <em>__</em> to create our website
+    <ul>
+      <li><span class="white">HTML</span></li>
+    </ul>
+  </li>
+  <li>We use <strong>HTML</strong> purely for <strong>__</strong><em>__</em> our content
+    <ul>
+      <li><span class="white">describing</span></li>
+    </ul>
+  </li>
+  <li>We can mark up our content by surrounding it in <span class="white"><strong>tags</strong></span> that make up <span class="white"><strong>html elements</strong></span></li>
+  <li>We use <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags for headings, <code>&lt;p&gt;&lt;/p&gt;</code> for paragraphs as well as many others which you will now tell me what they do:
+    <ol>
+      <li><code>&lt;strong&gt;&lt;/strong&gt;</code></li>
+      <li><code>&lt;em&gt;&lt;/em&gt;</code></li>
+      <li><code>&lt;img src="" alt=""&gt;</code></li>
+      <li>What are the two types of image paths? <span class="white">absolute and relative</span>
+<!-- 1. We use  the `<span></span>` tags to wrap elements and target them with CSS. -->
+<!-- 1. We use `<div></div>` tags to group and organize elements on a page as well as target with styling later on --></li>
+    </ol>
+  </li>
+  <li>What is the difference between spans and divs?
+    <ul>
+      <li><span class="white">divs are block, spans are inline. We generally use divs to group elements together, and spans to target single words</span></li>
+    </ul>
+  </li>
+  <li>We use attributes such as <strong>alt, src and title</strong> to provide additional data to the HTML tag. What do each of these do?</li>
+  <li>Name 3 other attributes
+    <ul>
+      <li><span class="white">href, alt, title, class + many more!</span></li>
+    </ul>
+  </li>
+  <li>We use the <strong>class</strong> and <strong>id</strong> attribute to name our elements and to make them selectable with CSS
+    <ol>
+      <li>What is the difference between a class and an id?
+        <ul>
+          <li><span class="white">ids can only be used once</span></li>
+        </ul>
+      </li>
+      <li>Can an element have multiple classes and ids?
+        <ul>
+          <li><span class="white">Yes multiple classes, no only a single id</span></li>
+        </ul>
+      </li>
+      <li>What can I name my classes and ids?
+        <ul>
+          <li><span class="white">Anything!</span></li>
+        </ul>
+      </li>
+      <li>What is camelcasing?
+        <ul>
+          <li><span class="white">itsWhenYouWriteLikeThis. First letter of every word is capitalized except the very first word.</span></li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>We use <span class="white">CSS</span> to style the look and feel of our website</li>
+  <li>We select elements from <span class="white">html document</span> with CSS Selectors and then write <span class="white">CSS Rules</span> to apply styles to them.</li>
+  <li>CSS rules have a definition made up of 1 or many property and values
+    <ol>
+      <li>A selector can target all elements but just typing the element name:
+ &gt; h3 {color:red; }
+        <ol>
+          <li><img src="http://wes.io/J3WP/diagrams.png" alt="" /></li>
+        </ol>
+      </li>
+      <li>We use <strong>hashes</strong> to select elements with id names.</li>
+      <li>Why do we recommend not using ids?
+        <ul>
+          <li><span class="white">They can only be used once!</span></li>
+        </ul>
+      </li>
+      <li>How would I select a span with the class of warning?</li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="firefox-3d-view">Firefox 3D View</h2>
+<p>Let’s look at css-fun.html in 3D view. This should help you get a better idea as to how and why we nest elements.</p>
+
+<h2 id="code-organization">Code Organization</h2>
+<p>As your website projects get bigger, they can become more difficult to navigate. Because of this, we its helpful to put code organization best practices into place.</p>
+
+<p>We have covered this briefly before, but lets dive in and get some notes on it:</p>
+
+<h3 id="separate-files--folder-structure">Separate Files &amp; Folder Structure</h3>
+<p>In last weeks example, we put the CSS inside <code>&lt;style&gt;</code> tags. This is okay for a single file, but the best practice is to separate it out into its own <code>style.css</code> file. Down the road you may even have 3 or 4 css files that you are working with - print and mobile stylesheets for example.</p>
+
+<p>When the number of files in your project becomes large, its helpful to group similar assets into folders. A nice clean web project that has HTML, CSS, JavaScript, and Images would look like this:</p>
+
+<pre><code>index.html
+about.html
+
+/javascripts/
+  -- scripts.js
+  -- jquery.js
+
+/style/
+  style.css
+  print.css
+  mobile.css
+
+/images/
+  dog.jpg
+  logo.png
+</code></pre>
+
+<h3 id="code-indentation">Code Indentation</h3>
+<p>The last tip of code organization is probably the most important one: code indentation.</p>
+
+<p>As your code grows, it gets more confusing. We already learned that commenting can help this, but keeping the levels of your elements properly indented is just as important and it should soon become second nature.</p>
+
+<p>Which piece of code is easier to read?</p>
+
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html lang="en-US"&gt;
+&lt;head&gt;
+&lt;title&gt;CSS Exercise&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;div class="wrapper"&gt;&lt;div class="header"&gt;
+&lt;h1&gt;My Website&lt;/h1&gt;
+&lt;/div&gt;&lt;div class="nav"&gt;&lt;/div&gt;
+&lt;div class="content"&gt;&lt;/div&gt;
+&lt;div class="footer"&gt;Copyright Hacker You 2012
+&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>OR</p>
+
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html lang="en-US"&gt;
+	&lt;head&gt;
+		&lt;title&gt;CSS Exercise&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div class="wrapper"&gt;
+			&lt;div class="header"&gt;
+				&lt;h1&gt;My Website&lt;/h1&gt;
+				&lt;div class="nav"&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="content"&gt;
+				&lt;!-- Page content goes here --&gt;
+			&lt;/div&gt;
+			&lt;div class="footer"&gt;
+				Copyright Hacker You 2012
+			&lt;/div&gt;
+		&lt;/div&gt;&lt;!-- /.wrapper --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>The second one is longer, but you are able to get an idea for the page structure almost right away. If you are messy with indentation, chances are you end up with extra (or not enough) closing div elements.</p>
+
+<p>Indenting code is easy, just press the tab button in front of your line. Most good text editors (sublime text included) will automatically indent your code as you write it as well as provide shortcuts for indenting large blocks of code.</p>
+
+<h4 id="sublime-text-indentation">Sublime Text Indentation</h4>
+
+<h5 id="pasting-with-proper-indentation">Pasting with proper Indentation</h5>
+
+<hr />
+
+<p>Sometimes you will paste a block of code into a file and the indentation will be all goofed up. Sublime text has something called <strong>paste and indent</strong></p>
+
+<p>Instead of pressing <code>cmd/ctrl</code> + <code>v</code> to paste (cmd + v for mac), press <code>cmd/ctrl</code> + <code>shift</code> + <code>v</code> to paste and indent properly.</p>
+
+<h5 id="indenting-multiple-lines-at-once">Indenting multiple lines at once</h5>
+
+<hr />
+
+<p>Sometimes you will also have to indent several lines at a time. To do this, select all the lines you want and press <code>cmd/ctrl</code> + <code>{</code> to indent all of them at once.</p>
+
+<p>On the flip side, to outdent, we use <code>cmd/ctrl</code> + <code>}</code> to outdent.</p>
+
+<p>The <code>tab</code> and <code>shift</code> + <code>tab</code> keys also work.</p>
+
+<p><strong>cmd⌘ on mac, ctrl on windows</strong></p>
+
+<h5 id="re-indenting-messy-code">Re-indenting Messy Code</h5>
+
+<hr />
+
+<p>Sublime Text also provides a nice way to re-indent your code for you. As long as you have nested all your tags properly, you can select a section of code (HTML or CSS) and re-indent it.</p>
+
+<p>To do this, select your code to re-indent and go to <code>Edit</code> → <code>Line</code> → <code>Reindent</code></p>
+
+<p>Give this a try and open <code>reindent.html</code> in your editor and try to reindent it with Sublime Text.</p>
+
+<h2 id="indenting-css-selectors">Indenting CSS Selectors</h2>
+<p>It is best practice to have each rule on a single line as well as the selector and closing brace.</p>
+
+<p><strong>best:</strong></p>
+
+<pre><code>h2 {
+	color:red;
+	font-size:50px;
+}
+</code></pre>
+
+<p><strong>Also works when tight on space</strong></p>
+
+<pre><code>h2 { color:red; font-size:50px; }
+</code></pre>
+
+<h2 id="sublime-text-settings">Sublime Text Settings</h2>
+<p>Sublime text has hundreds of settings that you can play with to make your editor just the way you like it. Unlike most programs, the editor doesn’t include a GUI (Graphical User Interface) to manage out settings. Since we are becoming coders, we code our settings file!</p>
+
+<p>The settings file is stored in something called <code>JSON</code> which is a portable way to display and transfer data files.  JSON starts with just two curly braces, just like CSS:</p>
+
+<pre><code>{
+
+}
+</code></pre>
+
+<p>In between that, we can add each of our setting names as well as a value:</p>
+
+<pre><code>{
+		"setting 1" : "wes is cool"
+}
+</code></pre>
+
+<p>Your settings file probably looks something like the one below because you have changed your colour scheme</p>
+
+<pre><code>{
+	"color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme"
+}
+</code></pre>
+
+<p>Note how in the above, each side is wrapped in <strong>“double quotes”</strong> — Very important as most settings need this. The exception is when you are using numbers:</p>
+
+<pre><code>{
+		"font_size" : 16
+}
+</code></pre>
+
+<p>Or something called a boolean, which means true or false</p>
+
+<pre><code>{
+		"highlight_modified_tabs": true
+}
+</code></pre>
+
+<h3 id="multiple-settings-at-once">Multiple Settings at once</h3>
+
+<p>Chances are you will want to use more than 1 setting, and if you have already changed your colour scheme, you should already see something in your settings file.</p>
+
+<p>Multiple settings are comma delimited:</p>
+
+<pre><code>{
+		"highlight_modified_tabs": true,
+		"font_size" : 16,
+		"bold_folder_labels" : true
+}
+</code></pre>
+
+<p><strong>Note how the last line doesn’t have a comma? This is very important!</strong></p>
+
+<p>If you put a trailing comma on your last line, it will break.</p>
+
+<h3 id="opening-your-settings-file">Opening your settings file</h3>
+<p>To open your own settings file, go to  <code>Preferences</code> (Under <code>Sublime Text</code> for Mac users) → <code>Settings - User</code></p>
+
+<p>This will open a blank settings file. You may have a few settings already in there if you have changed your colour scheme already.</p>
+
+<p>Here is a list of settings you will probably enjoy. Feel free to modify or delete them as you wish:</p>
+
+<pre><code>{
+  "bold_folder_labels": true,
+  "caret_style": "solid",
+  "color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme",
+  "theme": "Cobalt2.sublime-theme",
+  "highlight_line": true,
+  "highlight_modified_tabs": true,
+  "indent_guide_options":
+  [
+    "draw_normal",
+    "draw_active"
+  ],
+  "line_padding_bottom": 1,
+  "line_padding_top": 1,
+  "match_brackets": true,
+  "match_brackets_angle": true,
+  "match_brackets_braces": true,
+  "match_brackets_content": true,
+  "match_brackets_square": true,
+  "open_files_in_new_window": false,
+  "scroll_past_end": true,
+  "wide_caret": true,
+  "word_wrap": true
+}
+</code></pre>
+
+<p><strong>If you change “theme”, You will need to restart sublime text after you save this settings file as you are changing the skin of sublime</strong></p>
+
+<p>A full list of available setting defaults is available at <code>Preferences</code> → <code>Settings - Default</code> (Do not change these, simply restate them in your own file).</p>
+
+<h3 id="css-3-ways">CSS: 3 ways</h3>
+<p>There are three ways to write CSS and include it in your HTML document.</p>
+
+<p><strong>1. External Stylesheet</strong>
+This is by far the most common use case. You create a new file in your folder and name it whatever you want. I like to use <strong>style.css</strong>. We then write all of our CSS inside of this file and then use a <code>&lt;link rel="stylesheet" href=""&gt;</code> tag to embed it into our <strong>HTML Head</strong>. This method is great because we often have multiple pages that need the same styles.</p>
+
+<p><strong>2. Inside of style tags</strong>
+This is the method we are using so far because it allows us to write our CSS and HTML in the same page. When writing CSS inside of HTML, you must put your CSS inside of <strong>Style tags</strong> like so:</p>
+
+<pre><code>&lt;style type="text/css"&gt;
+	h2 {
+		color:red;
+		font-size:50px;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<p>This tells the browser that you are no longer writing HTML and everything inside of the tags is CSS.</p>
+
+<p><strong>3. Inline Styles</strong>
+Inline styles are when you pass the CSS styles in as an attribute for the HTML tag. These are rarely useful but situations where you may use them will sometimes crop up.</p>
+
+<pre><code>&lt;h2 style="color:red; font-size:50px;"&gt;Hello, I'm a header with inline styles&lt;/h2&gt;
+</code></pre>
+
+<p>The downside to this is that you can only use those styles on that element and would have to copy/paste if you wanted those styles elsewhere. Not very good code reuse.</p>
+
+<h2 id="writing-your-own-css-selectors">Writing your own CSS Selectors!</h2>
+
+<p>Once you get the hang of changing some existing CSS, its time to learn how to write our own CSS Selectors.</p>
+
+<p><strong>Remember that we use selectors to specify which elements on the page have the style applied to it</strong></p>
+
+<h3 id="basic-elements">Basic Elements</h3>
+<p>The most basic of CSS selectors is to select all of a type of element on a page. This is very helpful when you are setting some default styles for the website. Remember that these styles are applied to <strong>all</strong> matches.</p>
+
+<p><strong>Select Headings (can be used with h1 to h6)</strong></p>
+
+<pre><code>HTML:
+&lt;h2&gt;Welcome to our website&lt;/h2&gt;
+
+CSS:
+h2 {
+	font-size:22px;
+}
+</code></pre>
+
+<p><strong>Select all paragraphs and tweak the typography</strong></p>
+
+<pre><code>HTML:
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&lt;/p&gt;
+
+CSS:
+p {
+	line-height:25px;
+	font-family:arial;
+}
+</code></pre>
+
+<p><strong>Select all unordered lists and indent them</strong></p>
+
+<pre><code>HTML:
+&lt;ul&gt;
+	&lt;li&gt;Bread&lt;/li&gt;
+	&lt;li&gt;Eggs&lt;/li&gt;
+	&lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+
+CSS:
+ul {
+	margin-left:20px;
+}
+</code></pre>
+
+<p><strong>We get it!</strong> The selector for any element, is just that element without the open <code>&lt;</code> and close <code>&gt;</code></p>
+
+<p><code>&lt;strong&gt;...&lt;/strong&gt;</code> → <code>strong { ... }</code></p>
+
+<p><code>&lt;div&gt;..&lt;/div&gt;</code> → ` div { … }`</p>
+
+<p><code>&lt;blockquote&gt;Some quote&lt;/blockquote&gt;</code> →<code>blockquote { ... }</code></p>
+
+<h3 id="getting-more-specific-with-css-selectors">Getting more specific with CSS Selectors</h3>
+<p>The above is great, but what if we do not want to apply a style to every h2 element on the page? What if one of them is a different size, font or colour than the rest?</p>
+
+<p>To do this, we need to get a little more specific with our selectors to only pick the elements we do want. Remember <strong>attributes</strong>? We will be using the <strong>class</strong> and <strong>id</strong> attributes here.</p>
+
+<p>Lets say we have three paragraphs, yet only want one of them to have a yellow background. Our normal rule of <code>p { background:yellow; }</code> wouldn’t work here because it would turn them all yellow.</p>
+
+<pre><code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&lt;/p&gt;
+&lt;p&gt;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;
+&lt;p&gt;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;/p&gt;
+</code></pre>
+
+<h3 id="appending-a-class">Appending a class</h3>
+<p>What we need to do is append a <strong>class</strong> to the one we want to select like so:</p>
+
+<pre><code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&lt;/p&gt;
+&lt;p class="special"&gt;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;
+&lt;p&gt;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;/p&gt;
+</code></pre>
+
+<p>And then with our CSS, we can write a new selector. We use the <code>.</code> period to denote the <strong>class</strong> attribute</p>
+
+<pre><code>/* Turns any paragraph with the class of special yellow */
+p.special {
+	background:yellow;
+}
+</code></pre>
+
+<p><em>***Note: you may also sometimes see elements with an <strong>ID</strong> instead of a class such as <code>&lt;p id="special"&gt;...&lt;/p&gt;</code>. IDs are just like classes, but they can <strong>only be used once</strong> per page. As a best practice, we won’t be using IDs in this class, however, if you run into them in the wild, simple substitute the <code>.</code> period for the <code>#</code> hash like so:</em></p>
+
+<pre><code>/* Turns the only paragraph with the id of special yellow */
+p#special {
+	background:yellow;
+}
+</code></pre>
+
+<h4 id="example--small-exercise">Example &amp; Small Exercise</h4>
+
+<p>Open up <code>css-class-selector.html</code> in your files to see this live.</p>
+
+<ol>
+  <li>Can you change all p tags to have <code>font-size</code> of <code>20px</code> ?</li>
+  <li>Can you add a new class and write a new CSS rule to turn the last one blue?</li>
+  <li>Turn all paragraphs with the class of warning red</li>
+  <li>Can you write a single rule that targets both special and warning and change the font colour?</li>
+</ol>
+
+<h3 id="multiple-classes">Multiple Classes</h3>
+<p>Sometimes you’ll see items with multiple classes and want to select some of the elements based on a mixed. Take this markup for example:</p>
+
+<pre><code>&lt;ul&gt;
+	&lt;li class="food human"&gt;Bread&lt;/li&gt;
+	&lt;li class="liquid human"&gt;Milk&lt;/li&gt;
+	&lt;li class="food pet"&gt;Cat Nip&lt;/li&gt;
+	&lt;li class="food human"&gt;Eggs&lt;/li&gt;
+	&lt;li class="liquid human"&gt;Soda Pop&lt;/li&gt;
+	&lt;li class="food pet"&gt;Dog Food&lt;/li&gt;
+	&lt;li class="liquid pet"&gt;Beer for Dogs&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>Let’s select only the items that are both <strong>liquid</strong> and <strong>human</strong></p>
+
+<p>We simply just append another <code>.</code> period to the end of out selector for the second class:</p>
+
+<pre><code>li.liquid.human {
+	background: lightblue;
+}
+</code></pre>
+
+<p>Open <code>css-multi-class-selector.html</code> to see this in action!</p>
+
+<h4 id="multiple-selector-exercise">Multiple Selector Exercise</h4>
+
+<ol>
+  <li>Write a rule to change the font size for all food for humans</li>
+  <li>Write a rule to change all pet foods red</li>
+  <li>Write a rule to change all liquids for pets to orange background</li>
+</ol>
+
+<p>Once you have had some time to work on them, We will review the questions and answer together.</p>
+
+<h3 id="css-inheritance">CSS Inheritance</h3>
+<p>You may have noticed in our first CSS exercise <code>css-fun.html</code> that I applied a bunch of generic style to the <code>body</code> selector. Why is this?</p>
+
+<p>Well, there are certain styles that get passed down from the parent to the children. If we want all text on the page to be <code>lightgrey</code>, then we only have to specify it once and it will be applied to all children of it.</p>
+
+<p><em>So when we do this, We don’t have to go through every other element and set the font size to 14 and color to lightgrey.</em></p>
+
+<pre><code>body {
+	font-size:14px;
+	color:lightgrey;
+}
+</code></pre>
+
+<p>Not every style is inherited, only the useful ones and they almost all refer to typography and fonts.</p>
+
+<h3 id="parent-child-selectors">Parent Child Selectors</h3>
+<p>Another way to target the elements you want is to use parent child selectors.</p>
+
+<p>It’s not always the case, nor does it make sense, for us to go through our code and add a special class to every single element we want to select. Sometimes its just as easy to first select the parent and then narrow in on the children.</p>
+
+<p>Let’s say we have two lists on a page:</p>
+
+<pre><code>&lt;ul class="groceries"&gt;
+	&lt;li&gt;Milk&lt;/li&gt;
+	&lt;li&gt;Eggs (on sale at &lt;a href="#"&gt;No Frills&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;Bread&lt;/li&gt;
+	&lt;li&gt;Red Bull (Please print this &lt;a href="#"&gt;Coupon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="sports"&gt;
+	&lt;li&gt;Soccer&lt;/li&gt;
+	&lt;li&gt;Basketball&lt;/li&gt;
+	&lt;li&gt;Hockey&lt;/li&gt;
+	&lt;li&gt;Irish Bog Snorkeling (read more &lt;a href="#"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>We want to change the colour of the links only in the first list.</p>
+
+<p><strong>We can’t just use <code>a {  }</code> because that will select every link on the page!</strong></p>
+
+<p>So we use a parent child selector:</p>
+
+<p>ul.groceries a {
+	color: green;
+}</p>
+
+<p>This parent/child selector selects only the <code>a</code> elements within <code>ul</code> with the class of <code>groceries</code>.</p>
+
+<p>These selectors can be as long as you wish, however always try and take the shortest route when creating parent/child selectors. For this same example, we could have written <code>ul.groceries li a</code> which adds the step to make sure the <code>a</code> has a parent of <code>li</code>.</p>
+
+<h3 id="css-specificity">CSS Specificity</h3>
+
+<p>What happens when you write two rules for a single element? Which one gets picked?</p>
+
+<p>The short answer is the most recent or the most specific one. The long answer is that CSS calculates a specificity value based on how we write the selector.</p>
+
+<p>So If I write a selector for all paragraphs :</p>
+
+<pre><code>p {
+	color:blue;
+}
+</code></pre>
+
+<p>and then another targeting just warnings:</p>
+
+<pre><code>p.warnings {
+	color:red;
+}
+</code></pre>
+
+<p>Since the second one is more specific, it colours the paragraph red rather than the generic blue.</p>
+
+<h4 id="dual-rules">Dual Rules</h4>
+<p>What about the following:</p>
+
+<pre><code>p {
+	color:red;
+}
+
+p {
+	color:purple;
+}
+</code></pre>
+
+<p>The second one will overwrite the first one for the color because it comes later in the document.</p>
+
+<h4 id="more-specific-selectors">More Specific Selectors</h4>
+<pre><code>.wrapper p {
+	color:green;
+}
+
+p {
+	color:red;
+}
+</code></pre>
+
+<p>Now which one wins this battle? Its the first one. Even though the <code>p</code> rule comes second, since the first one is more specific, it wins.</p>
+
+<p>There are complicated ways to calculate which element takes precedent over another, but as a rule of thumb you should always code your defaults first, and then get target the more specific elements as you go on in your CSS document.</p>
+
+<pre><code>/* make all p tags 14px font */
+p {
+	font-size:14px;
+}
+/* Now target just the p tags in the sidebar */
+.sidebar p {
+	font-size:12px;
+}
+/* Finally, we target just a few sentences inside a twitter widget */
+.sidebar .twitterWidget p {
+	font-size:10px;
+}
+</code></pre>
+
+<h3 id="pseudo-selectors">Pseudo Selectors</h3>
+<p>The final type of selector we will be learning today is the Pseudo selector. These selectors are appended right after the main selector with a colon. There are four main pseudo selectors:</p>
+
+<ol>
+  <li>:hover - used to style an element when the user hovers over it. <code>a:hover { color: red;} /* Change links red when hovered */ </code></li>
+  <li>:visited - used to style an element when the user has already visited that link. <code>a:visited { color: purple;} /* Change links purple when visited */ </code></li>
+  <li>:active - used to style an element when the user . <code>a:active { text-decoration: underline;} /* Change links underline when selected */ </code></li>
+  <li>:focus - used to style an element when in focus <code>input.email:focus { border:1px solid red; } /* change border to red when focused */</code></li>
+</ol>
+
+<p>With CSS3, we have access to a whole new slew of pseudo elements. These don’t work in all older browsers, but you will be using them in the very near future.</p>
+
+<p>Chris Coyier has an excellent article detailing all of the current and upcoming pseudo selectors. <a href="http://css-tricks.com/pseudo-class-selectors/">http://css-tricks.com/pseudo-class-selectors/</a></p>
+
+<p><code>:nth-child(n)</code> and <code>:nth-of-type()</code> are two extremely useful ones. Let’s use the website <a href="http://nth-test.com/">http://nth-test.com/</a> and our own code to wrap out heads around it now.</p>
+
+<p><img src="http://wes.io/J4aY/relationalpseudos2.png" alt="" /></p>
+
+<h2 id="selector-exercises">Selector Exercises</h2>
+
+<p>In order to get amazing with CSS, you need selector chops! The only way to get good at writing selectors is to practice.</p>
+
+<p>Since we aren’t familiar with all of the available styles, I’ve included them for you, you just need to write the selectors.</p>
+
+<p>Open up <code>css-selector-exercises.html</code> in both your browser and editor and replace <code>____</code> with your own selectors. You’ll need to study the markup for a bit before. If you get stuck feel free to reference the notes, ask a mentor, help eachother and reference sites you find on Google.</p>
+
+<p>There is also an answer key provided, open it in your browser to view what it should look like.</p>
+
+<p><img src="http://wes.io/J6Kh/Screen%20Shot%202012-08-29%20at%203.54.25%20PM.png" alt="Final Product" /></p>
+
+<h2 id="challenge">Challenge!</h2>
+
+<p>Feeling hungry for more? In today’s exercises, there is a file named <code>css-challenge-selectors.html</code> that will really test your selector knowledge. We haven’t covered everything in the document yet, but I encourage you use Google and other resources to figure out the problems. As always, an answer key is provided so you know what you are shooting for.</p>
+
+
+
+    </div>
+
+
+  </body>
+
+</html>
