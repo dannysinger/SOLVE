@@ -6,28 +6,32 @@
     <title>About Me</title>
     
 <style>
-    
+
+/*Some basic commands instead of normalize*/
  *{
      border:1px solid black;
-     font-size:1em;
+     f`ont-size:1em;
      padding:0;
  }
+/*html{Min Height 100%} #stack, #mobile*/
 html{
     min-height:100%;
 }
+/*body margin 0, fontstuff, height 100% #stack, #mobile*/
 body{
     margin:0;
     font-family:helvetica neue;
     font-weight:300;
     height:100%;
 }
+/*Pad up the contents of .content, center the .content*/
 .content-centered{
     margin:0 auto;
     padding: 0 0.938rem;
     /*box-sizing*/
     background-color:red;
 }
-/*For Background Stretch*/
+/*For backgroud-color to fill vertically, #stack, #mobile*/
 .content-centered{
     position:absolute;
     top:0;
@@ -36,7 +40,7 @@ body{
     right:0;
     overflow:hidden;
 }
-    h1{
+    .Hi, .Danny{
         text-align:center;
     }
     li{
@@ -54,25 +58,23 @@ body{
 section{
     background-color:bisque;
 }
-    </style>
-    <script src="jQuery.min.js"></script>
-    <script>
-        
+
+</style>
+<script src="jQuery.min.js"></script>   
+<script>       
 $(document).ready(function() {
     $("li").on("click", function() {
     $(this).next("section").slideToggle("fast")
     });
-});
-        
-    </script>
+}); 
+</script>
 </head>
 <body>
-       
           <div class="content-centered">
              
-             <h1>Hi I'm</h1>
+             <h1 class = "Hi">Hi I'm</h1>
              
-             <h1>Danny!</h1>
+             <h1 class = "Danny">Danny!</h1>
 
               <ul><li>Where I'm From</li>
             
