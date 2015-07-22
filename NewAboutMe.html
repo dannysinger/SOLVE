@@ -41,25 +41,26 @@ header{
     right:0;
     overflow:hidden;
 }
-    .Hi{ 
+   /* .Hi{ 
         font-size:1.2em;
         margin-top:4em;
         margin-bottom:0;
-        color:firebrick;
-        text-shadow:3px 2px 2px aliceblue;
-    }
+        z-index:0;
+    }*/
     .Hi, .Danny, .Web{
         text-align:center;
     }
     .Danny{ 
-        margin-top:0;
+        margin-top:3em;
         margin-bottom:0;
         color:aliceblue;
-        font-size:3em;
+        font-size:2em;
         text-shadow:0px 2px 0px dodgerblue;
     }
     .Web{ 
-        color:white;
+        color:darkorange;
+        font-size:1.3em;
+        text-shadow:0px 2px 0px firebrick;
     }
     li{
         display:block;
@@ -68,15 +69,17 @@ header{
         max-width:100%;
         border-radius:5%;
         cursor:pointer;
+        margin-top:0.2em;
     }
     ul{
         margin-top:1.5em;
     }
-    .From, .Hobbies, .Music, .Life{
+    /*.From, .Hobbies, .Music, .Life, .Dream{
         display:none;
-    }
+    }*/
 section{
     background-color:bisque;
+    display:none;
 }
 
 </style>
@@ -95,34 +98,41 @@ $(document).ready(function() {
          
         <div class="content-centered">
              
-            <h1 class = "Hi">I'm</h1>
+            <!--<h1 class = "Hi">I'm</h1>-->
              
-            <h1 class = "Danny">Danny!</h1>
+            <h1 class = "Danny">Danny Singer</h1>
             
             <h1 class = "Web"> Web Developer</h1>
-            
+        </div> 
     </header>
 
-              <ul><li>Where I'm From</li>
+              <ul><li>About me</li>
             
-             <section class = "From">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non recusandae, a nisi molestias, quo culpa. Officia tempore delectus, obcaecati odio molestias sunt maxime alias, laborum doloremque esse optio beatae amet!</section>
+             <section class = "About"><div class="content-centered">I'm Danny Singer - <b>passionate</b> about developing your web presence! I use the latest advances in web technology to develop functional, beautiful and mobile-friendly web sites.  </div>
+            </section>
               
-               <li>Hobbies</li> 
+               <li>Approach</li> 
                
-               <section class = "Hobbies">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quidem, enim impedit! Ea veritatis mollitia, dolore ullam et quas commodi aliquid fugit tenetur voluptatem asperiores consequatur eius blanditiis veniam nulla.</section>
+                  <section class = "Approach"><div class="content-centered">Good comminication with my clients is the cornerstone of my philosophy. We will work together to create a blueprint of your needs and desires so that you get <b>exactly</b> what you need.</div></section>
                
-               <li>Music</li> 
+               <li>From</li> 
                
-               <section class="Music">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quo voluptatibus cum, unde veniam qui. Adipisci error, ab officia vitae quisquam corporis eaque maxime eligendi iste maiores minima, reiciendis, rerum!</section>
+               <section class="From"><div class="content-centered">I was born and raised in diverse and cosmopolitan Toronto, Ontario. Toronto is known world-wide for being a melting pot of many diverse cultures and creeds, and I have always been profoundly inspired by that.</div></section>
                
-               <li>Life</li>
+               <li>Likes</li>
                
-               <section class="Life">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, magnam illo, commodi itaque porro inventore molestias rem voluptatibus iure, quam tenetur id perferendis, neque explicabo. Impedit similique obcaecati necessitatibus beatae.
+               <section class="Likes"><div class="content-centered">Call me a nerd, but I love coding in my spare time. I also love music and anything with a good beat. Dancing and moving the body are great ways that I love to de-stress.</div> 
                </section>
+               
+              <!-- <li>Dream</li>
+               
+               <section class="Dream">
+                My dream is to start a non-profit web-based platform that is specifically designed to connect people all across the world while helping to spread knowledge of human beings' similarity and potential for co-operation. 
+               </section>-->
+               
                
                </ul>
               
-          </div>
           
 </body>
 </html>
