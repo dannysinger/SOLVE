@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Me</title>
-    
 <style>
 
 /*Some basic commands instead of normalize*/
  *{
-     border:1px solid black;
-     f`ont-size:1em;
+     /*border:1px solid black;*/
+     font-size:1em;
      padding:0;
  }
 /*html{Min Height 100%} #stack, #mobile*/
@@ -24,33 +23,54 @@ body{
     font-weight:300;
     height:100%;
 }
+header{ 
+    background-image: url(images/Danny.jpg);
+    background-size: 100%;
+}
 /*Pad up the contents of .content, center the .content*/
 .content-centered{
     margin:0 auto;
     padding: 0 0.938rem;
     /*box-sizing*/
-    background-color:red;
 }
 /*For backgroud-color to fill vertically, #stack, #mobile*/
 .content-centered{
-    position:absolute;
     top:0;
     bottom:0;
     left:0;
     right:0;
     overflow:hidden;
 }
-    .Hi, .Danny{
+    .Hi{ 
+        font-size:1.2em;
+        margin-top:4em;
+        margin-bottom:0;
+        color:firebrick;
+        text-shadow:3px 2px 2px aliceblue;
+    }
+    .Hi, .Danny, .Web{
         text-align:center;
+    }
+    .Danny{ 
+        margin-top:0;
+        margin-bottom:0;
+        color:aliceblue;
+        font-size:3em;
+        text-shadow:0px 2px 0px dodgerblue;
+    }
+    .Web{ 
+        color:white;
     }
     li{
         display:block;
         text-align:center;
         margin: 0 auto;
         max-width:100%;
+        border-radius:5%;
+        cursor:pointer;
     }
     ul{
-        margin-top:3em;
+        margin-top:1.5em;
     }
     .From, .Hobbies, .Music, .Life{
         display:none;
@@ -70,11 +90,18 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-          <div class="content-centered">
+
+    <header>
+         
+        <div class="content-centered">
              
-             <h1 class = "Hi">Hi I'm</h1>
+            <h1 class = "Hi">I'm</h1>
              
-             <h1 class = "Danny">Danny!</h1>
+            <h1 class = "Danny">Danny!</h1>
+            
+            <h1 class = "Web"> Web Developer</h1>
+            
+    </header>
 
               <ul><li>Where I'm From</li>
             

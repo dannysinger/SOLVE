@@ -1,0 +1,34 @@
+FONT AWESOME 
+
+- "Scalable Vector" 
+
+    - "fontawesome.github.io/Font-Awesome/"
+
+        -  Zip File - "/CSS" , "/Fonts" 
+    
+            - /CSS
+    
+                - Minified, Original versions
+        
+        - Add "Fonts" folder, copy in data. 
+        
+<       
+link href="
+//maxcdn.bootstrapcdn.com/
+font-awesome/4.2.0/css/
+font-awesome.min.css" 
+rel="stylesheet"
+> 
+
+FAVICON
+
+Create a 16x16 image. If you want transparency, use the PNG or GIF format.
+Convert your image to .ico format using a free service such as favicon.cc.
+Upload the new icon to http://www.yourdomain.com/favicon.ico . 
+
+<link rel="shortcut icon" href="/images/specialicon.ico" type="image/x-icon" />
+
+For finer control, use the code above to specify favicons on a page-by-page basis.
+
+
+
