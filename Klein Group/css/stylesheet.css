@@ -1,0 +1,105 @@
+/*-----League Gothic Regular----*/
+
+@font-face{
+    font-family:"Leaguecon"; 
+    src:url("../fonts/leaguegothic-condensed-regular-webfont.woff") format("woff");
+}
+@font-face{
+    font-family:"League";
+    src:url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
+}
+/*----------------------HTML5 support for older browsers
+        ----------*/
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+div{
+    border:1px solid white;
+}
+/*------------------------Mobile First
+                        ----------------*/
+body{
+    margin: 0; 
+    -webkit-font-smoothing:antialiased !important; 
+    background-color:red;
+}
+/*------------------------Generic info-box
+                        --------------------*/
+
+.generic-info-box{
+    padding:0 7% 0;
+}
+
+/*----------------------Body elements
+                    ---------------------*/
+
+/*-------------------Logo & Mobile Menu----------------*/
+.generic-info-box .top-logo-menu-container{
+    height:4em;
+    margin-bottom:2em;
+}    
+.generic-info-box .top-logo-box{
+    float:left;
+    height:inherit;
+    width:25%;
+}
+.generic-info-box .mobile-menu-icon{
+    float:right;
+    height:inherit;
+    width:10%;
+}
+header{
+    background-color:blue;
+}
+header h1{ 
+    font-family:League;
+    font-size:2em;
+    font-weight:100;
+    letter-spacing:0.03em;
+    line-height:0.25em;
+    color:white;
+    text-align:right;
+}
+header h2/*Should This be a <p>? Re: SEO */{
+    color:white;
+    font-family:helvetica;
+    text-align:right;
+    font-size:1em;
+    line-height:1.5em;
+    font-weight:400;
+}
+/*------------------- Commercial, Residential and Project Boxes
+                        -------------------------------------------*/
+section .generic-info-box{
+    height:10em; 
+    margin:5% 5% 5%;
+}
+
+section .generic-info-box .pic-box{
+    margin:0;
+    top:0;
+    height:50%;
+    vertical-align:top; 
+    line-height:1;
+}
+
+/*---------------------Footer Sections 
+                                    ---------------------*/
+
+.footer-nav, .logos, .social{
+    list-style:none;
+    text-decoration:none;
+    text-align:center;
+    margin:0; 
+    padding:0;
+}
+    
+.footer-nav>li, .logos>li, .social>li{
+    display:inline-block;
+}
+footer p{
+    text-align:center;
+}
+    
+
+

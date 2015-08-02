@@ -1,3 +1,23 @@
+*NORMALIZE* - Sets all browsers standardly! 
+   
+   - Box-sizing: webkit moz etc. 
+   
+        - CSS quirk: The content extends beyond the wrapper and doesn't know            how big it actually is... 
+        
+                - Solve with .wrapper{ overflow:hidden } 
+                
+                    -This works great but the downside is that you often don’t                      want to hide the overflow of something because you want to                      overlap or extend elements outside the wrapper. (HackerYou                      5 - floats and typography).
+    
+FLOATS
+
+FONTAWESOME // Line 47
+
+FAVICON // Line 69
+
+TREEHOUSE // RESPONSIVE // Line 79
+
+CODESCHOOL // RESPONSIVE // Line 119
+
 derekfogge [12:15 PM] 
 forced memorization is a waste of energy imo. you can never know everything and prioritizing what to memorize vs always look up is impossible.
 
@@ -56,6 +76,46 @@ Upload the new icon to http://www.yourdomain.com/favicon.ico .
 
 For finer control, use the code above to specify favicons on a page-by-page basis.
 
+TREEHOUSE / RESPONSIVE
+
+- Stylesheets standardized for elements accross multiple pages of a site
+- Main CSS file built for smallest format
+
+    - Next File built with media queries for larger and larger devices. 
+    - @media screen and (min-width: ...) { } 
+    
+    - Set a background color to activate. 
+    
+    - Interesting to see how they've done it with standard 320, 480, 660. 
+    
+    - Seems like to correctly judge this shit you would need to have some sort 
+    of eye for design. 
+    
+    - Floating left, and then right avoids unexpected browser issues as opposed 
+    to left then subsequent left. 
+    
+    - Using margins as %s and widths, thinking in general in terms of %s. 
+    
+    - Large decimal #s are common in advanced responsive. 
+    
+    - There is a nice <li> picture gallery project for Treehouse html
+    
+        - They have a nice way of clearING: left every :nth-child(4);
+        
+    - On profile page, all you need to do is float picture to left and add some     margin.
+    
+        - Added an 80px just in case text wrapped around the bottom (Four 
+        values NESW, Three values (top horiz bottom), (vert horiz)
+        
+    - // MENU Location // Floated right on desk, center on mobile
+    
+    - 5pixel border
+    
+    - VIEWPORT METATAG
+    
+    - // Note final breakpoint: 660 ///
+    
+
 CODESCHOOL / RESPONSIVE
 
 - FLUID LAYOUTS - ADAPTIVE DESIGN - RESPONSIVE DESIGN  -
@@ -68,7 +128,30 @@ CODESCHOOL / RESPONSIVE
             
             - Basically The em multiplies whatever you set the percentage                     (default font-size) to by whatever (Specific Target) it is. - 
             
-                - This "percentage" or "context" is whatever is in the parent                   (Even if the parent is relative to the body it starts a chain)
+                - This "percentage" or "context" is whatever is in the parent                   (Even if the parent is relative to the body it starts a chain).
+                
+- FLUID LAYOUTS (WOW!)
+    
+        - FLUID GRID: A series of evenly spaced (same size) COLUMNS accross the         page (Like a Greek Structure). 
+        
+        - PERCENTAGE WIDTHS, for example, on a sidebar are RELATIVE TO THE             PARENT. 
+        
+        - WOW @ setting percentages for margin, padding and everything!
+        
+             - Note in example it's a thing with a lot of text and the text                 doesn't actually change size...
+             
+        - WHEN TO SET BREAKPOINTS
+        
+            - When things get to crammed
+            - When menu's get too skinny
+            - WHITE SPACE!!! 
+            - Float >>> Stack
+        
+        - What does LINE-HEIGHT do??? Codrops!!!!
+            - But apparently context for line-height is font-size. 
+            
+
+
 
 
 
