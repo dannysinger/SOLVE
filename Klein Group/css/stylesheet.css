@@ -25,9 +25,19 @@ body{
 }
 /*------------------------Generic info-box
                         --------------------*/
-
-.generic-info-box{
+header> .generic-info-box{
     padding:0 7% 0;
+}
+section .generic-info-box{
+    height:15em; 
+    margin:5% auto;
+    width:90%;
+    background-color:yellow;
+}
+footer .generic info-box:nth-child(2){
+    padding:0 7% 0;
+    max-width:100%;
+    height:3em;
 }
 
 /*----------------------Body elements
@@ -70,17 +80,34 @@ header h2/*Should This be a <p>? Re: SEO */{
 }
 /*------------------- Commercial, Residential and Project Boxes
                         -------------------------------------------*/
-section .generic-info-box{
-    height:10em; 
-    margin:5% 5% 5%;
-}
+
 
 section .generic-info-box .pic-box{
-    margin:0;
-    top:0;
     height:50%;
-    vertical-align:top; 
-    line-height:1;
+    width:100%; 
+    position:relative;
+    background-color:green;
+}
+.pic-box .heading-and-logo-container{ 
+    height:36%;
+    width:100%;
+    bottom:0;
+    left:0;
+    position:absolute;
+    background-color:magenta;
+}
+.heading-and-logo-container .logo-left-corner{
+    height:100%;
+    width:10%; 
+    position:relative;
+    background-color:bisque;
+}
+
+/*------------------Slider CSS
+                            ---------------------*/ 
+.slider{
+    height:15em;
+    background-color:turquoise;
 }
 
 /*---------------------Footer Sections 
@@ -93,13 +120,70 @@ section .generic-info-box .pic-box{
     margin:0; 
     padding:0;
 }
-    
+
+/*------------------Footer NavBar
+                        -----------------------------*/
+
 .footer-nav>li, .logos>li, .social>li{
     display:inline-block;
 }
-footer p{
+.footer-nav>li{
+    margin-right:0.3em;
+    font-size:0.7em;
+}
+
+/*----------------Logos
+                    ----------------------*/
+.logos{ 
+    padding:0 7% 0;
+}
+.logos li{
+    width:33.3333%; 
+    text-align:left; 
+    float:left;
+    height:1.5em;
+    overflow:hidden;
+}
+.logos img{
+    width:80%; 
+    height:auto; 
+    padding:5% 0;
+}
+.logos2 img{
+    height:1.5em;
+    padding:0;
+}
+.logos3{ 
+    height:1.5em;
+    width:120%;
+}
+.logos3 p{ 
+    font-size:0.6em;
+    margin:0;
+}
+/*.logos li:nth-child(3){
+    position:relative;*/
+
+/*.logos3{
+    position:absolute;
+    top:0;
+}*/
+
+footer>p{
     text-align:center;
 }
-    
 
+
+/*-------------------Clearfix
+                    ----------------*/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
