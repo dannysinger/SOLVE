@@ -16,7 +16,7 @@ header, section, footer, aside, nav, main, article, figure {
 div{
     border:1px solid white;
 }
-/*------------------------Mobile First
+/*------------------------General Considerations
                         ----------------*/
 body{
     margin: 0; 
@@ -30,8 +30,8 @@ header> .generic-info-box{
 }
 section .generic-info-box{
     height:15em; 
-    margin:5% auto;
-    width:90%;
+    margin:7% auto;
+    width:86%;
     background-color:yellow;
 }
 footer .generic info-box:nth-child(2){
@@ -53,10 +53,34 @@ footer .generic info-box:nth-child(2){
     height:inherit;
     width:25%;
 }
+.top-logo-box>.fa-building{ 
+    font-size:2em;
+    color:white;
+    text-align:center;
+    display:block;
+    margin:7px auto;
+}
+.top-logo-box h3{
+    display:block;
+    color:white;
+    font-family:League;
+    font-size:1em;
+    font-weight:100;
+    text-align:center;
+    margin:0;
+}
 .generic-info-box .mobile-menu-icon{
     float:right;
     height:inherit;
     width:10%;
+}
+.mobile-menu-icon .fa-bars{
+    font-size:1.6em;
+    font-weight:bolder;
+    color:white;
+    text-align:center;
+    display:block;
+    margin-top:5px;
 }
 header{
     background-color:blue;
@@ -102,6 +126,12 @@ section .generic-info-box .pic-box{
     position:relative;
     background-color:bisque;
 }
+section .logo-left-corner .fa-building{ 
+    font-size:1.5em;
+    text-align:center;
+    display:block;
+    margin:9px auto;
+}
 
 /*------------------Slider CSS
                             ---------------------*/ 
@@ -110,10 +140,38 @@ section .generic-info-box .pic-box{
     background-color:turquoise;
 }
 
+/*-----------------Get in touch & Form Section
+                        -----------------------*/
+.get-in-touch{
+    background-color:pink;
+    height:15em;
+}
+.get-in-touch>.generic-info-box{
+    margin:0 auto;
+}
+.generic-info-box>.contact-heading{ 
+    font-family:League;
+    font-size:1.8em;
+    font-weight:100;
+    letter-spacing:0.03em;
+    line-height:0.25em;
+    text-transform:uppercase;
+    text-align:center;
+}
+.get-in-touch>.generic-info-box>p{
+    text-align:center;
+}
+.message-form{
+    background-color:green;
+    height:15em;
+}
+
+
+
 /*---------------------Footer Sections 
                                     ---------------------*/
 
-.footer-nav, .logos, .social{
+.footer-nav, .logos-container, .social{
     list-style:none;
     text-decoration:none;
     text-align:center;
@@ -134,32 +192,40 @@ section .generic-info-box .pic-box{
 
 /*----------------Logos
                     ----------------------*/
-.logos{ 
+.logos-container{ 
     padding:0 7% 0;
+    height:1.5em;
 }
-.logos li{
+.logos-container li{
     width:33.3333%; 
-    text-align:left; 
     float:left;
     height:1.5em;
     overflow:hidden;
 }
-.logos img{
+.logos-container img{
     width:80%; 
-    height:auto; 
-    padding:5% 0;
+    height:14px; 
+    padding:5px 0;
+    margin:0 auto;
 }
-.logos2 img{
+.logo1box img{
+    width:71px;
+}
+
+.logo2box img{
     height:1.5em;
+    width:71px;
     padding:0;
 }
-.logos3{ 
+.logo3box{ 
     height:1.5em;
     width:120%;
+    margin-top:2%;
 }
-.logos3 p{ 
+.logo3box p{ 
     font-size:0.6em;
     margin:0;
+    text-align:left;
 }
 /*.logos li:nth-child(3){
     position:relative;*/
