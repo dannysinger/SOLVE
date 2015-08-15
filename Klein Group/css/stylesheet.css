@@ -29,16 +29,38 @@ header> .generic-info-box{
     padding:0 7% 0;
 }
 section .generic-info-box{
-    height:15em; 
+    height:15em;
     margin:7% auto;
     width:86%;
     background-color:yellow;
+}
+
+@media screen and (min-width:448px){
+    section .generic-info-box{
+        height:20em;
+    }
+    section .logo-left-corner .fa-building{ 
+        margin:15px auto !important;
+    }
+}
+@media screen and (min-width:660px){ 
+    section .generic-info-box{
+        height:24em;
+        width:90%;
+        margin:5% auto;
+    }
+    section .logo-left-corner .fa-building{
+        margin:12px auto !important;
+        font-size:2em !important;
+    }
 }
 footer .generic info-box:nth-child(2){
     padding:0 7% 0;
     max-width:100%;
     height:3em;
 }
+
+
 
 /*----------------------Body elements
                     ---------------------*/
@@ -94,6 +116,12 @@ header h1{
     color:white;
     text-align:right;
 }
+@media screen and (min-width:660px){
+    header h1{
+        font-size:3.5em;
+    }
+}
+    
 header h2/*Should This be a <p>? Re: SEO */{
     color:white;
     font-family:helvetica;
@@ -101,6 +129,11 @@ header h2/*Should This be a <p>? Re: SEO */{
     font-size:1em;
     line-height:1.5em;
     font-weight:400;
+}
+@media screen and (min-width:660px){
+    header h2{
+        font-size:1.5em;
+    }
 }
 /*------------------- Commercial, Residential and Project Boxes
                         -------------------------------------------*/
