@@ -23,6 +23,13 @@ body{
     -webkit-font-smoothing:antialiased !important; 
     background-color:red;
 }
+
+.down-sort-div{
+    float:right;
+    height:inherit;
+    width:8%;
+    display:inline;
+}
 /*------------------------Generic info-box
                         --------------------*/
 header> .generic-info-box{
@@ -69,8 +76,26 @@ footer .generic info-box:nth-child(2){
 .generic-info-box .top-logo-menu-container{
     height:4em;
     margin-bottom:2em;
-}    
-.generic-info-box .top-logo-box{
+}
+@media screen and (min-width:448px){
+    .generic-info-box .top-logo-menu-container{
+        height:5em;
+        margin-bottom:2.5em;
+    }
+}
+@media screen and (min-width:660px){ 
+    .generic-info-box .top-logo-menu-container{
+        height:6em;
+        margin-bottom:3em;
+    }
+    .top-logo-box>.fa-building{
+        font-size:3em !important;    
+    }
+    .top-logo-box h3{
+        font-size:1.5em !important;
+    }
+}
+.top-logo-menu-container .top-logo-box{
     float:left;
     height:inherit;
     width:25%;
@@ -91,12 +116,12 @@ footer .generic info-box:nth-child(2){
     text-align:center;
     margin:0;
 }
-.generic-info-box .mobile-menu-icon{
+.generic-info-box .mobile-menu-box{
     float:right;
     height:inherit;
     width:10%;
 }
-.mobile-menu-icon .fa-bars{
+.mobile-menu-box .fa-bars{
     font-size:1.6em;
     font-weight:bolder;
     color:white;
@@ -173,6 +198,15 @@ section .logo-left-corner .fa-building{
     text-align:center;
     display:block;
     margin:9px auto;
+}
+.heading-and-logo-container h2{
+    position:absolute;
+    top:0;
+    margin:0 12% 0;
+    font-family:league;
+    font-size:8vw;
+    font-weight:100;
+    letter-spacing:0.06em;
 }
 
 /*------------------Slider CSS
