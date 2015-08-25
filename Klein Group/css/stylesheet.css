@@ -1,4 +1,4 @@
-/*-----League Gothic Regular----*/
+
 
 @font-face{
     font-family:"Leaguecon"; 
@@ -8,30 +8,38 @@
     font-family:"League";
     src:url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
 }
-/*----------------------HTML5 support for older browsers
-        ----------*/
+
+/*-------*/
+/*<HTML5>*/
 header, section, footer, aside, nav, main, article, figure {
     display: block;
 }
-div{
-    border:1px solid white;
-}
-/*------------------------General Considerations
-                        ----------------*/
+/*</HTML5>*/ div{ border:1px solid white;}
+
+/*<------->*/
+/*<GENERAL>*/
+/*<------->*/
+
 body{
     margin: 0; 
     -webkit-font-smoothing:antialiased !important; 
     background-color:red;
 }
-
 .down-sort-div{
     float:right;
     height:inherit;
     width:8%;
     display:inline;
 }
-/*------------------------Generic info-box
-                        --------------------*/
+
+/*</------->*/
+/*</GENERAL>*/
+/*</------->*/
+
+/*----------------------*/
+/*<DIV.generic-info-box>*/
+/*----------------------*/
+
 header> .generic-info-box{
     padding:0 7% 0;
 }
@@ -42,72 +50,74 @@ section .generic-info-box{
     background-color:yellow;
 }
 
+    /*<@DIV.generic-info-box>*/
 @media screen and (min-width:448px){
     section .generic-info-box{
         height:20em;
-    }
-    section .logo-left-corner .fa-building{ 
-        margin:15px auto !important;
-    }
-}
+    }/*----*/section .logo-left-corner .fa-building{ 
+        /*----*/margin:15px auto !important;}}
 @media screen and (min-width:660px){ 
     section .generic-info-box{
         height:24em;
         width:90%;
         margin:5% auto;
-    }
-    section .logo-left-corner .fa-building{
-        margin:12px auto !important;
-        font-size:2em !important;
-    }
-}
+    }/*----*/section .logo-left-corner .fa-building{
+        /*----*/margin:12px auto !important;
+        /*----*/font-size:2em !important;}}
+    /*</@*>*/
+
 footer .generic info-box:nth-child(2){
     padding:0 7% 0;
     max-width:100%;
     height:3em;
 }
+/*-----------------------*/
+/*</DIV.generic-info-box>*/
+/*-----------------------*/
 
+/*------*/
+/*<Body>*/
+/*------*/
 
+/*Logo & Mobile Menu (fa-bars)*/
 
-/*----------------------Body elements
-                    ---------------------*/
-
-/*-------------------Logo & Mobile Menu----------------*/
 .generic-info-box .top-logo-menu-container{
     height:4em;
     margin-bottom:2em;
 }
+
+    /*<@DIV.top-logo-menu-container>*/
 @media screen and (min-width:448px){
     .generic-info-box .top-logo-menu-container{
         height:5em;
-        margin-bottom:2.5em;
-    }
-}
+        margin-bottom:2.5em;}}
 @media screen and (min-width:660px){ 
     .generic-info-box .top-logo-menu-container{
         height:6em;
-        margin-bottom:3em;
-    }
-    .top-logo-box>.fa-building{
-        font-size:3em !important;    
-    }
-    .top-logo-box h3{
-        font-size:1.5em !important;
-    }
-}
-.top-logo-menu-container .top-logo-box{
+        margin-bottom:3em;}
+    /*----*/.top-left-corner-logo-box>.fa-building{
+        /*----*/font-size:3em !important;}
+    /*----*//*----*/.top-left-corner-logo-box h3{
+        /*----*//*----*/font-size:1.5em !important;}}
+    /*</@DIV.top-logo-menu-container>*/
+
+
+/*<DIV.top-logo-menu-container>*/
+.top-logo-menu-container .top-left-corner-logo-box{
     float:left;
     height:inherit;
     width:25%;
 }
-.top-logo-box>.fa-building{ 
+    /*<DIV.top-left-corner-logo-box>*/
+.top-left-corner-logo-box>.fa-building{ 
     font-size:2em;
     color:white;
     text-align:center;
     display:block;
     margin:7px auto;
 }
-.top-logo-box h3{
+        /*<h3>*/
+.top-left-corner-logo-box h3{
     display:block;
     color:white;
     font-family:League;
