@@ -14,7 +14,7 @@
 header, section, footer, aside, nav, main, article, figure {
     display: block;
 }
-/*</HTML5>*/ div{ border:1px solid white;}
+/*</HTML5>*/ div{ border:1px solid lightgrey;}
 
 /*<------->*/
 /*<GENERAL>*/
@@ -23,7 +23,7 @@ header, section, footer, aside, nav, main, article, figure {
 body{
     margin: 0; 
     -webkit-font-smoothing:antialiased !important; 
-    background-color:red;
+    background-color:white;
 }
 .down-sort-div{
     float:right;
@@ -31,6 +31,7 @@ body{
     width:8%;
     display:inline;
 }
+
 
 /*</------->*/
 /*</GENERAL>*/
@@ -46,7 +47,7 @@ header .generic-info-box{
 section .generic-info-box{
     height:15em;
     margin:7% auto;
-    width:86%;
+    width:90.78125%;
     background-color:yellow;
 }
 
@@ -54,16 +55,13 @@ section .generic-info-box{
 @media screen and (min-width:448px){
     section .generic-info-box{
         height:20em;
-    }/*----*/section .logo-left-corner .fa-building{ 
-        /*----*/margin:15px auto !important;}}
-@media screen and (min-width:660px){ 
+    }
+@media screen and (min-width:640px){ 
     section .generic-info-box{
         height:24em;
         width:90%;
         margin:5% auto;
-    }/*----*/section .logo-left-corner .fa-building{
-        /*----*/margin:12px auto !important;
-        /*----*/font-size:2em !important;}}
+    }}
     /*</@*>*/
 
 footer .generic info-box:nth-child(2){
@@ -88,6 +86,9 @@ footer .generic info-box:nth-child(2){
 }
 .top-logo-menu-container>.top-left-corner-logo-box{
     position:relative; /*to accomodate .down-sort-div*/
+    background:
+        url("../images/KGPSDlayer_103.png");
+    background-size:93%;
 }
 
     /*<@DIV.top-logo-menu-container>*/
@@ -95,14 +96,12 @@ footer .generic info-box:nth-child(2){
     .generic-info-box .top-logo-menu-container{
         height:5em;
         margin-bottom:2.5em;}}
-@media screen and (min-width:660px){ 
+@media screen and (min-width:640px){ 
     .generic-info-box .top-logo-menu-container{
         height:6em;
         margin-bottom:3em;}
-    /*----*/.top-left-corner-logo-box>.fa-building{
-        /*----*/font-size:3em !important;}
-    /*----*//*----*/.top-left-corner-logo-box h3{
-        /*----*//*----*/font-size:1.5em !important;}}
+    /*----*/.top-left-corner-logo-box h3{
+        /*----*/font-size:1.5em !important;}}
     /*</@DIV.top-logo-menu-container>*/
 
 
@@ -112,15 +111,7 @@ footer .generic info-box:nth-child(2){
     height:inherit;
     width:25%;
     position:relative;
-}
-/*<DIV.top-logo-menu-container>*/
-    /*<DIV.top-left-corner-logo-box>*/
-.top-left-corner-logo-box>.fa-building{ 
-    font-size:2em;
-    color:white;
-    text-align:center;
-    display:block;
-    margin:7px auto;
+    margin-left:1.30208333333%;
 }
 /*<DIV.top-logo-menu-container>*/
     /*<DIV.top-left-corner-logo-box>*/
@@ -141,6 +132,7 @@ footer .generic info-box:nth-child(2){
     position:absolute;
     top:0;
     right:0;
+    padding-right:0.5em;
     width:12%;
 }
 .down-sort-div>.fa-sort-desc{
@@ -153,6 +145,7 @@ footer .generic info-box:nth-child(2){
     float:right;
     height:inherit;
     width:10%;
+    padding-right:1.30208333333%;
 }
 /*<DIV.top-logo-menu-container>*/
     /*<DIV.mobile-menu-box>*/
@@ -161,7 +154,7 @@ footer .generic info-box:nth-child(2){
     font-size:1.6em;
     font-weight:bolder;
     color:white;
-    text-align:center;
+    text-align:right;
     display:block;
     margin-top:5px;
 }
@@ -169,7 +162,16 @@ footer .generic info-box:nth-child(2){
 /*Header Itself*/
 
 header{
-    background-color:blue;
+    background:url("../images/KGPSDlayer_046.png");
+    background-position:bottom right;
+  background:
+    linear-gradient(purple 0%, black 90%), 
+    linear-gradient(to right, green 0%, yellow 80%),
+    url("../images/KGPSDlayer_046.png")30px,
+    url("../images/KGPSDlayer_046.png")20px;
+  background-position:bottom right;
+  background-blend-mode: screen, difference, lighten;
+    
 }
 header h1{ 
     font-family:League;
@@ -185,7 +187,7 @@ header h1{
 @media screen and (min-width:448px){
     header h1{
         font-size:2.5em;}}
-@media screen and (min-width:660px){
+@media screen and (min-width:640px){
     header h1{
         font-size:3.5em;}}
     /*</@HEADER h1>*/
@@ -202,7 +204,7 @@ header h2/*Should This be a <p>? Re: SEO */{
 @media screen and (min-width:448px){
     header h2{
         font-size:1.3em;}}
-@media screen and (min-width:660px){
+@media screen and (min-width:640px){
     header h2{
         font-size:1.5em;}}
     /*</@HEADER h2>*/
@@ -237,19 +239,21 @@ header h2/*Should This be a <p>? Re: SEO */{
     height:100%;
     width:10%; 
     position:relative;
-    background-color:bisque;
+    background:url("../images/KGPSDlayer_027.png");
+    background-size:cover;
+    background-position:-2px 0;
 }
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
         /*<DIV.heading-and-logo-container>*/
             /*<DIV.logo-left-corner>*/
                 /*<I.fa-building>*/
-.logo-left-corner .fa-building{ 
+/*.logo-left-corner .fa-building{ 
     font-size:1.5em;
     text-align:center;
     display:block;
     margin:9px auto;
-}
+}*/
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
         /*<DIV.heading-and-logo-container>*/

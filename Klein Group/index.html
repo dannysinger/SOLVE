@@ -10,7 +10,6 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/<htm></htm>l5.js"></script>
 <![endif]-->
 </head>
-
   
   
   <body>
@@ -26,10 +25,7 @@
             <!---->
                 <!----> 
                 <div class="top-left-corner-logo-box">
-                    <i class="fa fa-building"></i> 
-                    <h3>
-                        KEVIN GROUP 
-                    </h3>
+        
                     <!---->
                 <!---->
                     <!---->
@@ -72,7 +68,7 @@
             <div class="pic-box">
                  <div class="heading-and-logo-container">
                      <div class="logo-left-corner">
-                         <i class="fa fa-building"></i>
+                         <!--<i class="fa fa-building"></i>-->
                      </div>
                      <h2>KEVIN GROUP COMMERCIAL</h2>
                  </div>    
@@ -89,7 +85,7 @@
              <div class="pic-box">
                   <div class="heading-and-logo-container">
                       <div class="logo-left-corner">
-                          <i class="fa fa-building"></i>
+                          <!--<i class="fa fa-building"></i>-->
                       </div>
                       <h2>KEVIN GROUP RESIDENTIAL</h2>
                   </div>
@@ -106,7 +102,7 @@
             <div class="pic-box">
                 <div class="heading-and-logo-container">
                     <div class="logo-left-corner">
-                        <i class="fa fa-building"></i>
+                        <!--<i class="fa fa-building"></i>-->
                     </div>
                     <h2>KEVIN GROUP PROJECT MARKETING</h2>
                 </div>
@@ -209,3 +205,24 @@
 
 </body>
 </html>
+
+
+<!-- GIMP Python script
+
+img = gimp.image_list()[0]  # retrieves a reference to the image
+
+folder = "/Users/Danny1/Desktop/KGPSD" # folder of you choice for saving the files
+counter = 0
+def save_recurse(item):
+    global counter 
+    if hasattr(item, "layers"):
+        for layer in reversed(item.layers):
+            save_recurse(layer)
+    else:
+        counter += 1
+        name = folder + "layer_%03d.png" % counter
+        pdb.gimp_file_save(img, item, name, name)
+
+
+save_recurse(img)
+-->
