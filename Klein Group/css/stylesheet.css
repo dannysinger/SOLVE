@@ -1,4 +1,4 @@
-
+/*The code is structured with a kind of "honeycomb" model meaning that certain sections and DIVs with certain classes are repeated throughout at different parts with different or "split" functions relating to the degree that they share a class but not to the degree that they contain different info (figure out a better way to explain this) --- As opposed to a one after the other thing*/
 
 @font-face{
     font-family:"Leaguecon"; 
@@ -31,25 +31,24 @@ header{
     /*1.30208333333%*/
 }
 
-
-/*</------->*/
-/*</GENERAL>*/
-/*</------->*/
-
 /*----------------------*/
-/*<DIV.generic-info-box>*/
+/*<SECTION.header>
+    <DIV.generic-info-box>*/
 /*----------------------*/
 
 header .generic-info-box{
     padding:0 7% 0;
 }
+/*----------------------*/
+/*<section (residential, commerical, project)>
+    <DIV.generic-info-box>*/
+/*----------------------*/
 section .generic-info-box{
     height:15em;
     margin:7% auto;
     width:90.78125%;/*This is actually for 640*/
     background-color:yellow;
 }
-
     /*<@DIV.generic-info-box>*/
 @media screen and (min-width:448px){
     section .generic-info-box{
@@ -60,6 +59,8 @@ section .generic-info-box{
         height:33.75em;
         width:90.78125%;
         margin:5% auto;}
+/*-----------------------------------*/
+    /*<@DIV.tile-shadow>*/
     section .tile-shadow{
         height:25em;
         width:85%;
@@ -78,8 +79,10 @@ section .generic-info-box{
         margin-right:auto;
         left:0;
         right:0;}}
-    /*</@*>*/
-
+/*----------------------*/
+/*<footer>
+    <DIV.generic-info-box>*/
+/*----------------------*/
 footer .generic info-box:nth-child(2){
     padding:0 7% 0;
     max-width:100%;
@@ -96,7 +99,7 @@ footer .generic info-box:nth-child(2){
 
 /*Logo & Mobile Menu (fa-bars)*/
 
-.generic-info-box .top-logo-menu-container{/*This must be first*/
+.generic-info-box .top-logo-menu-container{
     height:4em;
     margin-bottom:2em;
 }
@@ -106,6 +109,7 @@ footer .generic info-box:nth-child(2){
         url("../images/KGPSDlayer_103.png");
     background-size:93%;
     /*Are we talking 640 now?*/
+    /*And how about this "background-image" technique?*/
 }
 
     /*<@DIV.top-logo-menu-container>*/
@@ -154,7 +158,7 @@ footer .generic info-box:nth-child(2){
     width:12%;
     float:right;
      height:inherit;
-    display:inline;
+    display:inline;/*why*/
 }
 .down-sort-div>.fa-sort-desc{
     margin-top:4em;
@@ -182,7 +186,7 @@ footer .generic info-box:nth-child(2){
 
 /*Header Itself*/
 
-header{
+header{ /*GRADIENT EFFECT*/
     background:url("../images/KGPSDlayer_046.png");
     background-position:bottom right;
   background:
@@ -192,7 +196,7 @@ header{
     url("../images/KGPSDlayer_046.png")20px;
   background-position:bottom right;
   background-blend-mode: screen, difference, lighten;
-    
+    /*GRADIENT EFFECT*/
 }
 header h1{ 
     font-family:League;
@@ -235,10 +239,10 @@ header h2/*Should This be a <p>? Re: SEO */{
 
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
-.generic-info-box .pic-box{
+.generic-info-box .pic-box{ /*The top half*/
     height:50%;
     width:100%; 
-    position:relative;
+    position:relative; /*why*/
     background-color:green;
 }
 /*<DIV.generic-info.box>*/
@@ -247,6 +251,7 @@ header h2/*Should This be a <p>? Re: SEO */{
 .pic-box .heading-and-logo-container{ 
     height:36%;
     width:100%;
+    /*Again here we have the poorly understood (by me) Commands on absolutely positioned elements*/
     bottom:0;
     left:0;
     position:absolute;
