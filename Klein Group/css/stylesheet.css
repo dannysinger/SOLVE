@@ -61,7 +61,7 @@ section .generic-info-box{
         margin:5% auto;}
 /*-----------------------------------*/
     /*<@DIV.tile-shadow>*/
-    section .tile-shadow{
+   /* section .tile-shadow{
         height:25em;
         width:85%;
         margin-top:-26em;
@@ -78,7 +78,7 @@ section .generic-info-box{
         margin-left:auto;
         margin-right:auto;
         left:0;
-        right:0;}}
+        right:0;}}*/
 /*----------------------*/
 /*<footer>
     <DIV.generic-info-box>*/
@@ -151,9 +151,11 @@ footer .generic info-box:nth-child(2){
     /*<DIV.top-left-corner-logo-box>*/
         /*<DIV.down-sort-div>*/
 .top-left-corner-logo-box>.down-sort-div{
+    /*I can't visualize this abs pos*/
     position:absolute;
     top:0;
     right:0;
+     /*I can't visualize this abs pos*/
     padding-right:0.5em;
     width:12%;
     float:right;
@@ -161,6 +163,7 @@ footer .generic info-box:nth-child(2){
     display:inline;/*why*/
 }
 .down-sort-div>.fa-sort-desc{
+    /*pushing against the top*/
     margin-top:4em;
     color:white;
 }
