@@ -317,7 +317,7 @@ header h2/*Should This be a <p>? Re: SEO */{
                         -----------------------*/
 .get-in-touch{
     background-color:pink;
-    height:15em;
+    height:20.5em;
 }
 .get-in-touch>.generic-info-box{
     margin:0 auto;
@@ -342,8 +342,8 @@ header h2/*Should This be a <p>? Re: SEO */{
 }
 
 SECTION.message-form{
-    background-color:green;
-    height:15em;
+    background-color:coral;
+    height:38.888em;
 }
 
 
