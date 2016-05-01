@@ -296,6 +296,15 @@ header h2/*Should This be a <p>? Re: SEO */{
     font-weight:100;
     letter-spacing:0.06em;
 }
+.project .heading-and-logo-container h2{
+    position:relative;
+    top:-76px;
+    margin:-20px 11% 0;
+    font-family:league;
+    font-size:7.5vw;
+    font-weight:100;
+    letter-spacing:0.06em;
+    }
 
 /*------------------Slider CSS
                             ---------------------*/ 
