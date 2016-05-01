@@ -290,7 +290,7 @@ header h2/*Should This be a <p>? Re: SEO */{
 .heading-and-logo-container h2{
     position:absolute;
     top:0;
-    margin:0 12% 0;
+    margin:18px 12% 0;
     font-family:league;
     font-size:7.5vw;
     font-weight:100;
