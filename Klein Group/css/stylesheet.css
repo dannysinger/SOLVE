@@ -309,7 +309,7 @@ header h2/*Should This be a <p>? Re: SEO */{
 /*------------------Slider CSS
                             ---------------------*/ 
 .slider{
-    height:15em;
+    height:30em;
     background-color:turquoise;
 }
 
@@ -390,7 +390,7 @@ SECTION.message-form{
     /*<ul.logos-container>*/
 .logos-container{ 
     padding:0 7% 0;
-    height:1.5em;
+    height:1.75em;
 }
 .logos-container li{
     width:33.3333%; 
@@ -406,11 +406,13 @@ SECTION.message-form{
 .logos-container img{
     width:80%; 
     height:14px; 
-    padding:5px 0;
+    padding:5px 0; /*Redundancies!!!!!*/
     margin:0 auto;
 }
 .logo1box img{
-    width:71px;
+    width:142px;
+    height:28px;
+    margin:-12px auto;
 }
 
 .logo2box img{
@@ -435,6 +437,10 @@ SECTION.message-form{
 footer>p{
     text-align:center;
 }
+.footer-nav{
+    font-family:"verdana";
+    font-size:larger;
+    }
 
 /*-------------------Clearfix
                     ----------------*/
