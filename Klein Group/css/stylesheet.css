@@ -411,13 +411,13 @@ SECTION.message-form{
 }
 .logo1box img{
     width:142px;
-    height:28px;
+    height:31px;
     margin:-12px auto;
 }
 
 .logo2box img{
     height:1.5em;
-    width:71px;
+    width:91px;
     padding:0;
 }
 /*<DIV.generic-info-box>*/
@@ -431,6 +431,7 @@ SECTION.message-form{
 }
 .logo3box p{ 
     font-size:0.6em;
+    font-weight:bolder;
     margin:0;
     text-align:left;
 }
