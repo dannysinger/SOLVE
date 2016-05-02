@@ -371,6 +371,9 @@ SECTION.message-form{
 /*<ul.social>*/
 /*---------------*/
 
+nav.generic-info-box{
+    margin: 1.938em auto;
+}
 
 .footer-nav>li, .logos-container>li, .social>li{
     display:inline-block;
