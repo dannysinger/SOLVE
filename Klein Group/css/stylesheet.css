@@ -358,6 +358,10 @@ SECTION.message-form{
     margin:0; 
     padding:0;
 }
+footer p{
+    font-family:"verdana";
+    font-size:10px;
+    }
 
 /*------------------<FOOTER> NavBar
                         -----------------------------*/
@@ -386,7 +390,14 @@ nav.generic-info-box{
     margin-right:0.3em;
     font-size:0.7em;
 }
-
+.social{
+    font-size:2.5em;
+    margin:1em auto;
+    }
+.social i{
+    margin-left:0.75em;
+    margin-right:0.75em;
+    }
 /*----------------<FOOTER> Logos
                     ----------------------*/
 /*<DIV.generic-info-box>*/
@@ -433,8 +444,8 @@ nav.generic-info-box{
     margin-top:2%;
 }
 .logo3box p{ 
-    font-size:0.6em;
-    font-weight:bolder;
+    font-size:0.5em;
+    font-weight:100;
     margin:0;
     text-align:left;
 }
