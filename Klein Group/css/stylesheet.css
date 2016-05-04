@@ -341,10 +341,15 @@ header h2/*Should This be a <p>? Re: SEO */{
     text-align:center;
 }
 
-SECTION.message-form{
-    background-color:coral;
+section.message-form{
+    background-color:lightgoldenrodyellow;
     height:38.888em;
 }
+.message-form div.generic-info-box input{
+    width: 30em;
+    margin: 0 auto;
+    display:block;
+    }
 
 
 
@@ -393,6 +398,7 @@ nav.generic-info-box{
 .social{
     font-size:2.5em;
     margin:1em auto;
+    color:#777a7e;
     }
 .social i{
     margin-left:0.75em;
@@ -451,10 +457,12 @@ nav.generic-info-box{
 }
 footer>p{
     text-align:center;
+    color:#777a7e;
 }
 .footer-nav{
     font-family:"verdana";
     font-size:larger;
+    color:#777a7e;
     }
 
 /*-------------------Clearfix
