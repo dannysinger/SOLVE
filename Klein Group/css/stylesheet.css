@@ -1,3 +1,4 @@
+/*The code is structured with a kind of "honeycomb" model meaning that certain sections and DIVs with certain classes are repeated throughout at different parts with different or "split" functions relating to the degree that they share a class but not to the degree that they contain different info (figure out a better way to explain this) --- As opposed to a one after the other thing*/
 
 @font-face{
     font-family:"Leaguecon"; 
@@ -109,10 +110,8 @@ section .generic-info-box{
     .generic-info-box .top-logo-menu-container{
         height:6em;
         margin-bottom:3em;}
-    /*----*/.top-logo-menu-container>.top-left-corner-logo-box{
-        /*----*/background-size:104%;}
-    /*----*//*----*/.top-left-corner-logo-box h3{
-        /*----*//*----*/font-size:1.5em !important;}}
+    /*----*/.top-left-corner-logo-box h3{
+        /*----*/font-size:1.5em !important;}}
     /*</@DIV.top-logo-menu-container>*/
 
 
