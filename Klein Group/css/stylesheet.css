@@ -328,6 +328,8 @@ section.message-form{
     display:block;
     font-size: 1em;
     font-family:verdana;
+    background-color:lightgrey;
+    border:1px solid #bfbfbf;
     }
 
 
