@@ -318,11 +318,16 @@ section.message-form{
     background-color:lightgoldenrodyellow;
     height:38.888em;
 }
+.form-font-size-span{
+    font-size:xx-large;
+    font-family:verdana;
+}
 .message-form div.generic-info-box input{
-    width: 30em;
-    margin: 0 auto;
+    width: 10em;
+    margin: 31px auto;
     display:block;
     font-size: 1em;
+    font-family:verdana;
     }
 
 
