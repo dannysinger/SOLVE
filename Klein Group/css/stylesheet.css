@@ -55,12 +55,14 @@ section .generic-info-box{
         height:20em;
     }
 }
+/*THE ABOVE HITS ALL THE INSTANCES OF DIV.generic-info-box AT 20EM HEIGHT @448, As we can see I go straight to the DIV.generic-info-box for a different query, missing a vital step it looks like*/
 @media screen and (min-width:640px){ 
     section .generic-info-box{
         height:33.75em;
         width:90.78125%;
         margin:5% auto;}
     }
+/*THE ABOVE HITS ALL THE SECTIONS AT 33.75EM HEIGHT @640, Remember EM is the font size of the same element OR the PARENT BY PROPERTIES OF INHERITANCE*/
 /*-----------------------------------*/
 
 
@@ -399,8 +401,13 @@ nav.generic-info-box{
 /*<DIV.generic-info-box>*/
     /*<ul.logos-container>*/
 .logos-container{ 
-    padding:0 13% 0;
+    padding:0 -5% 0;
     height:1.75em;
+}
+@media screen and (min-width:640px){
+    .logos-container{
+        padding: 0 13% 0;
+    }
 }
 .logos-container li{
     width:33.3333%; 
