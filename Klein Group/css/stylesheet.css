@@ -43,6 +43,20 @@ header .generic-info-box{
 /*<section (residential, commerical, project)>
     <DIV.generic-info-box>*/
 /*----------------------*/
+
+@media screen and (min-width:640px){ 
+    section .generic-info-box{
+        height:33.75em;
+        width:90.78125%;
+        margin:5% auto;}
+    }
+
+@media screen and (min-width:448px){
+    section .generic-info-box{
+        height:20em;
+    }
+}
+
 section .generic-info-box{
     height:20em;
     margin:5% auto;
@@ -50,19 +64,10 @@ section .generic-info-box{
     background-color:yellowgreen;
 }
     /*<@DIV.generic-info-box>*/
-@media screen and (min-width:448px){
-    section .generic-info-box{
-        height:20em;
-    }
-}
-/*THE ABOVE HITS ALL THE INSTANCES OF DIV.generic-info-box AT 20EM HEIGHT @448, As we can see I go straight to the DIV.generic-info-box for a different query, missing a vital step it looks like*/
-@media screen and (min-width:640px){ 
-    section .generic-info-box{
-        height:33.75em;
-        width:90.78125%;
-        margin:5% auto;}
-    }
-/*THE ABOVE HITS ALL THE SECTIONS AT 33.75EM HEIGHT @640, Remember EM is the font size of the same element OR the PARENT BY PROPERTIES OF INHERITANCE*/
+
+
+
+
 /*-----------------------------------*/
 
 
@@ -71,6 +76,7 @@ section .generic-info-box{
 /*------*/
 
 /*Logo & Mobile Menu (fa-bars)*/
+
 
 .generic-info-box .top-logo-menu-container{
     height:4em;
@@ -87,21 +93,22 @@ section .generic-info-box{
 
     /*<@DIV.top-logo-menu-container>*/
 @media screen and (min-width:448px){
+    
     .generic-info-box .top-logo-menu-container{
         height:5em;
         margin-bottom:2.5em;}
+    
     .generic-info-box .top-logo-menu-container .top-left-corner-logo-box{
-        background-size:104%;}}
-@media screen and (min-width:640px){ 
-    .generic-info-box .top-logo-menu-container{
-        height:6em;
-        margin-bottom:3em;}
-    .top-left-corner-logo-box h3{
-      font-size:1.5em !important;}}
+        background-size:104%;}
+
+}
+
+
     /*</@DIV.top-logo-menu-container>*/
 
 
 /*<DIV.top-logo-menu-container>*/
+
 .top-logo-menu-container .top-left-corner-logo-box{
     float:left;
     height:inherit;
@@ -110,21 +117,7 @@ section .generic-info-box{
     margin-left:1.30208333333%;
     /*A bunch of shit here I don't understand*/
 }
-/*<DIV.top-logo-menu-container>*/
-    /*<DIV.top-left-corner-logo-box>*/
-        /*<h3>*/
-/*.top-left-corner-logo-box h3{
-    display:block;
-    color:white;
-    font-family:League;
-    font-size:1em;
-    font-weight:100;
-    text-align:center;
-    margin:0;
-}*/
-/*<DIV.top-logo-menu-container>*/
-    /*<DIV.top-left-corner-logo-box>*/
-        /*<DIV.down-sort-div>*/
+
 .top-left-corner-logo-box>.down-sort-div{
     /*I can't visualize this abs pos*/
     position:absolute;
@@ -137,6 +130,7 @@ section .generic-info-box{
      height:inherit;
     display:inline;/*why*/
 }
+
 .down-sort-div>.fa-sort-desc{
     /*pushing against the top*/
     margin-top:4em;
