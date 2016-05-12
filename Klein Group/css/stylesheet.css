@@ -111,7 +111,7 @@ section .generic-info-box{
     /*And how about this "background-image" technique?*/
 }
 
-@media screen and (min-width:448px){
+
     
     .generic-info-box .top-logo-menu-container{
         height:5em;
@@ -119,9 +119,9 @@ section .generic-info-box{
     
     .generic-info-box .top-logo-menu-container .top-left-corner-logo-box{
         background-size:104%;}
-}
 
-@media screen and (min-width:640px){
+
+@media screen and (min-width:448px){
     .generic-info-box .top-logo-menu-container{
         height:9.063em;
     }
