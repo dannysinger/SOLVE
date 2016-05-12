@@ -44,25 +44,36 @@ header .generic-info-box{
     <DIV.generic-info-box>*/
 /*----------------------*/
 
-@media screen and (min-width:640px){ 
+
+/*@media screen and (min-width:640px){ 
     section .generic-info-box{
         height:33.75em;
         width:90.78125%;
         margin:5% auto;}
-    }
+    }*/
 
 @media screen and (min-width:448px){
     section .generic-info-box{
         height:20em;
+        margin:5% auto;
+        width:90.78125%;
     }
 }
-
+@media screen and (min-width:640px){
 section .generic-info-box{
+        height:33.75em;
+        width:90.78125%;
+        margin:5% auto;
+        background-color:yellowgreen;
+    }}
+
+
+/*section .generic-info-box{
     height:20em;
     margin:5% auto;
-    width:90.78125%;/*This is actually for 640*/
+    width:90.78125%;
     background-color:yellowgreen;
-}
+}*/
     /*<@DIV.generic-info-box>*/
 
 
@@ -206,9 +217,9 @@ header h2/*Should This be a <p>? Re: SEO */{
         font-size:1.5em;}}
     /*</@HEADER h2>*/
 
-
+/*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*/
 /*Commercial, Residential and Project Boxes*/
-
+/*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*/
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
 .generic-info-box .pic-box{ /*The top half*/
