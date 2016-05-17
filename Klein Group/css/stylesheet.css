@@ -246,6 +246,11 @@ header h2/*Should This be a <p>? Re: SEO */{
     left:0;
     position:absolute;
     background-color:magenta;
+    display:flex;
+    align-items:center;
+    line-height:259%;
+    vertical-align:middle;
+
 }
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
@@ -253,11 +258,18 @@ header h2/*Should This be a <p>? Re: SEO */{
             /*<DIV.logo-left-corner>*/
 .heading-and-logo-container .logo-left-corner{
     height:100%;
-    width:10%; 
+    width:58px; 
     position:relative;
-    background:url("../images/KGPSDlayer_027.png");
+    /*background:url("../images/KGPSDlayer_027.png");
     background-size:cover;
-    background-position:-9px 0;
+    background-position:-9px 0;*/
+}
+
+
+@media screen and (max-width:448px){
+    .heading-and-logo-container .logo-left-corner{
+        width:10%;
+    }
 }
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
@@ -275,9 +287,7 @@ header h2/*Should This be a <p>? Re: SEO */{
         /*<DIV.heading-and-logo-container>*/
             /*<h2>*/
 .heading-and-logo-container h2{
-    position:absolute;
-    top:0;
-    margin:18px 12% 0;
+    margin:1% 2% 0;
     font-family:league;
     font-size:7.5vw;
     font-weight:100;
