@@ -27,10 +27,11 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
+    /*Fixing a problem that made a vertical whitespace down at smaller widths closer to 320. Taken from StackOverFlow*/
 }
 body{
     margin: 0; 
-    -webkit-font-smoothing:antialiased !important; 
+    -webkit-font-smoothing:antialiased !important; /*Thinkful*/
     background-color:white;
 }
 
@@ -257,15 +258,26 @@ header h2/*Should This be a <p>? Re: SEO */{
     font-weight:100;
     letter-spacing:0.06em;
 }
+
+.project .heading-and-logo-container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:stretch;
+}
 .project .heading-and-logo-container h2{
-    position:relative;
-    top:-78px;
-    margin:-20px 11% 6px;
     font-family:league;
     font-size:7.5vw;
     font-weight:100;
     letter-spacing:0.06em;
+    margin:-10% 0% 4% 11.5%;
+    line-height:normal;
+
     }
+.project .heading-and-logo-container h2:nth-child(2){
+    margin-left:1%;
+    margin-top:1%;
+}
 
 /*------------------Slider CSS
                             ---------------------*/ 
