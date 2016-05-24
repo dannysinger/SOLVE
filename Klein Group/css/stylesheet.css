@@ -319,6 +319,7 @@ header h2/*Should This be a <p>? Re: SEO */{
         /*<p>*/
 .get-in-touch>.generic-info-box>p{
     text-align:center;
+    font-size:150%;
 }
 
 section.message-form{
