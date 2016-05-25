@@ -266,7 +266,12 @@ header h2/*Should This be a <p>? Re: SEO */{
     align-items:stretch;
 }
 .project .project-heading{
-    margin:-20% 11%;
+    margin:-19% 11%;
+}
+@media screen and (min-width:449px) and (max-width:521px){
+    .project .project-heading{
+        margin:-20% 16%;
+    }
 }
 
 @media screen and (min-width:448px){{}}/*448 to 521*/
@@ -279,7 +284,7 @@ header h2/*Should This be a <p>? Re: SEO */{
     line-height:normal;
 }
 .project .project-heading h2:nth-child(2){
-    margin-top: -0.5em !important;
+    margin-top: -0.5vw !important;
 }
 /*Dealing with the .project h2... I'm sure there's a better way to do this*/
 /*@media screen and (min-width:383px){.project h2{margin:-17% 0% 1% 13.5% !important;}}
