@@ -265,25 +265,30 @@ header h2/*Should This be a <p>? Re: SEO */{
     flex-wrap:wrap;
     align-items:stretch;
 }
+.project .project-heading{
+    margin:-20% 11%;
+}
 
-.project .heading-and-logo-container h2{
+@media screen and (min-width:448px){{}}/*448 to 521*/
+.project .heading-and-logo-container .project-heading h2{
     font-family:league;
     font-size:7.5vw;
     font-weight:100;
     letter-spacing:0.06em;
-    margin:-18% 0% 1% 13.5%;
+    /*margin:-18% 0% 1% 13.5%;*/
     line-height:normal;
 }
-.project .heading-and-logo-container h2:nth-child(3){
+.project .project-heading h2:nth-child(2){
     margin-top: -0.5em !important;
 }
 /*Dealing with the .project h2... I'm sure there's a better way to do this*/
-@media screen and (min-width:383px){.project h2{margin:-17% 0% 1% 13.5% !important;}}
+/*@media screen and (min-width:383px){.project h2{margin:-17% 0% 1% 13.5% !important;}}
 @media screen and (min-width:432px){.project h2{margin:-16% 0% 1% 13.5% !important;}}
 @media screen and (min-width:448px){.project h2{margin:-21% 0% 3% 16.5% !important;}}
 @media screen and (min-width:518px){.project h2{margin:-19% 0% 3% 16.5% !important;}}
 @media screen and (min-width:607px){.project h2{margin:-18% 0% 3% 16.5% !important;}}
 /*I should put this shit in one div and scale it accordingly. That was super lazy*/
+/*Mabye Make that Div a Flex Box */
 
 
 /*------------------Slider CSS
@@ -327,18 +332,22 @@ section.message-form{
     height:38.888em;
 }
 .form-font-size-span{
-    font-size:xx-large;
+    font-size:1em;
     font-family:verdana;
 }
+
 .message-form div.generic-info-box{
     margin-top:0;
 }
 .message-form div.generic-info-box input{
     width:80%;
-    margin: 31px auto;
+    height:20px;
+    margin: 20px auto;
+    padding:17px 23px;
     display:block;
-    font-size: 1em;
-    font-family:verdana;
+    font-size: 1.4em;
+    font-family:helvetica;
+    font-weight:100;
     background-color:lightgrey;
     border:1px solid #bfbfbf;
     }
