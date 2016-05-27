@@ -362,6 +362,14 @@ section.message-form{
     padding:4vw 3.75vw 28vw;
     border: 1px solid grey /*Need to Change*/;
 }
+.message-form div.generic-info-box input:nth-child(5){
+    height:20.5vw;
+    padding:3vw 4vw;
+}
+i.fa-arrow-circle-o-right{
+    margin:0vw 38vw;
+    font-size:7.5vw;
+}
 
 
 
