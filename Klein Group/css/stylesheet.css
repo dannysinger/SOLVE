@@ -358,7 +358,9 @@ section.message-form{
     }
 
 .message-form div.generic-info-box input:nth-child(4){
-    height:32vw;
+    height:1vw;
+    padding:4vw 3.75vw 28vw;
+    border: 1px solid grey /*Need to Change*/;
 }
 
 
