@@ -44,7 +44,10 @@ img{
     width:100%;
     height:inherit;
     }
-
+.get-in-touch, .message-form{
+    position:relative;
+    overflow: hidden;
+}
 /*----------------------*/
 /*<HEADER>
     <DIV.generic-info-box>*/
@@ -61,7 +64,7 @@ section .generic-info-box{
         height:20em;
         margin:5% auto;
         width:90.78125%;
-        background-color:rebeccapurple;
+        background-color:orchid;
     }
 @media screen and (min-width:448px){
     section .generic-info-box{
@@ -307,7 +310,8 @@ header h2/*Should This be a <p>? Re: SEO */{
                         -----------------------*/
 .get-in-touch{
     background-color:pink;
-    height:20.5em;
+    height:0;
+    padding-bottom:300px;
 }
 .get-in-touch>.generic-info-box{
     margin:0 auto;
@@ -317,19 +321,23 @@ header h2/*Should This be a <p>? Re: SEO */{
         /*<DIV.contact-heading>*/
 .generic-info-box>.contact-heading{ 
     font-family:League;
-    font-size:1.7em;
+    font-size:3em;
     font-weight:100;
     letter-spacing:0.03em;
-    line-height:0.25em;
+    line-height:37px;
     text-transform:uppercase;
     text-align:center;
 }
+@media screen and (min-width:512px){{}}
 /*<SECTION.get-in-touch>*/
     /*<DIV.generic-info-box>*/
         /*<p>*/
 .get-in-touch>.generic-info-box>p{
     text-align:center;
-    font-size:150%;
+    font-size:1.3em;
+    line-height:6.5vw;
+    font-family:helvetica;
+    font-weight:100;
 }
 
 section.message-form{
@@ -339,6 +347,7 @@ section.message-form{
 .form-font-size-span{
     font-size:1em;
     font-family:verdana;
+    position:relative;
 }
 
 .message-form div.generic-info-box{
@@ -367,8 +376,9 @@ section.message-form{
     padding:3vw 4vw;
 }
 i.fa-arrow-circle-o-right{
-    margin:0vw 38vw;
+    margin:-11vw 42vw;
     font-size:7.5vw;
+    position:absolute;
 }
 
 
