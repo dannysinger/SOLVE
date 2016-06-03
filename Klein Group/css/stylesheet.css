@@ -311,7 +311,7 @@ header h2/*Should This be a <p>? Re: SEO */{
 .get-in-touch{
     background-color:pink;
     height:0;
-    padding-bottom:300px;
+    padding-bottom:280px;
 }
 .get-in-touch>.generic-info-box{
     margin:0 auto;
@@ -332,6 +332,9 @@ header h2/*Should This be a <p>? Re: SEO */{
     display:none;
 }
 @media screen and (min-width:427px){
+    .get-in-touch{
+        padding-bottom:300px
+}
     .generic-info-box>.contact-heading{
         display:block;
         font-size:2.5em;
@@ -364,7 +367,7 @@ header h2/*Should This be a <p>? Re: SEO */{
 
 section.message-form{
     background-color:lightgoldenrodyellow;
-    height:38.888em;
+    height:90vw;
 }
 .form-font-size-span{
     font-size:1em;
@@ -393,14 +396,16 @@ section.message-form{
     padding:4vw 3.75vw 28vw;
     border: 1px solid grey /*Need to Change*/;
 }
-.message-form div.generic-info-box input:nth-child(5){
-    height:20.5vw;
-    padding:3vw 4vw;
+.message-form div.generic-info-box input:nth-child(6){
+    height:7.5vw;
+    padding:10vw 4vw 5vw 4vw;
 }
 i.fa-arrow-circle-o-right{
-    margin:-11vw 42vw;
+    margin:2vw 42vw;
     font-size:7.5vw;
+    width:88%;
     position:absolute;
+    z-index:1;
 }
 
 
