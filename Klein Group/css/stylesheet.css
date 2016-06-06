@@ -1,5 +1,5 @@
-/*The code is structured with a kind of "honeycomb" model meaning that certain sections and DIVs with certain classes are repeated throughout at different parts with different or "split" functions relating to the degree that they share a class but not to the degree that they contain different info (figure out a better way to explain this) --- As opposed to a one after the other thing*/
 
+/*First We Load In The Fonts*/
 @font-face{
     font-family:"Leaguecon"; 
     src:url("../fonts/leaguegothic-condensed-regular-webfont.woff") format("woff");
@@ -15,39 +15,28 @@ header, section, footer, aside, nav, main, article, figure {
     display: block;
     width:100%;
 }
-/*</HTML5>*/ div{ border:1px solid lightgrey;}
+/*</HTML5>*/ 
+
+div{ border:1px solid lightgrey;}
 
 /*<------->*/
 /*<GENERAL>*/
 /*<------->*/
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-    /*Fixing a problem that made a vertical whitespace down at smaller widths closer to 320. Taken from StackOverFlow*/
-}
-body{
-    margin: 0; 
-    -webkit-font-smoothing:antialiased !important; /*Thinkful*/
-    background-color:white;
-}
+
+/*Fixing a problem that made a vertical whitespace down at smaller widths closer to 320. Taken from StackOverFlow*/html,body{width: 100%;height: 100%;margin: 0px;padding: 0px;overflow-x: hidden;}
+/*-----*/
+body{ 
+    margin: 0; -webkit-font-smoothing:antialiased !important; /*Thinkful*/ background-color:white;}
 
 header{
-    border-top:0.313em solid #1d4782;
-    /*1.30208333333%*/
-}
+    border-top:0.313em solid #1d4782; /*1.30208333333%*/}
 
 img{ 
-    width:100%;
-    height:inherit;
-    }
+    width:100%; height:inherit;}
+
 .get-in-touch, .message-form{
-    position:relative;
-    overflow: hidden;
-}
+    position:relative; overflow:hidden;}
+
 /*----------------------*/
 /*<HEADER>
     <DIV.generic-info-box>*/
@@ -61,28 +50,11 @@ header .generic-info-box{
     <DIV.generic-info-box>*/
 /*----------------------*/
 section .generic-info-box{
-        height:20em;
-        margin:5% auto;
-        width:90.78125%;
-        background-color:orchid;
-    }
+                            height:20em; margin:5% auto; width:90.78125%; background-color:orchid;}
+
 @media screen and (min-width:448px){
-    section .generic-info-box{
-        height:33.75em;
-        width:90.78125%;
-        margin:5% auto;
-        background-color:yellowgreen;
-    }
-}
-
-
-    /*<@DIV.generic-info-box>*/
-
-
-
-
-/*-----------------------------------*/
-
+                                    section .generic-info-box{
+                                                                height:33.75em; width:90.78125%; margin:5% auto; background-color:yellowgreen;}}
 
 /*------*/
 /*<Body>*/
@@ -100,12 +72,8 @@ section .generic-info-box{
         height:9.063em;
     }
 }
-.top-logo-menu-container .top-left-corner-logo-box{
-    float:left;
-    height:inherit;
-    position:relative;
+.top-logo-menu-container .top-left-corner-logo-box{ float:left; height:inherit; position:relative;
     margin-left:1.30208333333%;
-    /*A bunch of shit here I don't understand*/
 }
 
 @media screen and (min-width:320px){
@@ -119,19 +87,16 @@ section .generic-info-box{
     }
 }
 .top-left-corner-logo-box>.down-sort-div{
-    position:absolute;
-    top:0;
-    right:0;
-    width:12%;
     float:right;
-    height:inherit;
+    position:absolute; top:0; right:0;
+    width:12%;
     display:inline;/*why*/
+    height:inherit;   
 }
-.down-sort-div>.fa-sort-desc{
-    color:white;
-    position:absolute;
-    bottom:1.05em;
-}
+.down-sort-div>.fa-sort-desc{ position:absolute; bottom:1.05em;
+    color:white;}
+
+
 @media screen and (min-width:482px){
     .down-sort-div>.fa-sort-desc{
         bottom:2em;
@@ -139,44 +104,30 @@ section .generic-info-box{
 }
 /*<DIV.top-logo-menu-container>*/
     /*<DIV.mobile-menu-box>*/
-.top-logo-menu-container .mobile-menu-box{
-    float:right;
+.top-logo-menu-container .mobile-menu-box{float:right; padding-right:1.30208333333%;
     height:inherit;
-    width:10%;
-    padding-right:1.30208333333%;
+    width:10%;   
 }
 /*<DIV.top-logo-menu-container>*/
     /*<DIV.mobile-menu-box>*/
         /*<I.fa-bars>*/
-.mobile-menu-box .fa-bars{
-    font-size:1.6em;
+.mobile-menu-box .fa-bars{display:block; text-align:right; margin-top:5px; 
+    font-size:1.6em; 
     font-weight:bolder;
     color:white;
-    text-align:right;
-    display:block;
-    margin-top:5px;
 }
 
 /*Header Itself*/
 
-header{ /*GRADIENT EFFECT*/
-    background:url("../images/KGPSDlayer_046.png");
-    background-position:bottom right;
-  background:
-    linear-gradient(purple 0%, black 90%), 
-    linear-gradient(to right, green 0%, yellow 80%),
-    url("../images/KGPSDlayer_046.png")30px,
-    url("../images/KGPSDlayer_046.png")20px;
-  background-position:bottom right;
-  background-blend-mode: screen, difference, lighten;
-    /*GRADIENT EFFECT*/
-}
-header h1{ 
-    font-family:League;
-    font-size:2em;
+/*GRADIENT EFFECT*/header{ 
+background:url("../images/KGPSDlayer_046.png"); background-position:bottom right;
+background:linear-gradient(purple 0%, black 90%), linear-gradient(to right, green 0%, yellow 80%),
+url("../images/KGPSDlayer_046.png")30px, url("../images/KGPSDlayer_046.png")20px; 
+    background-blend-mode: screen, difference, lighten; background-position:bottom right;}
+/*GRADIENT EFFECT*/
+
+header h1{ line-height:0.25em; font-family:League; font-size:2em; letter-spacing:0.03em;
     font-weight:100;
-    letter-spacing:0.03em;
-    line-height:0.25em;
     color:white;
     text-align:right;
 }
@@ -190,12 +141,11 @@ header h1{
         font-size:3.5em;}}
     /*</@HEADER h1>*/
 
-header h2/*Should This be a <p>? Re: SEO */{
+header h2{ line-height:1.5em;
     color:white;
     font-family:helvetica;
     text-align:right;
     font-size:1em;
-    line-height:1.5em;
     font-weight:400;
 }
     /*<@HEADER h2>*/
@@ -212,27 +162,20 @@ header h2/*Should This be a <p>? Re: SEO */{
 /*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*/
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
-.generic-info-box .pic-box{ /*The top half*/
-    height:50%;
-    width:100%; 
-    position:relative; 
+.generic-info-box .pic-box{ position:relative; width:100%; height:50%;  /*The top half*/
     background-color:green;
 }
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
         /*<DIV.heading-and-logo-container>*/
-.pic-box .heading-and-logo-container{ 
+.pic-box .heading-and-logo-container{ position:absolute; bottom:0; left:0;
+    display:flex;
+    line-height:259%;
     height:36%;
     width:100%;
-    bottom:0;
-    left:0;
-    position:absolute;
     background-color:magenta;
-    display:flex;
     align-items:center;
-    line-height:259%;
     vertical-align:middle;
-
 }
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
@@ -329,7 +272,7 @@ header h2/*Should This be a <p>? Re: SEO */{
     text-align:center;
 }
 .generic-info-box>.contact-heading{
-    display:none;
+    display:none; /*visibility:hidden, transform, translate xy to avoid DOM reflows*/
 }
 @media screen and (min-width:427px){
     .get-in-touch{
@@ -357,10 +300,9 @@ header h2/*Should This be a <p>? Re: SEO */{
 /*<SECTION.get-in-touch>*/
     /*<DIV.generic-info-box>*/
         /*<p>*/
-.get-in-touch>.generic-info-box>p{
+.get-in-touch>.generic-info-box>p{ line-height:6.5vw;
     text-align:center;
     font-size:1.3em;
-    line-height:6.5vw;
     font-family:helvetica;
     font-weight:100;
 }
