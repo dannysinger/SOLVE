@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Kevin Group</title>
+    <script src=js/jQuery.min.js></script>
+    <script src=js/jquery.slideme2.js></script>
+    <script>
+       $(document).ready(function(){
+            $(".slider").slideme({
+                arrows: true,
+                pagination:"numbers",
+                nativeTouchScroll: true,
+                resizable: {
+                    width: 320,
+                    height: 250,
+                }
+});});</script>
     <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"/>
     <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
+    <link href=“css/slideme.css” rel=“stylesheet”/>
 <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/<htm></htm>l5.js"></script>
 <![endif]-->
@@ -127,7 +141,13 @@
 <!--END PROJECT, START aside.SLIDER-->
 <!--END PROJECT, START aside.SLIDER-->
     
-    <aside class="slider"></aside>
+    <aside class="slider">
+        <ul class="slideme">
+            <li><img src="images/KGPSDlayer_027.png"/></li>
+            <li><img src="images/KGPSDlayer_035.png"/></li>
+            <li><img src="images/KGPSDlayer_043.png"/></li>
+        </ul>
+    </aside>
    
 <!--END aside.SLIDER, START section.GET-IN-TOUCH-->
 <!--END aside.SLIDER, START section.GET-IN-TOUCH-->
