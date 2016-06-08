@@ -8,15 +8,22 @@
     <script type="text/javascript" src=js/jquery.slideme2.js></script>
     <script>
        $(document).ready(function(){
-            $(".slider").slideme({
-                arrows: true,
+           $(".slider").slideme({
+                arrows: false,
+                autoslide:true,
+                loop:true,
+                interval:5000,
                 pagination:"numbers",
                 nativeTouchScroll: true,
+                
                 resizable: {
                     width: 320,
                     height: 250,
-                }
-});});</script>
+                }});
+         
+               
+           });
+</script>
     <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"/>
     <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
     <link type="text/css" rel="stylesheet" href="css/slideme.css" />
