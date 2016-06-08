@@ -256,10 +256,25 @@ height: 100%;
     margin:0 auto !important;
     padding-top:55px !important;
 }
+.pagination{
+    text-align:center;
+    position:absolute;
+    bottom:30px;
+    left:0;
+    width:100%;
+}
+.pagination ol{
+    list-style-position:inside;
+    list-style:none;
+}
+.pagination li{
+    -webkit-transition:background-position .33s cubic-bezier(0.47,0,0.745,0.715);
+}
 
 
 /*-----------------Get in touch & Form Section
                         -----------------------*/
+/*Need to adjust below the heading @ 640*/
 .get-in-touch{
     background-color:pink;
     height:0;
