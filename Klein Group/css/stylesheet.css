@@ -271,6 +271,34 @@ height: 100%;
     -webkit-transition:background-position .33s cubic-bezier(0.47,0,0.745,0.715);
 }
 
+.numbers {
+    clear:both;
+    width:75px;
+    margin:25px auto 0;
+    padding:0;
+}
+
+.numbers li {
+    list-style:none;
+    float:left;
+    margin:0 2px;
+}
+
+.numbers li {
+    display:block;
+    width:10px;
+    height:10px;
+    text-indent:-10000px;
+    background: #999;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: inset 1px 1px 1px rgba(0, 0 ,0, 0.4);
+}
+
+ol li.current {
+    background: #668CFF;
+}
 
 /*-----------------Get in touch & Form Section
                         -----------------------*/
