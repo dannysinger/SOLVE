@@ -76,21 +76,12 @@ section .generic-info-box{
     margin-left:1.30208333333%;
 }
 
-@media screen and (min-width:320px){
-    .top-logo-menu-container .top-left-corner-logo-box{
-        width:113px;
-    }
-}
-@media screen and (min-width:482px){
-    .top-logo-menu-container .top-left-corner-logo-box{
-        width:inherit;
-    }
-}
-.top-left-corner-logo-box>.down-sort-div{
-    float:right;
-    position:absolute; top:0; right:0;
-    width:12%;
+@media screen and (min-width:320px){.top-left-corner-logo-box{width:113px;}}
+@media screen and (min-width:482px){.top-left-corner-logo-box{width:inherit;}}
+
+.top-left-corner-logo-box>.down-sort-div{float:right; position:absolute; top:0; right:0; 
     display:inline;/*why*/
+    width:12%;
     height:inherit;   
 }
 .down-sort-div>.fa-sort-desc{ position:absolute; bottom:1.05em;
@@ -168,14 +159,13 @@ header h2{ line-height:1.5em;
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
         /*<DIV.heading-and-logo-container>*/
-.pic-box .heading-and-logo-container{ position:absolute; bottom:0; left:0;
-    display:flex;
-    line-height:259%;
+.pic-box .heading-and-logo-container{ position:absolute; bottom:0; left:0; line-height:259%;
+
+display:flex; align-items:center; vertical-align:middle;
+    
     height:36%;
     width:100%;
     background-color:magenta;
-    align-items:center;
-    vertical-align:middle;
 }
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
@@ -184,10 +174,7 @@ header h2{ line-height:1.5em;
 .heading-and-logo-container .logo-left-corner{
     height:100%;
     width:58px; 
-    position:relative;
 }
-
-
 @media screen and (max-width:448px){
     .heading-and-logo-container .logo-left-corner{
         width:10%;
@@ -197,12 +184,9 @@ header h2{ line-height:1.5em;
     /*<DIV.pic-box>*/
         /*<DIV.heading-and-logo-container>*/
             /*<h2>*/
-.heading-and-logo-container h2{
+.heading-and-logo-container h2{ font-size:7.5vw; font-weight:100; letter-spacing:0.06em;
     margin:1% 2% 0;
     font-family:league;
-    font-size:7.5vw;
-    font-weight:100;
-    letter-spacing:0.06em;
 }
 
 .project .heading-and-logo-container{
@@ -266,6 +250,7 @@ height: 100%;
 .pagination ol{
     list-style-position:inside;
     list-style:none;
+
 }
 .pagination li{
     -webkit-transition:background-position .33s cubic-bezier(0.47,0,0.745,0.715);
@@ -276,6 +261,7 @@ height: 100%;
     width:75px;
     margin:25px auto 0 !important;
     padding:0;
+    display:block;
 }
 
 .numbers li {
@@ -285,9 +271,9 @@ height: 100%;
 }
 
 .numbers li {
-    display:block;
-    width:10px;
-    height:10px;
+    vertical-align:middle;
+    width:20px;
+    height:20px;
     text-indent:-10000px;
     background: #999;
     border-radius: 10px;
