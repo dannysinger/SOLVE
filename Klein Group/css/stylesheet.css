@@ -188,12 +188,8 @@ display:flex; align-items:center; vertical-align:middle;
     margin:1% 2% 0;
     font-family:league;
 }
-
 .project .heading-and-logo-container{
     display:inline-block;
-    flex-direction:row;
-    flex-wrap:wrap;
-    align-items:stretch;
 }
 .project .project-heading{
     margin:-19% 11%;
@@ -203,8 +199,6 @@ display:flex; align-items:center; vertical-align:middle;
         margin:-20% 16%;
     }
 }
-
-@media screen and (min-width:448px){{}}/*448 to 521*/
 .project .heading-and-logo-container .project-heading h2{
     font-family:league;
     font-size:7.5vw;
@@ -229,62 +223,43 @@ display:flex; align-items:center; vertical-align:middle;
 /*------------------Slider CSS
                             ---------------------*/ 
 .slider{
-    height:75%;
+    height:77vw;
     background-color:turquoise;
 }
-.slideme {
-max-width: 76%;
-max-height: 320px;
+.slideme {max-width: 76%;max-height: 320px; margin:0 auto !important;padding-top:7vw !important;
 width: 100%;
-height: 100%;
-    margin:0 auto !important;
-    padding-top:55px !important;
+height: 100%;   
 }
 .pagination{
     text-align:center;
     position:absolute;
-    bottom:30px;
+    top:63vw;
     left:0;
     width:100%;
 }
-.pagination ol{
-    list-style-position:inside;
-    list-style:none;
-
-}
-.pagination li{
+/*.pagination li{
     -webkit-transition:background-position .33s cubic-bezier(0.47,0,0.745,0.715);
-}
+}*/
 
 .numbers {
-    clear:both !important;
-    width:75px;
+    width:100%;
     margin:25px auto 0 !important;
-    padding:0;
-    display:block;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.numbers li {
-    list-style:none;
-    float:left;
-    margin:0 2px;
-}
-
-.numbers li {
-    vertical-align:middle;
-    width:20px;
-    height:20px;
-    text-indent:-10000px;
+.numbers li { width:3vw;height:3vw; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; box-shadow: inset 1px 1px 1px rgba(0, 0 ,0, 0.4);
+    display:flex;
+    flex-direction:row;
+    margin:0 19px;
+    text-indent:-10000px; /*Knocks the numbers off the screen, hack.*/
     background: #999;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    box-shadow: inset 1px 1px 1px rgba(0, 0 ,0, 0.4);
 }
 
-ol li.current {
-    background: #668CFF;
-}
+ol li.current {background: #668CFF; width:4vw; height:4vw; border-radius: 4vw; 
+    
+-moz-border-radius: 4vw; -webkit-border-radius: 4vw;}
 
 /*-----------------Get in touch & Form Section
                         -----------------------*/
