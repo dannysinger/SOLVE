@@ -224,7 +224,7 @@ display:flex; align-items:center; vertical-align:middle;
                             ---------------------*/ 
 .slider{
     height:77vw;
-    background-color:turquoise;
+    background-color:#44658D;
 }
 .slideme {max-width: 76%;max-height: 320px; margin:0 auto !important;padding-top:7vw !important;
 width: 100%;
@@ -265,12 +265,13 @@ ol li.current {background: #668CFF; width:4vw; height:4vw; border-radius: 4vw;
                         -----------------------*/
 /*Need to adjust below the heading @ 640*/
 .get-in-touch{
-    background-color:pink;
+    background-color:white;
     height:0;
     padding-bottom:280px;
 }
 .get-in-touch>.generic-info-box{
     margin:0 auto;
+    height:inherit; /*This is funny*/
 }
 /*<SECTION.get-in-touch>*/
     /*<DIV.generic-info-box>*/
@@ -319,13 +320,14 @@ ol li.current {background: #668CFF; width:4vw; height:4vw; border-radius: 4vw;
     text-align:center;
     font-size:1.3em;
     font-family:helvetica;
-    font-weight:100;
+    font-weight:200;
+    color:grey;
 }
 
 section.message-form{
-    background-color:lightgoldenrodyellow;
+    background-color:white;
     height:94vw;
-    border-bottom:1px solid lightgrey;
+    border-bottom:2px solid #D7D7D8;
 }
 /*@media screen and (min-width:450px){
     section.message-form{
@@ -340,24 +342,20 @@ section.message-form{
 
 .message-form div.generic-info-box{
     margin-top:0;
+    background-color:white;
 }
-.message-form div.generic-info-box input{
-    width:80%;
-    height:3vw;
-    margin:3vw auto;
-    padding:2.6vw 3.6vw;
+.message-form div.generic-info-box input{width:80%;height:3vw;padding:2.6vw 3.6vw;margin:3vw auto;
     display:block;
     font-size: 1.4em;
     font-family:helvetica;
     font-weight:100;
-    background-color:lightgrey;
-    border:1px solid #bfbfbf;
+    background-color:#F5F5F5;
+    border:1px solid #E7E7E7;
     }
 
 .message-form div.generic-info-box input:nth-child(4){
     height:1vw;
     padding:4vw 3.75vw 28vw;
-    border: 1px solid grey /*Need to Change*/;
 }
 .message-form div.generic-info-box input:nth-child(6){
     height:7.5vw;
@@ -453,11 +451,9 @@ nav.generic-info-box{
         padding: 0 13% 0;
     }
 }
-.logos-container li{
+.logos-container li{float:left; overflow:hidden;
     width:33.3333%; 
-    float:left;
-    height:1.5em;
-    overflow:hidden;
+    height:1.5em; 
 }
 /*<DIV.generic-info-box>*/
     /*<ul.logos-container>*/
@@ -476,7 +472,7 @@ nav.generic-info-box{
     margin:-12px auto;
 }
 
-.logo2box img{
+.logo2box img{/*Notice the Ems To vw change*/
     height:1.5em;
     width:91px;
     padding:0;
@@ -490,20 +486,13 @@ nav.generic-info-box{
     width:120%;
     margin-top:2%;
 }
-.logo3box p{ 
-    font-size:0.5em;
-    font-weight:100;
-    margin:0;
-    text-align:left;
+.logo3box p{ font-size:0.5em; font-weight:100; margin:0; text-align:left;
 }
-footer>p{
+footer>p{ /*Where is this located*/
     text-align:center;
     color:#777a7e;
 }
-.footer-nav{
-    font-family:"verdana";
-    font-size:larger;
-    color:#777a7e;
+.footer-nav{font-family:"verdana"; font-size:larger; color:#777a7e;
     }
 
 /*-------------------Clearfix
