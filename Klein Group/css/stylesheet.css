@@ -161,7 +161,7 @@ header h2{ line-height:1.5em;
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
         /*<DIV.heading-and-logo-container>*/
-.pic-box .heading-and-logo-container{ position:absolute; bottom:0; left:0; line-height:259%;
+.pic-box .heading-and-logo-container{ position:absolute; bottom:0; left:0; /*line-height:259%;*/
 
 display:flex; align-items:center; vertical-align:middle;
     
@@ -175,7 +175,7 @@ display:flex; align-items:center; vertical-align:middle;
             /*<DIV.logo-left-corner>*/
 .heading-and-logo-container .logo-left-corner{
     height:100%;
-    width:82px; 
+    width:12.8vw; 
 }
 @media screen and (max-width:448px){
     .heading-and-logo-container .logo-left-corner{
@@ -194,11 +194,19 @@ display:flex; align-items:center; vertical-align:middle;
     display:inline-block;
 }
 .project .project-heading{
-    margin:-19% 11%;
+    margin:-20% 16%;
 }
-@media screen and (min-width:449px) and (max-width:521px){
+@media screen and (min-width:449px) and (max-width:559px){
     .project .project-heading{
-        margin:-20% 16%;
+        margin:-22% 19%;
+    }   
+}
+@media screen and (max-width:447px){
+    .project .project-heading{
+        margin:-19% 11%;
+    }
+    .project-heading h2:nth-child(2){
+        margin-top: -2.5vw !important;
     }
 }
 .project .heading-and-logo-container .project-heading h2{
@@ -210,7 +218,7 @@ display:flex; align-items:center; vertical-align:middle;
     line-height:normal;
 }
 .project .project-heading h2:nth-child(2){
-    margin-top: -0.5vw !important;
+    margin-top: -0.5vw;
 }
 /*Dealing with the .project h2... I'm sure there's a better way to do this*/
 /*@media screen and (min-width:383px){.project h2{margin:-17% 0% 1% 13.5% !important;}}
