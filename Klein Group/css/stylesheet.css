@@ -154,9 +154,23 @@ header h2{ line-height:1.5em;
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
 .generic-info-box .pic-box{ position:relative; width:95%; height:50%;  /*The top half*/
-    background-color:green;
     margin:2vw auto;
     margin-bottom:0;
+}
+section.commercial .pic-box{
+    background:url(../images/KGPSDlayer_026.png);
+    background-position:-254px -55px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+section.residential .pic-box{
+    background:url(../images/KGPSDlayer_034.png);
+    background-position:-259px -36px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+section.project .pic-box{
+    background:url(../images/KGPSDlayer_042.png);
+    background-position:0px 269px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 }
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
@@ -167,7 +181,7 @@ display:flex; align-items:center; vertical-align:middle;
     
     height:38%;
     width:100%;
-    background-color:magenta;
+    /*background-color:magenta;*/
 }
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
@@ -189,6 +203,7 @@ display:flex; align-items:center; vertical-align:middle;
 .heading-and-logo-container h2{ font-size:7.5vw; font-weight:100; letter-spacing:0.06em;
     margin:1% 2% 0;
     font-family:league;
+    color:white;
 }
 .project .heading-and-logo-container{
     display:inline-block;
