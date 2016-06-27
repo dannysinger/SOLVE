@@ -26,60 +26,57 @@
     <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"/>
     <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
     <link type="text/css" rel="stylesheet" href="css/slideme.css" />
-<!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/<htm></htm>l5.js"></script>
-<![endif]-->
+    <!--There is no normalize here yet-->
+    <!--League Gothic Regular Condensed and League Gothic Regular in webfont woff format loaded with css @font-face-->
+    <!--Main page flow for basic semantic elements defined as block, I think this is already done in normalize-->
 </head>
-  
-  
   <body>
-   
-   
-    <header>
-               <!---->
-           <!---->
-           
-        <div class="generic-info-box">
+<!--margin:0, -webkit-font-smoothing:antialiased !impportant;-->
+   <!--Initially make all img(s) full width and height:inherit-->
+    <header><!--border-top in em-->
+        <div class="generic-info-box"> <!-- 0 7% 0 padding...?-->
             <div class="top-logo-menu-container">
-        
-            <!---->
-                <!----> 
+               <!--height, margin-bottom in em (5 & 2.5) height+@482-->
                 <div class="top-left-corner-logo-box">
+                <!--fixed px width,
+                    @482 px width increase 
+                    floated left, 
+                    relative position,                   
+                    left margin %, 
+                    inherit hegiht 
+                    -->
                     <img src="images/KGPSDlayer_103.png"/>
-        
-                    <!---->
-                <!---->
-                    <!---->
                     <div class="down-sort-div">
+                    <!--floated right,
+                        abs. pos. top 0 right 0 (necessary?)
+                        display:inline;
+                        %width;
+                        height:inherit;-->
                         <i class="fa fa-sort-desc"></i>
+                        <!-- abs. pos. 
+                             bottom:1.05em;
+                             bottom:2em @482-->
                     </div>
-                    <!---->
-                <!---->
-                    <!---->
                 </div>
-                    <!---->
-                <!---->
-                    <!---->
                 <div class="mobile-menu-box">
+                   <!--float right, some padding for the icon width 10% and inheriting height of container-->
                     <i class="fa fa-bars"></i>
+                    <!--block in page flow, text align right -->
                 </div>
             </div>
-                    <!---->
-                <!---->
-            <!---->
-            
             <!----><h1>DECISIVE DECADENCE.</h1><!---->
             <!----><h1>EMINENCE IN EVOLUTION.</h1><!---->
-                           
-                            <!---->
-                            
+                            <!---->     
             <h2>The Kevin Group is known for the most  solutions to your average (or not so average!) real-estate conundri. We are a competent team and, well, let's just say we put the "Real" back in Real Estate.</h2>
-                            <!---->
-                            
+                            <!---->              
         </div>
     </header>      
     <section class="commercial">
         <div class="generic-info-box">
+           <!-- on all section .generic-info-box
+                height:20em, 84.4vw @448px
+                width:91% approx
+                margin:5% auto ????-->
             <div class="pic-box">
                  <div class="heading-and-logo-container">
                      <div class="logo-left-corner">
@@ -91,8 +88,6 @@
             </div>
             <img class="commercial-text-img" src="images/CommDescSmall.png"/>
         </div>
-        <!--<div class="tile-shadow"></div>
-        <div class="tile-shadow"></div>-->
     </section>    
     <section class="residential">
         <div class="generic-info-box"> 
@@ -138,6 +133,8 @@
         </ul>
     </aside>
        <section class="get-in-touch">
+         <!--position:relative;
+             overflow:hidden;-->
           <div class="generic-info-box">
            <h2 class="contact-heading">
                Get in Touch, We Love To chat!
@@ -149,6 +146,9 @@
        </div>
     </section>
     <section class="message-form">
+       <!--position:relative;
+           overflow:hidden;
+           -->
         <div class="generic-info-box">
             <form>
             <span class="form-font-size-span">

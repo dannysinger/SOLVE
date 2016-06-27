@@ -26,16 +26,21 @@ div{ border:1px solid lightgrey;}
 /*Fixing a problem that made a vertical whitespace down at smaller widths closer to 320. Taken from StackOverFlow*/html,body{width: 100%;height: 100%;margin: 0px;padding: 0px;overflow-x: hidden;}
 /*-----*/
 body{ 
-    margin: 0; -webkit-font-smoothing:antialiased !important; /*Thinkful*/ background-color:white;}
+    margin: 0; 
+    -webkit-font-smoothing:antialiased !important; /*Thinkful*/             background-color:white;}
 
 header{
-    border-top:0.313em solid #1d4782; /*1.30208333333%*/}
+    border-top:0.313em solid #1d4782; /*1.30208333333%*/
+}
 
 img{ 
-    width:100%; height:inherit;}
-
+    width:100%; 
+    height:inherit;
+}
 .get-in-touch, .message-form{
-    position:relative; overflow:hidden;}
+    position:relative; 
+    overflow:hidden;
+}
 
 /*----------------------*/
 /*<HEADER>
@@ -50,11 +55,16 @@ header .generic-info-box{
     <DIV.generic-info-box>*/
 /*----------------------*/
 section .generic-info-box{
-                            height:20em; margin:5% auto; width:90.78125%; background-color:orchid;}
+    height:20em; 
+    margin:5% auto; 
+    width:90.78125%; 
+    background-color:orchid;}
 
 @media screen and (min-width:448px){
-                                    section .generic-info-box{
-                                                                height:84.4vw; width:90.78125%; margin:5% auto; background-color:yellowgreen;}}
+    section .generic-info-box{
+        height:84.4vw; 
+        background-color:yellowgreen;}
+}
 
 /*------*/
 /*<Body>*/
@@ -66,27 +76,44 @@ section .generic-info-box{
 .generic-info-box .top-logo-menu-container{
         height:5em;
         margin-bottom:2.5em;
-    }}
+    }
+}
+
 @media screen and (min-width:482px){
     .generic-info-box .top-logo-menu-container{
         height:9.063em;
     }
 }
-.top-logo-menu-container .top-left-corner-logo-box{ float:left; height:inherit; position:relative;
+
+.top-left-corner-logo-box{ 
+    float:left; 
+    position:relative;
+    height:inherit; 
     margin-left:1.30208333333%;
+    width:100px;
 }
 
-@media screen and (min-width:320px){.top-left-corner-logo-box{width:113px;}}
-@media screen and (min-width:482px){.top-left-corner-logo-box{width:inherit;}}
+@media screen and (min-width:482px){
+    .top-left-corner-logo-box{
+        width:164px;
+    }
+}
 
-.top-left-corner-logo-box>.down-sort-div{float:right; position:absolute; top:0; right:0; 
+.top-left-corner-logo-box>.down-sort-div{
+    float:right; 
+    position:absolute; 
+    top:0; 
+    right:0; 
     display:inline;/*why*/
     width:12%;
     height:inherit;   
 }
-.down-sort-div>.fa-sort-desc{ position:absolute; bottom:1.05em;
-    color:white;}
 
+.down-sort-div>.fa-sort-desc{ 
+    position:absolute; 
+    bottom:1.05em;
+    color:white;
+}
 
 @media screen and (min-width:482px){
     .down-sort-div>.fa-sort-desc{
@@ -95,27 +122,36 @@ section .generic-info-box{
 }
 /*<DIV.top-logo-menu-container>*/
     /*<DIV.mobile-menu-box>*/
-.top-logo-menu-container .mobile-menu-box{float:right; padding-right:1.30208333333%;
+.top-logo-menu-container .mobile-menu-box{
+    float:right; 
+    padding-right:1.30208333333%;
     height:inherit;
     width:10%;   
 }
 /*<DIV.top-logo-menu-container>*/
     /*<DIV.mobile-menu-box>*/
         /*<I.fa-bars>*/
-.mobile-menu-box .fa-bars{display:block; text-align:right; margin-top:5px; 
+.mobile-menu-box .fa-bars{
+    margin-top:5px; 
+    display:block; 
+    text-align:right; 
     font-size:1.6em; 
     font-weight:bolder;
     color:white;
 }
 
 /*Header Itself*/
-
-/*GRADIENT EFFECT*/header{ 
-background:url("../images/KGPSDlayer_046.png"); background-position:bottom right;
-background:linear-gradient(purple 0%, black 90%), linear-gradient(to right, green 0%, yellow 80%),
-url("../images/KGPSDlayer_046.png")30px, url("../images/KGPSDlayer_046.png")20px; 
-    background-blend-mode: screen, difference, lighten; background-position:bottom right;}
 /*GRADIENT EFFECT*/
+header{ 
+    background:url("../images/KGPSDlayer_046.png"); 
+    background-position:bottom right;
+    background:linear-gradient(purple 0%, black 90%), 
+        linear-gradient(to right, green 0%, yellow 80%),
+        url("../images/KGPSDlayer_046.png")30px,
+        url("../images/KGPSDlayer_046.png")20px; 
+    background-blend-mode: screen, difference, lighten; 
+    background-position:bottom right;
+}
 
 header h1{ line-height:0.25em; font-family:League; font-size:2em; letter-spacing:0.03em;
     font-weight:100;
