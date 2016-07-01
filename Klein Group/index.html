@@ -19,8 +19,6 @@
                     width: 320,
                     height: 250,
                 }});
-         
-               
            });
 </script>
     <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"/>
@@ -31,10 +29,14 @@
     <!--Main page flow for basic semantic elements defined as block, I think this is already done in normalize-->
 </head>
   <body>
-<!--margin:0, -webkit-font-smoothing:antialiased !impportant;-->
-   <!--Initially make all img(s) full width and height:inherit-->
-    <header><!--border-top in em-->
-        <div class="generic-info-box"> <!-- 0 7% 0 padding...?-->
+<!--margin:0;
+    -webkit-font-smoothing:antialiased !impportant;-->
+   <!--Initially make all img(s) full width;
+       and height:inherit-->
+    <header>
+       <!--border-top in em-->
+        <div class="generic-info-box"> 
+           <!-- 0 7% 0 padding...?-->
             <div class="top-logo-menu-container">
                <!--height, margin-bottom in em (5 & 2.5) height+@482-->
                 <div class="top-left-corner-logo-box">
@@ -59,16 +61,28 @@
                     </div>
                 </div>
                 <div class="mobile-menu-box">
-                   <!--float right, some padding for the icon width 10% and inheriting height of container-->
+                   <!--float right, 
+                       some padding for the icon 
+                       width 10% 
+                       inheriting height of container-->
                     <i class="fa fa-bars"></i>
-                    <!--block in page flow, text align right -->
+                    <!--block in page flow; 
+                        text align right -->
                 </div>
             </div>
             <!----><h1>DECISIVE DECADENCE.</h1><!---->
             <!----><h1>EMINENCE IN EVOLUTION.</h1><!---->
-                            <!---->     
+            <!-- On h1 Above:
+                line-height:0.25;
+                font-size:2em; @482px 3.5em;
+                letter-spacing:0.03em;
+                text-align:right-->   
             <h2>The Kevin Group is known for the most  solutions to your average (or not so average!) real-estate conundri. We are a competent team and, well, let's just say we put the "Real" back in Real Estate.</h2>
-                            <!---->              
+            <!--line-height 1.5em;
+                helvetica;
+                text align right; 
+                font-size 1.3em, 1.5 @ 482px width;
+                weight:400-->  
         </div>
     </header>      
     <section class="commercial">
@@ -78,7 +92,14 @@
                 width:91% approx
                 margin:5% auto ????-->
             <div class="pic-box">
+                <!--Relative Position;
+                    95% width;
+                    50% height of parent;
+                    2vw auto margin;
+                    0 margin-bottom;
+                    -->
                  <div class="heading-and-logo-container">
+                    <!--absolute bottom 0 left 0-->
                      <div class="logo-left-corner">
                         <img src="images/KGPSDlayer_027.png"/>
                          <!--<i class="fa fa-building"></i>-->
@@ -86,13 +107,23 @@
                      <h2>KEVIN GROUP COMMERCIAL</h2>
                  </div>    
             </div>
-            <img class="commercial-text-img" src="images/CommDescSmall.png"/>
+            <img class="commercial-text-img"                                     src="images/CommDescSmall.png"/>
+            <!--89vw width, 8em height, 10px 3px margin
+                @media min 448{
+                80vw width, 30vw height, 24px 25px margin-->
         </div>
     </section>    
     <section class="residential">
         <div class="generic-info-box"> 
              <div class="pic-box">
+                 <!--Relative Position;
+                    95% width;
+                    50% height of parent;
+                    2vw auto margin;
+                    0 margin-bottom;
+                    -->
                   <div class="heading-and-logo-container">
+                     <!--absolute bottom 0 left 0-->
                       <div class="logo-left-corner">
                          <img src="images/KGPSDlayer_035.png"/>
                           <!--<i class="fa fa-building"></i>-->
@@ -103,13 +134,18 @@
              <img class="residential-text-img" src="images/ResDescSmall.png"/>
              <!-- width: 80vw height:30vw margin 24 25-->
         </div>
-        <!--<div class="tile-shadow"></div>
-        <div class="tile-shadow"></div> -->
     </section>
     <section class="project">
         <div class="generic-info-box">
             <div class="pic-box">
+                <!--Relative Position;
+                    95% width;
+                    50% height of parent;
+                    2vw auto margin;
+                    0 margin-bottom;-->
                 <div class="heading-and-logo-container">
+                   <!--absolute bottom 0 left 0-->
+                   <!--inline-block-->
                     <div class="logo-left-corner">
                        <img src="images/KGPSDlayer_043.png"/>
                         <!--<i class="fa fa-building"></i>-->
@@ -117,13 +153,18 @@
                     <div class="project-heading">
                         <h2>KEVIN GROUP</h2> 
                         <h2>PROJECT MARKETING</h2>
+                         <!--
+                            font-size:7.5vw;
+                            font-weight:100; 
+                            letter-spacing 0.06em;
+                            margin:1% 2% 0;
+                            helvetica
+                            -->            
                     </div>
                 </div>
             </div>
             <img class="project-text-img" src="images/MarketDescSmall.png"/>
         </div>
-        <!--<div class="tile-shadow"></div>
-        <div class="tile-shadow"></div>-->
     </section>
     <aside class="slider">
         <ul class="slideme">
