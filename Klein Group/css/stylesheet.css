@@ -146,7 +146,7 @@ header{
     background:url("../images/KGPSDlayer_046.png"); 
     background-position:bottom right;
     background:linear-gradient(purple 0%, black 90%), 
-        linear-gradient(to right, green 0%, yellow 80%),
+        linear-gradient(to right, green 0%, red 80%),
         url("../images/KGPSDlayer_046.png")30px,
         url("../images/KGPSDlayer_046.png")20px; 
     background-blend-mode: screen, difference, lighten; 
