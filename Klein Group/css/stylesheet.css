@@ -1,19 +1,23 @@
 
-/*First We Load In The Fonts*/
-@font-face{
-    font-family:"Leaguecon"; 
+
+@font-face{font-family:"Leaguecon"; 
     src:url("../fonts/leaguegothic-condensed-regular-webfont.woff") format("woff");
 }
-@font-face{
-    font-family:"League";
+@font-face{font-family:"League";
     src:url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
 }
 
 /*-------*/
 /*<HTML5>*/
-header, section, footer, aside, nav, main, article, figure {
-    display: block;
-    width:100%;
+header, 
+section, 
+footer, 
+aside, 
+nav, 
+main, 
+article, 
+figure {
+display: block; width:100%;
 }
 /*</HTML5>*/ 
 
@@ -25,18 +29,18 @@ div{ border:1px solid lightgrey;}
 
 /*Fixing a problem that made a vertical whitespace down at smaller widths closer to 320. Taken from StackOverFlow*/html,body{width: 100%;height: 100%;margin: 0px;padding: 0px;overflow-x: hidden;}
 /*-----*/
-body{ 
-    margin: 0; 
-    -webkit-font-smoothing:antialiased !important; /*Thinkful*/             background-color:white;}
-
+body{margin: 0; 
+-webkit-font-smoothing:antialiased !important; background-color:white;}
+/*1.30208333333%*/
 header{
-    border-top:0.313em solid #1d4782; /*1.30208333333%*/
+border-top:0.313em solid #1d4782; 
 }
 
 img{ 
     width:100%; 
     height:inherit;
 }
+/*Now Why is this here? The order of the CSS in related to html is not making sense to me*/
 .get-in-touch, .message-form{
     position:relative; 
     overflow:hidden;
@@ -86,35 +90,35 @@ section .generic-info-box{
 }
 
 .top-left-corner-logo-box{ 
-    float:left; 
-    position:relative;
-    height:inherit; 
+ 	float:left; position:relative;
+    height:inherit; /*Is this necessary*/
     margin-left:1.30208333333%;
     width:100px;
 }
 
 @media screen and (min-width:482px){
     .top-left-corner-logo-box{
-        width:164px;
+        width:164px; /*Straight up pixels*/
     }
 }
 
 .top-left-corner-logo-box>.down-sort-div{
     float:right; 
     position:absolute; 
+/*Absolute position and right floating on this box doesn't seem to cause any problems*/
     top:0; 
     right:0; 
     display:inline;/*why*/
     width:12%;
     height:inherit;   
 }
-
+/*Do we need this direct child selector*/
 .down-sort-div>.fa-sort-desc{ 
-    position:absolute; 
+ 	position:absolute; 
     bottom:1.05em;
     color:white;
 }
-
+/*Do we need this direct child selector*/
 @media screen and (min-width:482px){
     .down-sort-div>.fa-sort-desc{
         bottom:2em;
@@ -125,7 +129,7 @@ section .generic-info-box{
 .top-logo-menu-container .mobile-menu-box{
     float:right; 
     padding-right:1.30208333333%;
-    height:inherit;
+    height:inherit;/*Isn't this automatic*/
     width:10%;   
 }
 /*<DIV.top-logo-menu-container>*/
@@ -198,18 +202,22 @@ header h2{
     margin:2vw auto;
     margin-bottom:0;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+	/*What the fuck does this actually do?*/
 }
 section.commercial .pic-box{
     background:url(../images/KGPSDlayer_026.png);
     background-position:-254px -55px;
+	/*Art Direction*/
 }
 section.residential .pic-box{
     background:url(../images/KGPSDlayer_034.png);
     background-position:-259px -36px;
+	/*Art Direction*/
 }
 section.project .pic-box{
     background:url(../images/KGPSDlayer_042.png);
     background-position:0px 269px;
+	/*Art Direction*/
 }
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
@@ -223,6 +231,7 @@ section.project .pic-box{
     vertical-align:middle;
     height:38%;
     width:100%;
+	/*Hack-y?*/
     /*background-color:magenta;*/
 }
 /*<DIV.generic-info.box>*/
@@ -232,10 +241,12 @@ section.project .pic-box{
 .heading-and-logo-container .logo-left-corner{
     height:100%;
     width:12.8vw; 
+	/*vw units as a thing, aspect ratios*/
 }
 @media screen and (max-width:448px){
     .heading-and-logo-container .logo-left-corner{
         width:10%;
+/*A vw goes to a %, why not keep it consistent?*/
     }
 }
 /*<DIV.generic-info.box>*/
