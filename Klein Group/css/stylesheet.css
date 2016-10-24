@@ -1,6 +1,7 @@
 /*@font-face{font-family:"Leaguecon"; src:url("../fonts/leaguegothic-condensed-regular-webfont.woff") format("woff");
 }*/
 @font-face{font-family:"League";src:url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
+/*League Gothic... Do we have anything to say aout this, or about fonts in general?*/
 }
 
 /*-------*/
@@ -16,7 +17,7 @@ figure {
 display: block; width:100%;
 }
 /*</HTML5>*/ 
-
+/*"The Semantic Web" What The Fuck is that and Why Should I care at all"*/
 div{ border:1px solid lightgrey;}
 
 /*<------->*/
@@ -32,12 +33,12 @@ body{margin: 0;
 
 header{
 border-top:0.313em solid #1d4782; 
+	/*PsdToHTML*/
 }
 
 
 img{width:100%;height:inherit;}
-
-
+/*Why*/
 
 .get-in-touch, .message-form{
 	
@@ -536,7 +537,7 @@ ol li.current {background: #668CFF; width:4vw; height:4vw; border-radius: 4vw;
         
 		text-transform:uppercase;
         
-		text-align:?center;
+		text-align:center;
 		/*Necessary*/
     }
     .generic-info-box>.contact-small{
