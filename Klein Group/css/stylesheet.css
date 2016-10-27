@@ -24,7 +24,7 @@ div{ border:1px solid lightgrey;}
 /*<GENERAL>*/
 /*<------->*/
 
-/*Fixing a problem that made a vertical whitespace down at smaller widths closer to 320. Taken from StackOverFlow*/html,body{width: 100%;height: 100%;margin: 0px;padding: 0px;overflow-x: hidden;}
+/*Fixing a problem that made a vertical whitespace down at smaller widths closer to 320. Taken from StackOverFlow*//*html,body{width: 100%;height: 100%;margin: 0px;padding: 0px;overflow-x: hidden;}
 /*-----*/
 body{margin: 0; 
 -webkit-font-smoothing:antialiased !important; background-color:white;}
@@ -54,7 +54,7 @@ img{width:100%;height:inherit;}
 
 header .generic-info-box{
 	
-    padding:0 7% 0;
+    padding:0 7% 0; /*Could I have done this with margin as well?*/
 }
 /*----------------------*/
 /*<section (residential, commerical, project)>
@@ -68,7 +68,6 @@ section .generic-info-box{height:20em;
 	width:90.78125%; 
 	
 	
-	
 background-color:orchid;}@media 
 	
 	screen and (min-width:448px){
@@ -79,7 +78,7 @@ background-color:orchid;}@media
         
 		background-color:yellowgreen;}
 		
-		/*What are we using in terms of units and shit ? Let's get consistent, mathematical, and UX friendly. Fuck the brainstation faggots. We're going to go a la true organical musical, waiting for the fuckin invitation like fuck*/
+		/*What are we using in terms of units and shit ? Let's get consistent, mathematical, and UX friendly. We're going to go a la true organical musical, waiting for the fuckin invitation like yaa*/
 }
 
 /*------*/
@@ -199,8 +198,8 @@ bottom:1.05em;color:white;
 header{ 
     background:url("../images/KGPSDlayer_046.png"); 
     background-position:bottom right;
-    background:linear-gradient(purple 0%, black 90%), 
-        linear-gradient(to right, green 0%, red 80%),
+    background:linear-gradient(#003980 0%, yellow 90%), 
+        linear-gradient(to right, green 0%, red 150%),
         url("../images/KGPSDlayer_046.png")30px,
         url("../images/KGPSDlayer_046.png")20px; 
     background-blend-mode: screen, difference, lighten; 
@@ -355,6 +354,7 @@ header h2{
 }
 
 .commercial-text-img, .residential-text-img, .project-text-img{
+	/*Text-Images? Are you a cheap chinese manufacturer?*/
     
 	width:89vw;
     
