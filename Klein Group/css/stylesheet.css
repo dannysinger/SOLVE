@@ -1,10 +1,13 @@
 /*@font-face{font-family:"Leaguecon"; src:url("../fonts/leaguegothic-condensed-regular-webfont.woff") format("woff");
 }*/
+
+/*?px=?em=?rem=?vw=?vmin=?vmax=?vh*/
+/*(body-font-size)*/
 @font-face{font-family:"League";src:url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
 /*League Gothic... Do we have anything to say aout this, or about fonts in general?*/
 }
-
-/*-------*/
+/*Make FITC available offline (Responsive Niche)
+*//*-------*/
 /*<HTML5>*/
 header, 
 section, 
@@ -52,9 +55,7 @@ img{width:100%;height:inherit;}
 /*----------------------*/
 
 
-header .generic-info-box{
-	
-    padding:0 7% 0; /*Could I have done this with margin as well?*/
+header .generic-info-box{padding:0 7% 0; /*Could I have done this with margin as well?*/
 }
 /*----------------------*/
 /*<section (residential, commerical, project)>
@@ -63,12 +64,12 @@ header .generic-info-box{
 
 section .generic-info-box{height:20em; 
 	
-	margin:5% auto; 
-	
+	margin:5% auto; /*ANCIENT CENTERING TACTICS*/
+
 	width:90.78125%; 
 	
 	
-background-color:orchid;}@media 
+background-color:paleturquoise;}@media 
 	
 	screen and (min-width:448px){
    
@@ -112,11 +113,11 @@ background-color:orchid;}@media
 
 .top-left-corner-logo-box{ 
 
- 	float:left; position:relative;
+ 	float:left; position:relative;/*Probably doesn't matter*/
 	
     height:inherit; /*Is this necessary*/
 	
-    margin-left:1.30208333333%;
+    margin-left:1.30208333333%;/*Will there not be a day with a standard Grid System?*/
 	
     width:100px;
 	
@@ -138,25 +139,17 @@ background-color:orchid;}@media
 
 /*<div.down-sort-div*/
 
-.top-left-corner-logo-box>.down-sort-div{
+.top-left-corner-logo-box>.down-sort-div{float:right; 
+position:absolute; 
+top:0;right:0; 
+
+display:inline;/*why*/
 	
-    float:right; 
-	
-    position:absolute; 
-	
-/*Absolute position and right floating on this box doesn't seem to cause any problems*/
-    top:0; 
-	
-    right:0; 
-	
-    display:inline;/*why*/
-	
-    width:12%;
-	
-    height:inherit;   
-	
-	/*Man too much shit for such a small thing*/
+width:12%;height:inherit; /*Man too much shit for such a small thing?*/
 }
+
+
+
 /*.fa-sort-desc*/
 .down-sort-div>.fa-sort-desc{ position:absolute;
 bottom:1.05em;color:white;
@@ -198,7 +191,7 @@ bottom:1.05em;color:white;
 header{ 
     background:url("../images/KGPSDlayer_046.png"); 
     background-position:bottom right;
-    background:linear-gradient(#003980 0%, yellow 90%), 
+    background:linear-gradient(#003980 0%, black 90%), 
         linear-gradient(to right, green 0%, red 150%),
         url("../images/KGPSDlayer_046.png")30px,
         url("../images/KGPSDlayer_046.png")20px; 
@@ -208,7 +201,7 @@ header{
 
 header h1{ 
 	
-    line-height:0.25em; 
+    line-height:0.25em; /*Is this drawn from the center of the text*/
     
 	font-size:2.3em;
     
@@ -309,13 +302,7 @@ header h2{
     
 	display:flex; 
     
-	align-items:center; 
-    
-	vertical-align:middle;
-    
-	height:38%;
-    
-	width:100%;
+	align-items:center; vertical-align:middle;height:38%;width:100%;
 	/*Hack-y?*/
     /*background-color:magenta;*/
 }
