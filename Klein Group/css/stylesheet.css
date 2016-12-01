@@ -1,15 +1,26 @@
 /*@font-face{font-family:"Leaguecon"; src:url("../fonts/leaguegothic-condensed-regular-webfont.woff") format("woff");
-}*/
-
+}/*Erase this note before final release, but I think this version (mobile)is nearly good to go.Beside em fallbacks, small visual stuff, eemm i dunno ... 
+Seems pretty good. Issue now seems to be flex integration margin 0 auto and normalizing paddings and margins a lil bit*/
+/*Dealing with design conscious hipsters is more of a social perceptual thing. Fonts. Visual experience is a thing. Seems that with phones load time has to be huge. CrawlBots has to be Something.*/
 /*?px=?em=?rem=?vw=?vmin=?vmax=?vh*/
+/*Vw = 1/100 of viewp. width*/
+/*Vmax (or vm)= Adapts to landscape or portrait?*/
 /*(body-font-size)*/
+/*rem is relative to :root what is that*/
+/* 1em = bodyfont x 1 etc.*/
+/*Vws are very good for text apparently, fluid, vector based*/
+/*Fallback order for lengths: v, %, em, px*/
+/*Fallback order for texts: v, em, px, is % a thing here*/
+/*html canvas*/
+/*Make sure to put all fonts in em, or %, probably em, or VW? Kyle Schaffer's article was written in 2010*/
+/*PsdToHTML*/
 @font-face{font-family:"League";src:url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
 /*League Gothic... Do we have anything to say aout this, or about fonts in general?*/
 }
 /*Make FITC available offline (Responsive Niche)
 *//*-------*/
 /*<HTML5>*/
-header, 
+/*header, 
 section, 
 footer, 
 aside, 
@@ -20,7 +31,9 @@ figure {
 display: block; width:100%;
 }
 /*</HTML5>*/ 
-/*"The Semantic Web" What The Fuck is that and Why Should I care at all"*/
+/*CrawlBots*/
+/*I notice the chrome user agent takes care of this already....? That's chrome though, and it's new*/
+
 div{ border:1px solid lightgrey;}
 
 /*<------->*/
@@ -36,48 +49,49 @@ body{margin: 0;
 
 header{
 border-top:0.313em solid #1d4782; 
-	/*PsdToHTML*/
+	/*0.3*16px=16px/3= "5.3px", actually is 4.5px, 4.5*3=13.5???*/
+	
 }
 
 
 img{width:100%;height:inherit;}
 /*Why*/
 
-.get-in-touch, .message-form{
+/*.get-in-touch, .message-form{
 	
-    position:relative;/*What does this mean*/ 
+    position:relative;/
 	
     overflow:hidden;
-}
+}*/
 /*----------------------*/
 /*<HEADER>
     <DIV.generic-info-box>*/
 /*----------------------*/
 
 
-header .generic-info-box{padding:0 7% 0; /*Could I have done this with margin as well?*/
+header .Inner-Skeleton{
+	padding:0 7% 0; /*Could I have done this with margin as well?*/
 }
 /*----------------------*/
 /*<section (residential, commerical, project)>
     <DIV.generic-info-box>*/
 /*----------------------*/
 
-section .generic-info-box{height:20em; 
+section .Inner-Skeleton{
+	height:20em; 
 	
 	margin:5% auto; /*ANCIENT CENTERING TACTICS*/
 
 	width:90.78125%; 
 	
-	
-background-color:paleturquoise;}@media 
-	
+	background-color:paleturquoise;}
+
+@media 
 	screen and (min-width:448px){
-   
-		section .generic-info-box{
-        
-		height:84.4vw; 
-        
-		background-color:yellowgreen;}
+		section .Inner-Skeleton{
+        	height:33.813em;
+			height:84.4vw; /*Should be using vmax or should just switch?*/
+			background-color:yellowgreen;}
 		
 		/*What are we using in terms of units and shit ? Let's get consistent, mathematical, and UX friendly. We're going to go a la true organical musical, waiting for the fuckin invitation like yaa*/
 }
@@ -90,7 +104,7 @@ background-color:paleturquoise;}@media
 
 @media screen and (min-width:320px){
 
-.generic-info-box .top-logo-menu-container{
+.Inner-Skeleton .top-logo-menu-container{
 
         height:5em;
 	
@@ -101,7 +115,7 @@ background-color:paleturquoise;}@media
 
 @media screen and (min-width:482px){
 	
-    .generic-info-box .top-logo-menu-container{
+    .Inner-Skeleton .top-logo-menu-container{
 		
         height:9.063em;
     }
@@ -163,7 +177,7 @@ bottom:1.05em;color:white;
 	float:right; 
     
 	padding-right:1.30208333333%;
-    
+    =
 	height:inherit;/*Isn't this automatic*/
     
 	width:10%;   
@@ -189,8 +203,7 @@ bottom:1.05em;color:white;
 /*Header Itself*/
 /*GRADIENT EFFECT*/
 header{ 
-    background:url("../images/KGPSDlayer_046.png"); 
-    background-position:bottom right;
+
     background:linear-gradient(#003980 0%, black 90%), 
         linear-gradient(to right, green 0%, red 150%),
         url("../images/KGPSDlayer_046.png")30px,
@@ -249,9 +262,8 @@ header h2{
 /*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*/
 /*Commercial, Residential and Project Boxes*/
 /*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*/
-/*<DIV.generic-info.box>*/
-    /*<DIV.pic-box>*/
-.generic-info-box .pic-box{ 
+
+.divider-a, .divider-b, .divider-c{ 
     
 	position:relative; 
     
@@ -266,14 +278,14 @@ header h2{
 	box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 	/*What the fuck does this actually do?*/
 }
-.commercial .pic-box{
+.divider-a{
     
 	background:url(../images/KGPSDlayer_026.png);
     
 	background-position:-254px -55px;
 	/*Art Direction*/
 }
-.residential .pic-box{
+.divider-b{
     
 	background:url(../images/KGPSDlayer_034.png);
     
@@ -281,7 +293,7 @@ header h2{
 	/*Art Direction*/
 }
 
-.project .pic-box{
+.divider-c{
 	
     background:url(../images/KGPSDlayer_042.png);
     
@@ -292,7 +304,7 @@ header h2{
     /*<DIV.pic-box>*/
         /*<DIV.heading-and-logo-container>*/
 
-.pic-box .heading-and-logo-container{ 
+.heading-and-logo-container{ 
    
 	position:absolute; 
     
@@ -306,8 +318,6 @@ header h2{
 	/*Hack-y?*/
     /*background-color:magenta;*/
 }
-/*<DIV.generic-info.box>*/
-    /*<DIV.pic-box>*/
         /*<DIV.heading-and-logo-container>*/
             /*<DIV.logo-left-corner>*/
 .heading-and-logo-container .logo-left-corner{
@@ -321,8 +331,7 @@ header h2{
 /*A vw goes to a %, why not keep it consistent?*/
     }
 }
-/*<DIV.generic-info.box>*/
-    /*<DIV.pic-box>*/
+
         /*<DIV.heading-and-logo-container>*/
             /*<h2>*/
 .heading-and-logo-container h2{ 
@@ -471,17 +480,15 @@ ol li.current {background: #668CFF; width:4vw; height:4vw; border-radius: 4vw;
 	padding-bottom:280px;
 	/*Simple*/
 }
-.get-in-touch>.generic-info-box{
+.get-in-touch>.Inner-Skeleton{
     
 	margin:0 auto;
     
 	height:inherit; /*This is funny*/
 }
-/*<SECTION.get-in-touch>*/
-    /*<DIV.generic-info-box>*/
-        /*<DIV.contact-heading>*/
 
-.generic-info-box>.contact-small{ 
+
+.Inner-Skeleton>.contact-small{ 
     
 	font-size:2em;
     
@@ -497,7 +504,7 @@ ol li.current {background: #668CFF; width:4vw; height:4vw; border-radius: 4vw;
     
 	text-align:center;
 }
-.generic-info-box>.contact-heading{
+.Inner-Skeleton>.contact-heading{
 	
     display:none; /*visibility:hidden, transform, translate xy to avoid DOM reflows*/
     margin-top:9.35vw;
@@ -508,7 +515,7 @@ ol li.current {background: #668CFF; width:4vw; height:4vw; border-radius: 4vw;
     .get-in-touch{
         padding-bottom:307px;
 }
-    .generic-info-box>.contact-heading{
+    .Inner-Skeleton>.contact-heading{
         
 		display:block;
         
@@ -527,19 +534,17 @@ ol li.current {background: #668CFF; width:4vw; height:4vw; border-radius: 4vw;
 		text-align:center;
 		/*Necessary*/
     }
-    .generic-info-box>.contact-small{
+    .Inner-Skeleton>.contact-small{
         display:none;
     }
 }
 @media screen and (min-width:512px){
-    .generic-info-box>.contact-heading{
+    .Inner-Skeleton>.contact-heading{
         font-size:3em;
     }
 }
-/*<SECTION.get-in-touch>*/
-    /*<DIV.generic-info-box>*/
-        /*<p>*/
-.get-in-touch>.generic-info-box>p{ 
+
+.get-in-touch>.Inner-Skeleton>p{ 
 	
 	line-height:6.5vw;
 	
@@ -578,13 +583,13 @@ section.message-form{
 }
 /*I can guess what that is*/
 
-.message-form div.generic-info-box{
+.message-form div.Inner-Skeleton{
     
 	margin-top:0;
     
 	background-color:white;
 }
-.message-form div.generic-info-box input{
+.message-form div.Inner-Skeleton input{
 	
 	width:80%;height:3vw;padding:2.6vw 3.6vw;margin:3vw auto;
     
@@ -601,13 +606,13 @@ section.message-form{
 	border:1px solid #E7E7E7;
     }
 
-.message-form div.generic-info-box input:nth-child(4){
+.message-form div.Inner-Skeleton input:nth-child(4){
     
 	height:1vw;
     
 	padding:4vw 3.75vw 28vw;
 }
-.message-form div.generic-info-box input:nth-child(6){
+.message-form div.Inner-Skeleton input:nth-child(6){
     
 	height:7.5vw;
     
@@ -618,13 +623,13 @@ section.message-form{
 
 @media screen and (min-width:450px){
     
-	.message-form div.generic-info-box input:nth-child(6){
+	.message-form div.Inner-Skeleton input:nth-child(6){
     
 		padding-bottom:5vw;
     }
 }
 
-i.fa-arrow-circle-o-right{
+.fa-arrow-circle-o-right{
     
 	margin:2vw 42vw;
     
@@ -639,9 +644,8 @@ i.fa-arrow-circle-o-right{
                                     ---------------------*/
 /*----------------------*/
 /*<footer>
-    <DIV.generic-info-box>*/
 /*----------------------*/
-footer .generic info-box:nth-child(2){
+footer .Inner-Skeleton:nth-child(2){
     
 	padding:0 7% 0;
     
@@ -668,16 +672,15 @@ footer p{
 /*------------------<FOOTER> NavBar
                         -----------------------------*/
 
-/*<NAV.generic-info-box>*/
+
     /*<ul.footer-nav>*/
 /*---------------*/
-/*<DIV.generic-info-box>*/
     /*<ul.logos-container>*/
 /*---------------*/
 /*<ul.social>*/
 /*---------------*/
 
-nav.generic-info-box{
+nav.Inner-Skeleton{
 	
     margin: 1.938em auto;
     
@@ -690,7 +693,7 @@ nav.generic-info-box{
     display:inline-block;
 }
 
-/*<NAV.generic-info-box>*/
+
     /*<ul.footer-nav>*/
 
 .footer-nav>li{
@@ -711,7 +714,7 @@ nav.generic-info-box{
 
 /*----------------<FOOTER> Logos
                     ----------------------*/
-/*<DIV.generic-info-box>*/
+
     /*<ul.logos-container>*/
 .logos-container{ 
     padding:0 -5% 0;
@@ -726,7 +729,7 @@ nav.generic-info-box{
     width:33.3333%; 
     height:1.5em; 
 }
-/*<DIV.generic-info-box>*/
+
     /*<ul.logos-container>*/
         /*<li>*/
             /*<DIV (logo1box, logo2box, logo3box)>*/
