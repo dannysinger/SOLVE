@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>9 - Navigation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+html,body{color:black}*:not('#mkdbuttons'){margin:0;padding:0}#wrapper{font:15px helvetica,arial,freesans,clean,sans-serif;-webkit-font-smoothing:subpixel-antialiased;line-height:1.7;padding:3px;background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}p{margin:1em 0}a{color:#4183c4;text-decoration:none}#wrapper{background-color:#fff;padding:30px;margin:15px;font-size:15px;line-height:1.6}#wrapper>*:first-child{margin-top:0 !important}#wrapper>*:last-child{margin-bottom:0 !important}@media screen{#wrapper{box-shadow:0 0 0 1px #cacaca, 0 0 0 4px #eee}}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.7;cursor:text;position:relative;margin:1em 0 15px;padding:0}h1{font-size:2.5em;border-bottom:1px solid #ddd}h2{font-size:2em;border-bottom:1px solid #eee}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{color:#777;font-size:1em}p,blockquote,table,pre{margin:15px 0}ul{padding-left:30px}ol{padding-left:30px}ol li ul:first-of-type{margin-top:0px}hr{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:4px;margin:15px 0;padding:0}#wrapper>h2:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child+h2{margin-top:0;padding-top:0}#wrapper>h3:first-child,#wrapper>h4:first-child,#wrapper>h5:first-child,#wrapper>h6:first-child{margin-top:0;padding-top:0}a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p,ul li>:first-child,ol li>:first-child{margin-top:0}dl{padding:0}dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px}dl dt:first-child{padding:0}dl dt>:first-child{margin-top:0}dl dt>:last-child{margin-bottom:0}dl dd{margin:0 0 15px;padding:0 15px}dl dd>:first-child{margin-top:0}dl dd>:last-child{margin-bottom:0}blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{border-collapse:collapse;border-spacing:0;font-size:100%;font:inherit}table th{font-weight:bold;border:1px solid #ccc;padding:6px 13px}table td{border:1px solid #ccc;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;font-family:Consolas, 'Liberation Mono', Courier, monospace;font-size:12px;color:#333}pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent}.highlight pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:14px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px;margin:26px 0}pre code,pre tt{background-color:transparent;border:none}.poetry pre{font-family:Georgia, Garamond, serif !important;font-style:italic;font-size:110% !important;line-height:1.6em;display:block;margin-left:1em}.poetry pre code{font-family:Georgia, Garamond, serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;vertical-align:super;position:relative}sub{vertical-align:sub;top:-1px}@media print{body{background:#fff}img,pre,blockquote,table,figure{page-break-inside:avoid}#wrapper{background:#fff;border:none}code{background-color:#fff;color:#333 !important;padding:0 .2em;border:1px solid #DEDEDE}pre{background:#fff}pre code{background-color:#fff !important;overflow:visible}}@media screen{body.inverted{color:#eee !important;border-color:#555;box-shadow:none}.inverted #wrapper,.inverted hr,.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt,.inverted blockquote{color:#eee !important;border-color:#555;box-shadow:none}.inverted td,.inverted th{background:#333}.inverted pre,.inverted code,.inverted tt{background:#eee !important;color:#111}.inverted h2{border-color:#555555}.inverted hr{border-color:#777;border-width:1px !important}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eeeeee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eeeeee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}.inverted{background:#0b2531;background:#252a2a}.inverted #wrapper{background:#252a2a}.inverted a{color:#acd1d5}}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k,.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .gt{color:#a00}.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .il{color:#099}.highlight .gc{color:#999;background-color:#EAF2F5}.type-csharp .highlight .k,.type-csharp .highlight .kt{color:#00F}.type-csharp .highlight .nf{color:#000;font-weight:normal}.type-csharp .highlight .nc{color:#2B91AF}.type-csharp .highlight .nn{color:#000}.type-csharp .highlight .s,.type-csharp .highlight .sc{color:#A31515}
+
+</style>
+</head>
+
+  <body class="normal">
+    <div id="wrapper">
+      <h1 id="navigations">Navigations</h1>
+
+<!-- ## Whats the toughest part of CSS?
+I asked on [twitter](http://twitter.com/wesbos) what the toughest part of learning CSS was. Most of the replies were from very seasoned developers. Lets take a look at their replies:
+
+[https://twitter.com/wesbos/status/256766414109675520](https://twitter.com/wesbos/status/256766414109675520) -->
+
+<h2 id="project-review">Project Review</h2>
+
+<p>So far, the projects were really great! Most of the code written was very clean and understandable.</p>
+
+<p>Projects will all be reviewed and feedback provided.</p>
+
+<p>There are a few running issues that I found in a few projects, I want to review them now:</p>
+
+<h3 id="clearfix">Clearfix</h3>
+
+<p>Let’s review a clearfix example.</p>
+
+<h3 id="code-indentation">Code indentation</h3>
+<p>Keeping clean and indented code is very important when we start building larger websites. Every time you nest an element, you should indent it in 1 level further.</p>
+
+<p>Open <code>indentExample.html</code> to see an example of multiple levels of indentation.</p>
+
+<h4 id="indentation-tricks">Indentation Tricks</h4>
+<p>You can indent lines in sublime text with <code>CMD</code> (or <code>CTRL</code> on windows) + <code>{</code> or <code>}</code></p>
+
+<p>If you select multiple lines and then go to <code>edit</code> → <code>line</code> → <code>Reindent</code>. This will automatically indent your code based on how deep the are wrapped.</p>
+
+<h3 id="capitals">Capitals</h3>
+<p>HTML elements <em>should never</em> have capitals in them. I saw a lot of this:</p>
+
+<pre><code>&lt;P&gt;...&lt;/p&gt;
+</code></pre>
+
+<p>Same goes for class names.</p>
+
+<p>Bad practice to start with a capital</p>
+
+<pre><code>&lt;ul class="Sidebarwidget"&gt;&lt;/ul&gt;
+</code></pre>
+
+<p>Use camelCasing:</p>
+
+<pre><code>&lt;ul class="sidebarWidget"&gt;&lt;/ul&gt;
+</code></pre>
+
+<p>or dashes</p>
+
+<pre><code>&lt;ul class="sidebar-widget"&gt;&lt;/ul&gt;
+</code></pre>
+
+<p>or underscores</p>
+
+<pre><code>&lt;ul class="sidebar_widget"&gt;&lt;/ul&gt;
+</code></pre>
+
+<p>Pick one and stay consistent</p>
+
+<h3 id="commenting">Commenting</h3>
+<p>I saw some comments that were not commented properly in CSS:</p>
+
+<pre><code>ul { hrmmm not working...
+	color:red;
+}
+</code></pre>
+
+<p>OR</p>
+
+<pre><code>Here starts my sidebar
+.sidebar {
+	color:red;
+}
+</code></pre>
+
+<h3 id="proper">Proper:</h3>
+
+<pre><code>ul { /* hrmmm not working... */
+	color:red;
+}
+</code></pre>
+
+<p>OR</p>
+
+<pre><code>/* Here starts my sidebar */
+.sidebar {
+	color:red;
+}
+</code></pre>
+
+<p>You must always open and close your comments with <code>/*</code> and <code>*/</code> - this was a source of many css problems.</p>
+
+<h3 id="closing-divs-when-you-open-them">Closing divs when you open them</h3>
+
+<p>One of the biggest problems was people opening an element without closing it.</p>
+
+<p>A best practice is to <strong>close an element as soon as you open it</strong>. <code>&lt;img&gt;</code>,<code>&lt;hr&gt;</code> and <code>&lt;br&gt;</code> are the only elements that don’t need to be closed.</p>
+
+<h2 id="last-week-review">Last Week Review</h2>
+<ol>
+  <li>Positioning
+    <ol>
+      <li>By default, what position are all elements?</li>
+      <li>What is the difference between absolute and relative in terms of space left behind? (Who takes whos seat?)</li>
+      <li>A div inside the body with <code>postition:static</code> (default) and <code>top:100px, left:100px</code> will go where?</li>
+      <li>A div inside the body with <code>postition:absolute</code> and <code>top:100px, left:100px</code> will go where?</li>
+      <li>A div inside the body with <code>postition:relative</code> and <code>top:100px, left:100px</code> will go where?</li>
+      <li>How does an absolute positioned item figure out where what to base its <code>top</code>,<code>right</code>, <code>bottom</code>, <code>left</code> values off of?</li>
+      <li>Why would we <em>just</em> <code>position:relative;</code> an item?</li>
+      <li>what is <code>position:fixed;</code> and when would we use it?</li>
+    </ol>
+  </li>
+  <li>Display
+    <ol>
+      <li>What are the differences between <code>display:inline</code> and <code>display:block</code></li>
+      <li>When would you use each one?</li>
+      <li>What are some elements that are by default <code>inline</code></li>
+      <li>What are some elements that are by default <code>block</code></li>
+      <li>What is inline-block?</li>
+      <li>What is the only element that is default inline-block?</li>
+    </ol>
+  </li>
+  <li>Questions about last week’s exercises?
+## Styling Lists with CSS</li>
+</ol>
+
+<p>So we have already learned that we have both <strong>ordered lists</strong> and <strong>unordered lists</strong></p>
+
+<pre><code>&lt;ol&gt;
+	&lt;li&gt;One&lt;/li&gt;
+	&lt;li&gt;Two&lt;/li&gt;
+	&lt;li&gt;Three&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Milk&lt;/li&gt;
+	&lt;li&gt;Bread&lt;/li&gt;
+	&lt;li&gt;Eggs&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>There are three main CSS properties that we can use to style lists:</p>
+
+<h3 id="list-style-position">list-style-position</h3>
+
+<p>You may have noticed that by default your lists look like this:</p>
+
+<p><img src="http://f.cl.ly/items/2c2Q1p1M0E1I0K0R2530/Screen%20Shot%202012-10-14%20at%207.31.41%20PM.png" alt="" /></p>
+
+<p>Why are the bullets on the outside? By default, lists are <code>list-style-position: outside;</code></p>
+
+<p>Switch it to inside</p>
+
+<pre><code>ol,ul {
+	list-style-position:inside;
+}
+</code></pre>
+
+<p>You’ll see it look like this:</p>
+
+<p><img src="http://f.cl.ly/items/2E22290f3W1R0B1t2l0f/Screen%20Shot%202012-10-14%20at%207.34.02%20PM.png" alt="" /></p>
+
+<h3 id="list-style-type">list-style-type</h3>
+
+<p>Filled in dots, or “disc”, are the default for unordered lists and decimal numbers for ordered lists, but we have total control over that:</p>
+
+<pre><code>ul {
+	list-style-type: square;
+}
+</code></pre>
+
+<ul style="list-style-type:square;">
+	<li>Milk</li>
+	<li>Bread</li>
+	<li>Eggs</li>
+</ul>
+
+<pre><code>ul {
+	list-style-type: circle;
+}
+</code></pre>
+
+<ul style="list-style-type:circle;">
+	<li>Milk</li>
+	<li>Bread</li>
+	<li>Eggs</li>
+</ul>
+
+<pre><code>ul {
+	list-style-type: asterisks;
+}
+</code></pre>
+
+<ul style="list-style-type:asterisks;">
+	<li>Milk</li>
+	<li>Bread</li>
+	<li>Eggs</li>
+</ul>
+
+<pre><code>ul {
+	list-style-type: binary;
+}
+</code></pre>
+
+<ul style="list-style-type:binary;">
+	<li>Milk</li>
+	<li>Bread</li>
+	<li>Eggs</li>
+	<li>Milk</li>
+	<li>Bread</li>
+	<li>Eggs</li>
+	<li>Milk</li>
+	<li>Bread</li>
+	<li>Eggs</li>
+</ul>
+
+<p><strong>Same goes for ordered lists</strong></p>
+
+<pre><code>ol {
+	list-style-type: decimal-leading-zero;
+}
+</code></pre>
+
+<ol style="list-style-type:decimal-leading-zero;">
+	<li>One</li>
+	<li>Two</li>
+	<li>Three</li>
+</ol>
+
+<pre><code>ol {
+	list-style-type: lower-roman;
+}
+</code></pre>
+
+<ol style="list-style-type:lower-roman;">
+	<li>One</li>
+	<li>Two</li>
+	<li>Three</li>
+</ol>
+
+<pre><code>ol {
+	list-style-type: armenian;
+}
+</code></pre>
+
+<ol style="list-style-type:armenian;">
+	<li>One</li>
+	<li>Two</li>
+	<li>Three</li>
+</ol>
+
+<h3 id="list-style-image">list-style-image</h3>
+<p>The third and final CSS property is for when you want your own image bullets. It works almost exactly like background-image.</p>
+
+<pre><code>ul {
+	list-style-image:url(http://wes.io/K8oo/yellow-bullet.gif);
+}
+</code></pre>
+
+<ul style="list-style-image:url(http://wes.io/K8oo/yellow-bullet.gif);">
+	<li>Milk</li>
+	<li>Bread</li>
+	<li>Eggs</li>
+</ul>
+
+<h3 id="list-style-shorthand">list-style shorthand</h3>
+
+<p>Just like some other properties, we can use short hand with the CSS property  <code>list-style</code>.</p>
+
+<pre><code>ol {
+	list-style: inside upper-roman;
+}
+</code></pre>
+
+<p>You can also apply any of these styles to list items if you want to get more specific:</p>
+
+<pre><code>ol li.warning {
+	background:red;
+	list-style:inside circle;
+}
+</code></pre>
+
+<p>** Open up <code>list-style.html</code> and write some CSS to do the following:**</p>
+
+<ol>
+  <li>Change the ordered list to lowercase roman numerals</li>
+  <li>Change the unordered list to squares and outside</li>
+  <li>Change the unordered first list item to asterisk and inside</li>
+  <li>Change the unordered third list item to have a custom bullet. Use http://wes.io/K8oo/yellow-bullet.gif</li>
+</ol>
+
+<p>You may either add classes to the list items or use pseudo classes.</p>
+
+<h2 id="nested-lists">Nested Lists</h2>
+
+<p>We haven’t done much with nested lists yet, but just like any other elements we can totally nest ordered or unordered lists inside of list items:</p>
+
+<pre><code>&lt;ul&gt;
+	&lt;li&gt;Milk&lt;/li&gt;
+	&lt;li&gt;Bread
+		&lt;ul&gt;
+			&lt;li&gt;Rye&lt;/li&gt;
+			&lt;li&gt;Whole Wheat&lt;/li&gt;
+			&lt;li&gt;Pumpernickel&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Eggs&lt;/li&gt;
+	&lt;li&gt;Beer&lt;/li&gt;
+	&lt;li&gt;Sketti
+		&lt;ul&gt;
+			&lt;li&gt;Margarine&lt;/li&gt;
+			&lt;li&gt;Ketchup&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Sauce&lt;/li&gt;
+	&lt;li&gt;Hot Dogs&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>How can we target <em>just</em> this nested list level with simple parent child selectors:</p>
+
+<pre><code>ul li ul {
+	background:red;
+}
+</code></pre>
+
+<p>Using the nested lists in <code>nested-lists.html</code></p>
+
+<ol>
+  <li>Make the first nested ordered list list-style-type of binary</li>
+  <li>Adjust the margin and padding of the first nested ordered list so its not indented so far.</li>
+  <li>Color the main unordered list background blue, color white.</li>
+  <li>colors its sub lists background red</li>
+</ol>
+
+<h2 id="using-lists-for-navigation">Using lists for Navigation</h2>
+
+<p>Now that we have a handle on unordered lists, we can start to use them for creating navigations for our websites.</p>
+
+<p>Almost all navigations on the web are unordered lists filled with list items and links. Lets start with a really simple example. Open up <code>simple-nav.html</code> in your browser and editor and we will work through an example.</p>
+
+<p>First off we need to take the margin and padding off that unordered list:</p>
+
+<pre><code>ul.nav {
+	margin:0;
+	padding:0;
+}
+</code></pre>
+
+<p>Now we need them to be displayed beside each other, instead of breaking onto the next line. How would we do that?</p>
+
+<p>Remember <code>display:inline;</code> ? By using this on the list items, they will jump up beside each other.</p>
+
+<pre><code>ul.nav li {
+	display: inline;
+}
+</code></pre>
+
+<p>Note how the bullets disappear. We could also float them left and set the list-style-type to none.</p>
+
+<pre><code>ul.nav li {
+	float:left;
+	list-style-type:none;
+}
+</code></pre>
+
+<p>We can now go ahead and style it as we wish. Lets make it look like this:</p>
+
+<p><img src="http://f.cl.ly/items/2Z0E1Y3l403L410l251G/Screen%20Shot%202012-10-14%20at%209.55.39%20PM.png" alt="" /></p>
+
+<p>Note: its best practice to put your styles on the link themselves rather than the <code>&lt;li&gt;</code> because we want the entire link to take up all the space.</p>
+
+<h3 id="centering-navigations">Centering Navigations</h3>
+
+<p>Sometimes you’ll have a navigation that you want centered on the page. This is easy as pie if you got the last example. Open <code>centered-nav.html</code> and we will work through another example.</p>
+
+<p>First we need to change over our list from bulleted to inline:</p>
+
+<pre><code>ul li {
+	display:inline;
+}
+</code></pre>
+
+<p>Then its as easy as centering the text inside of the nav:</p>
+
+<pre><code>ul {
+	text-align:center;
+}
+</code></pre>
+
+<p>Super basic, we can take it a step further and style the links for something a little more visually appealing:</p>
+
+<pre><code>ul li a {
+	padding: 5px 10px;
+	color:white;
+	font-family: sans-serif;
+	background:purple;
+	text-decoration: none;
+}
+	ul li a:hover {
+		background:pink;
+		color:black;
+	}
+</code></pre>
+
+<h2 id="dropdown-navigations">Dropdown Navigations</h2>
+
+<p>A really useful part of doing navigations with unordered lists is that we can create dropdown navigations with nothing but a few CSS rules, some clever positioning and the <code>:hover</code> state.</p>
+
+<p>Lets work through an example. Things can get a little confusing here so stay with me. Open up <code>dropdown.html</code> and you’ll see a basic navigation unordered list.</p>
+
+<p>Lets style the the list and nested list different colours so we know whats going on:</p>
+
+<pre><code>ul {
+	background:#BADA55;
+}
+	ul li ul {
+		background:#00E0FF;
+	}
+</code></pre>
+
+<p>Now we need to make the first list items inline:</p>
+
+<pre><code>ul li {
+	display:inline;
+}
+</code></pre>
+
+<p>Hrm, but that makes both the parent nav and the sub nav inline, we only want the parent nav to be inline, so lets revert the second nav:</p>
+
+<pre><code>ul li ul li {
+	display:list-item; /* Set the sub navs list items back */
+}
+</code></pre>
+
+<p>The above uses parent → child selectors to select only those list items nested inside another unordered list.</p>
+
+<p>Okay, looking okay so far. Lets get the hover part working. First thing we need to do is hide the sub menus by default.</p>
+
+<pre><code>ul li ul {
+	background:#00E0FF;
+	color:white;
+	display:none;
+}
+</code></pre>
+
+<p>Then, how do we show them only when we hover? What should we trigger the hover on?</p>
+
+<p>Since the sub nav is nested inside of the parents <code>&lt;li&gt;</code>, we want to trigger it on there. We use display:block to switch it back from display:hidden;</p>
+
+<pre><code>ul li:hover ul {
+	display:block;
+}
+</code></pre>
+
+<p>Now you should see the sub nav when you hover over its parent:</p>
+
+<p><img src="http://wes.io/KAhq/Screen%20Shot%202012-10-15%20at%2010.43.32%20AM.png" alt="" /></p>
+
+<p>Problem now is that it pushes everything after the sub navigation down? Why? Because we are using <code>display:block;</code> !</p>
+
+<p>If only we could position it that it did not take up any extra space. It should “give up its seat”. This is where we start to use <code>position:relative</code> and <code>position:absolute;</code></p>
+
+<p>We want the sub menu to be absolute so it doesn’t take up any room within its parent and the parent <code>&lt;li&gt;</code> to be relative so we can base out positioning off of that.</p>
+
+<pre><code>ul li {
+	display:inline;
+	position: relative;
+}
+ul li ul {
+	background:#00E0FF;
+	color:white;
+	display:none;
+	position: absolute;
+}
+</code></pre>
+
+<p>Bam! with just that, we now have a very simple dropdown menu. Its very ugly, but it works! We can use CSS to make cosmetic changes in the future.</p>
+
+<p><img src="http://wes.io/KATD/Screen%20Shot%202012-10-15%20at%2010.48.37%20AM.png" alt="" /></p>
+
+<h2 id="exercises">Exercises</h2>
+
+<p>We have a number of exercises today all revolving around menus, look in today’s folder for the starting code as well as the answers.</p>
+
+<p>There are two challenges today - exercises 6 and 7 will really push the limits of what you are comfortable with.</p>
+
+<p><img src="http://wes.io/Vr2Y/content" alt="" /></p>
+
+<p><img src="http://wes.io/VqYC/content" alt="" /></p>
+
+
+
+
+    </div>
+
+
+  </body>
+
+</html>

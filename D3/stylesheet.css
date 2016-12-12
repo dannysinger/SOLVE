@@ -1,0 +1,61 @@
+body{
+    font-size:43px;
+    font-family:helvetica;
+    font-weight:100;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.D3-logo{
+	margin-left:18px;
+	display:block;
+	width:10%;
+}
+span, h1{
+	text-align:center;
+    font-weight:100;
+    display:block;
+    margin:0;
+}
+.p{
+    font-size:10px;
+}
+.mp{
+    font-size:16px;
+}
+.mf{
+    font-size:24px;
+}
+.f{
+    font-size:13px;
+}
+.darkred{
+    color:darkorange;
+}
+.greenyellow{
+    color:darkseagreen;
+}
+.darkviolet{
+    color:darkviolet;
+}
+.blue{
+    color:deepskyblue;
+}
+.darkblue{
+    color:firebrick;
+}
+
+.container{
+    width:40%; 
+    border: 1px solid violet;
+}
+
+/*When google comes to crawl it thinks each heading as if it was a paragraph title. It will think your page has a heading 1 heading 2 heading 3 generate Table of contents for google auto generate it. And it will display in a way you didnt want. 
+
+
+H1 - H1 is top 
+H2 - sub title
+H3 - section title
+H4 - Overdoing it. 
+
+*/

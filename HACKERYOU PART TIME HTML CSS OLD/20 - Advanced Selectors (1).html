@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>20 - Advanced Selectors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+html,body{color:black}*:not('#mkdbuttons'){margin:0;padding:0}#wrapper{font:15px helvetica,arial,freesans,clean,sans-serif;-webkit-font-smoothing:subpixel-antialiased;line-height:1.7;padding:3px;background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}p{margin:1em 0}a{color:#4183c4;text-decoration:none}#wrapper{background-color:#fff;padding:30px;margin:15px;font-size:15px;line-height:1.6}#wrapper>*:first-child{margin-top:0 !important}#wrapper>*:last-child{margin-bottom:0 !important}@media screen{#wrapper{box-shadow:0 0 0 1px #cacaca, 0 0 0 4px #eee}}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.7;cursor:text;position:relative;margin:1em 0 15px;padding:0}h1{font-size:2.5em;border-bottom:1px solid #ddd}h2{font-size:2em;border-bottom:1px solid #eee}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{color:#777;font-size:1em}p,blockquote,table,pre{margin:15px 0}ul{padding-left:30px}ol{padding-left:30px}ol li ul:first-of-type{margin-top:0px}hr{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:4px;margin:15px 0;padding:0}#wrapper>h2:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child+h2{margin-top:0;padding-top:0}#wrapper>h3:first-child,#wrapper>h4:first-child,#wrapper>h5:first-child,#wrapper>h6:first-child{margin-top:0;padding-top:0}a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p,ul li>:first-child,ol li>:first-child{margin-top:0}dl{padding:0}dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px}dl dt:first-child{padding:0}dl dt>:first-child{margin-top:0}dl dt>:last-child{margin-bottom:0}dl dd{margin:0 0 15px;padding:0 15px}dl dd>:first-child{margin-top:0}dl dd>:last-child{margin-bottom:0}blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{border-collapse:collapse;border-spacing:0;font-size:100%;font:inherit}table th{font-weight:bold;border:1px solid #ccc;padding:6px 13px}table td{border:1px solid #ccc;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;font-family:Consolas, 'Liberation Mono', Courier, monospace;font-size:12px;color:#333}pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent}.highlight pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:14px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px;margin:26px 0}pre code,pre tt{background-color:transparent;border:none}.poetry pre{font-family:Georgia, Garamond, serif !important;font-style:italic;font-size:110% !important;line-height:1.6em;display:block;margin-left:1em}.poetry pre code{font-family:Georgia, Garamond, serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;vertical-align:super;position:relative}sub{vertical-align:sub;top:-1px}@media print{body{background:#fff}img,pre,blockquote,table,figure{page-break-inside:avoid}#wrapper{background:#fff;border:none}code{background-color:#fff;color:#333 !important;padding:0 .2em;border:1px solid #DEDEDE}pre{background:#fff}pre code{background-color:#fff !important;overflow:visible}}@media screen{body.inverted{color:#eee !important;border-color:#555;box-shadow:none}.inverted #wrapper,.inverted hr,.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt,.inverted blockquote{color:#eee !important;border-color:#555;box-shadow:none}.inverted td,.inverted th{background:#333}.inverted pre,.inverted code,.inverted tt{background:#eee !important;color:#111}.inverted h2{border-color:#555555}.inverted hr{border-color:#777;border-width:1px !important}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eeeeee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eeeeee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}.inverted{background:#0b2531;background:#252a2a}.inverted #wrapper{background:#252a2a}.inverted a{color:#acd1d5}}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k,.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .gt{color:#a00}.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .il{color:#099}.highlight .gc{color:#999;background-color:#EAF2F5}.type-csharp .highlight .k,.type-csharp .highlight .kt{color:#00F}.type-csharp .highlight .nf{color:#000;font-weight:normal}.type-csharp .highlight .nc{color:#2B91AF}.type-csharp .highlight .nn{color:#000}.type-csharp .highlight .s,.type-csharp .highlight .sc{color:#A31515}
+
+</style>
+</head>
+
+  <body class="normal">
+    <div id="wrapper">
+      <h1 id="advanced-selectors">Advanced Selectors</h1>
+<p>By now, we have become pretty comfortable with the following selectors:</p>
+
+<pre><code>p {...}
+
+ul li {...}
+
+.className {...}
+
+#idName {...}
+
+.warning, .error {...}
+</code></pre>
+
+<p>CSS3 (and CSS2 in some cases) has ushered in a set of new, more complex, selectors. Let’s take a look at Some of them. Compatability and examples of each can be found at the excellent article by net tuts <a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/">http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/</a></p>
+
+<h2 id="adjacent-selectors--cat--dog-">Adjacent Selectors — .cat + .dog {}</h2>
+
+<p>Select an element right next to another element. Cats and dogs should not be beside eachother. Let’s flag it!</p>
+
+<pre><code>&lt;div class="cat"&gt;Cat&lt;/div&gt;
+&lt;div class="dog"&gt;Dog&lt;/div&gt;
+&lt;div class="dog"&gt;Dog&lt;/div&gt;
+
+&lt;style&gt;
+	.cat + .dog {
+		background:red;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<div class="cat">Cat</div>
+<div class="dog">Dog</div>
+<div class="dog">Dog</div>
+
+<style>
+	.cat + .dog {
+		background:red;
+	}
+</style>
+
+<p>This can be handy when you are trying to pad text, but only when it comes after an image element.</p>
+
+<h2 id="direct-child-selector--cat--kitten">Direct Child Selector — .cat &gt; .kitten</h2>
+
+<p>Select elements only when they are a direct descendant. No children should be selected.</p>
+
+<pre><code>&lt;div class="parent"&gt;
+	Parent
+	&lt;div class="child"&gt;Child&lt;/div&gt;
+	&lt;div class="child"&gt;Child&lt;/div&gt;
+	&lt;div class="child"&gt;Child&lt;/div&gt;
+	&lt;div class="anotherDiv"&gt;
+		&lt;div class="child"&gt;Child&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+	.parent &gt; .child {
+		background:red;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<div class="parent">
+	Parent
+	<div class="child">Child</div>
+	<div class="child">Child</div>
+	<div class="child">Child</div>
+	<div class="anotherDiv">
+		<div class="child">Child</div>
+	</div>
+</div>
+
+<style>
+	.parent > .child {
+		background:red;
+	}
+</style>
+
+<h2 id="following-selector--img--p-">Following Selector — img ~ p {}</h2>
+
+<p>Select elements that follow an element:</p>
+
+<pre><code>&lt;div class="followExample"&gt;
+	&lt;p&gt;I'm a paragraph&lt;/p&gt;
+	&lt;p&gt;I'm a paragraph&lt;/p&gt;
+	&lt;p&gt;I'm a paragraph&lt;/p&gt;
+	&lt;img src="http://placedog.com/100/100"&gt;
+	&lt;p&gt;I'm a paragraph&lt;/p&gt;
+	&lt;p&gt;I'm a paragraph&lt;/p&gt;
+	&lt;p&gt;I'm a paragraph&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+	.followExample img ~ p {
+		background:red;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<div class="followExample">
+	<p>I'm a paragraph</p>
+	<p>I'm a paragraph</p>
+	<p>I'm a paragraph</p>
+	<img src="http://placedog.com/100/100" />
+	<p>I'm a paragraph</p>
+	<p>I'm a paragraph</p>
+	<p>I'm a paragraph</p>
+</div>
+
+<style>
+	.followExample img ~ p {
+		background:red;
+	}
+</style>
+
+<h2 id="attribute-selector--inputtypetext">Attribute Selector — input[type=text]</h2>
+
+<p>Select elements with specific attribute. We have done this with input types before, but it works with any type of attribute!</p>
+
+<h2 id="exactly">Exactly</h2>
+
+<pre><code>&lt;a href="http://wesbos.com"&gt;Wes Bos&lt;/a&gt;
+&lt;a href="http://www.wesbos.com"&gt;Wes Bos (with www)&lt;/a&gt;
+&lt;a href="http://hackeryou.com"&gt;HackerYou&lt;/a&gt;
+
+&lt;style&gt;
+ a[href="http://wesbos.com"] {
+ 	background:red;
+ 	color:white;
+ 	padding:10px;
+ }
+	
+&lt;/style&gt;
+</code></pre>
+
+<p><a href="http://drewminns.com">Drew Minns</a>
+<a href="http://www.drewminns.com">Drew Minns (with www)</a>
+<a href="http://hackeryou.com">HackerYou</a></p>
+
+<style>
+ a[href="http://drewminns.com"] {
+ 	background:red;
+ 	color:white;
+ 	padding:10px;
+ }
+	
+</style>
+
+<h2 id="contains--ahrefhack">Contains — a[href*=”hack”]</h2>
+
+<p>We can be a bit more lax with this. </p>
+
+<p><a href="http://hack.ca">Hack.ca</a>
+<a href="http://www.google.com">Google</a>
+<a href="http://hackeryou.com">HackerYou</a></p>
+
+<style>
+	a[href*="hack"] {
+		border:2px solid red;
+	}	
+</style>
+
+<pre><code>&lt;a href="http://hack.ca"&gt;Hack.ca&lt;/a&gt;
+&lt;a href="http://www.google.com"&gt;Google&lt;/a&gt;
+&lt;a href="http://hackeryou.com"&gt;HackerYou&lt;/a&gt;
+
+&lt;style&gt;
+	a[href*="hack"] {
+		border:2px solid red;
+	}	
+&lt;/style&gt;
+</code></pre>
+
+<h2 id="starts-with--ahrefhttps">Starts with — <code>a[href^="https://"]</code></h2>
+
+<p>Let’s make all https links green:</p>
+
+<pre><code>&lt;a href="http://google.com"&gt;Google.com&lt;/a&gt;
+&lt;a href="https://cibc.ca"&gt;CIBC&lt;/a&gt;
+&lt;a href="https://google.com"&gt;Google.com&lt;/a&gt;
+&lt;a href="http://tsn.ca"&gt;TSN&lt;/a&gt;
+
+&lt;style&gt;
+	a[href^="https://"] {
+		background:green;
+		color:white;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<p><a href="http://google.com">Google.com</a>
+<a href="https://cibc.ca">CIBC</a>
+<a href="https://google.com">Google.com</a>
+<a href="http://tsn.ca">TSN</a></p>
+
+<style>
+	a[href^="https://"] {
+		background:green;
+		color:white;
+	}
+</style>
+
+<h2 id="ends-with">Ends with</h2>
+
+<p>Target the end of an attribute. Turn all links to jpgs blue.</p>
+
+<p><a href="http://google.com">Google.com</a>
+<a href="http://drewminns.com/logo.png">Drew Minns’ logo</a>
+<a href="http://drewminns.com/face.jpg">Drew Minns’ picture</a></p>
+
+<style>
+	a[href$="jpg"] {
+		color:blue;
+	}
+</style>
+
+<pre><code>&lt;a href="http://google.com"&gt;Google.com&lt;/a&gt;
+&lt;a href="http://drewminns.com/logo.png"&gt;Drew Minns' logo&lt;/a&gt;
+&lt;a href="http://drewminns.com/face.jpg"&gt;Drew Minns' picture&lt;/a&gt;
+
+&lt;style&gt;
+	a[href$="jpg"] {
+		color:blue;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<h2 id="checked--checked">Checked — :checked</h2>
+
+<p>Kind of a fun pseudo selector, you can target checkboxes when they are in the checked state.</p>
+
+<div class="floatEx">
+<input type="checkbox" />
+<input type="checkbox" />
+<input type="checkbox" />
+<input type="checkbox" />
+<input type="checkbox" />
+</div>
+<style>
+	.floatEx input[type='checkbox']:checked {
+		float:right;
+	}
+</style>
+
+<pre><code>&lt;input type="checkbox"&gt;
+&lt;input type="checkbox"&gt;
+&lt;input type="checkbox"&gt;
+&lt;input type="checkbox"&gt;
+&lt;input type="checkbox"&gt;
+
+&lt;style&gt;
+	input[type='checkbox']:checked {
+		float:right;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<h3 id="zzzz">zzzz</h3>
+<p>Kind of boring, but we can use this in conjunction with the sibling selectors. </p>
+
+<div class="wat">
+<input type="checkbox" class="toggle" /><div class="showMe">I can be hidden</div>
+</div>
+
+<style>
+	.showMe {
+		background:red;
+		color:white;
+		padding:20px;
+	}
+	input[type='checkbox']:checked + .showMe {
+		display: none;
+	}
+</style>
+
+<pre><code>&lt;input type="checkbox" class="toggle"&gt;
+&lt;div class="showMe"&gt;I can be hidden&lt;/div&gt;
+
+&lt;style&gt;
+	.showMe {
+		background:red;
+		color:white;
+		padding:20px;
+	}
+	input[type='checkbox']:checked + .showMe {
+		display: none;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<h2 id="not">:not</h2>
+<p>This is a new one. Select elements but not certain ones.</p>
+
+<pre><code>&lt;div class="items"&gt;
+	&lt;p class="item1"&gt;Item # 01&lt;/p&gt;
+	&lt;p class="item2"&gt;Item # 02&lt;/p&gt;
+	&lt;p class="item3"&gt;Item # 03&lt;/p&gt;
+	&lt;p class="item4"&gt;Item # 04&lt;/p&gt;
+	&lt;p class="item5"&gt;Item # 05&lt;/p&gt;
+	&lt;p class="item6"&gt;Item # 06&lt;/p&gt;
+	&lt;p class="item7"&gt;Item # 07&lt;/p&gt;
+	&lt;p class="item8"&gt;Item # 08&lt;/p&gt;
+	&lt;p class="item9"&gt;Item # 09&lt;/p&gt;
+	&lt;p class="item10"&gt;Item # 10&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+	.items p:not(.item9) {
+		background:red;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<div class="items">
+	<p class="item1">Item # 01</p>
+	<p class="item2">Item # 02</p>
+	<p class="item3">Item # 03</p>
+	<p class="item4">Item # 04</p>
+	<p class="item5">Item # 05</p>
+	<p class="item6">Item # 06</p>
+	<p class="item7">Item # 07</p>
+	<p class="item8">Item # 08</p>
+	<p class="item9">Item # 09</p>
+	<p class="item10">Item # 10</p>
+</div>
+
+<style>
+	.items p:not(.item9) {
+		background:red;
+	}
+</style>
+
+<h2 id="first-letter--first-letter">First Letter — ::first-letter</h2>
+
+<p>Select the first letter of an element</p>
+
+<pre><code>&lt;p class="drew"&gt;Drew Minns&lt;/p&gt;
+
+&lt;style&gt;
+	p.drew::first-letter {
+		font-size:100px;
+	}
+&lt;/style&gt;
+</code></pre>
+
+<p class="drew">Drew Minns</p>
+
+<style>
+	p.drew::first-letter {
+		font-size:100px;
+	}
+</style>
+
+<h2 id="first-line--first-line">First Line — ::first-line</h2>
+
+<pre><code>&lt;p class="lines"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.Aliquam, minus, quos, earum expedita obcaecati reprehenderitinventore libero atque veniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat tempora!&lt;/p&gt;
+
+&lt;style&gt;
+	p.lines::first-line {
+		color:red;	
+	}
+&lt;/style&gt;
+</code></pre>
+
+<p class="lines">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Aliquam, minus, quos, earum expedita obcaecati reprehenderitinventore libero atque veniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat temporaveniam aut repellendus tenetur in repellat necessitatibus eveniet iure eos quaerat tempora!</p>
+
+<style>
+	p.lines::first-line {
+		color:red;	
+	}
+</style>
+
+
+
+    </div>
+
+
+  </body>
+
+</html>

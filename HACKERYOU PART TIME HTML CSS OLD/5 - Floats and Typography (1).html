@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>5 - Floats and Typography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+html,body{color:black}*:not('#mkdbuttons'){margin:0;padding:0}#wrapper{font:15px helvetica,arial,freesans,clean,sans-serif;-webkit-font-smoothing:subpixel-antialiased;line-height:1.7;padding:3px;background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}p{margin:1em 0}a{color:#4183c4;text-decoration:none}#wrapper{background-color:#fff;padding:30px;margin:15px;font-size:15px;line-height:1.6}#wrapper>*:first-child{margin-top:0 !important}#wrapper>*:last-child{margin-bottom:0 !important}@media screen{#wrapper{box-shadow:0 0 0 1px #cacaca, 0 0 0 4px #eee}}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.7;cursor:text;position:relative;margin:1em 0 15px;padding:0}h1{font-size:2.5em;border-bottom:1px solid #ddd}h2{font-size:2em;border-bottom:1px solid #eee}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{color:#777;font-size:1em}p,blockquote,table,pre{margin:15px 0}ul{padding-left:30px}ol{padding-left:30px}ol li ul:first-of-type{margin-top:0px}hr{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:4px;margin:15px 0;padding:0}#wrapper>h2:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child+h2{margin-top:0;padding-top:0}#wrapper>h3:first-child,#wrapper>h4:first-child,#wrapper>h5:first-child,#wrapper>h6:first-child{margin-top:0;padding-top:0}a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p,ul li>:first-child,ol li>:first-child{margin-top:0}dl{padding:0}dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px}dl dt:first-child{padding:0}dl dt>:first-child{margin-top:0}dl dt>:last-child{margin-bottom:0}dl dd{margin:0 0 15px;padding:0 15px}dl dd>:first-child{margin-top:0}dl dd>:last-child{margin-bottom:0}blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{border-collapse:collapse;border-spacing:0;font-size:100%;font:inherit}table th{font-weight:bold;border:1px solid #ccc;padding:6px 13px}table td{border:1px solid #ccc;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;font-family:Consolas, 'Liberation Mono', Courier, monospace;font-size:12px;color:#333}pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent}.highlight pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:14px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px;margin:26px 0}pre code,pre tt{background-color:transparent;border:none}.poetry pre{font-family:Georgia, Garamond, serif !important;font-style:italic;font-size:110% !important;line-height:1.6em;display:block;margin-left:1em}.poetry pre code{font-family:Georgia, Garamond, serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;vertical-align:super;position:relative}sub{vertical-align:sub;top:-1px}@media print{body{background:#fff}img,pre,blockquote,table,figure{page-break-inside:avoid}#wrapper{background:#fff;border:none}code{background-color:#fff;color:#333 !important;padding:0 .2em;border:1px solid #DEDEDE}pre{background:#fff}pre code{background-color:#fff !important;overflow:visible}}@media screen{body.inverted{color:#eee !important;border-color:#555;box-shadow:none}.inverted #wrapper,.inverted hr,.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt,.inverted blockquote{color:#eee !important;border-color:#555;box-shadow:none}.inverted td,.inverted th{background:#333}.inverted pre,.inverted code,.inverted tt{background:#eee !important;color:#111}.inverted h2{border-color:#555555}.inverted hr{border-color:#777;border-width:1px !important}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eeeeee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eeeeee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}.inverted{background:#0b2531;background:#252a2a}.inverted #wrapper{background:#252a2a}.inverted a{color:#acd1d5}}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k,.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .gt{color:#a00}.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .il{color:#099}.highlight .gc{color:#999;background-color:#EAF2F5}.type-csharp .highlight .k,.type-csharp .highlight .kt{color:#00F}.type-csharp .highlight .nf{color:#000;font-weight:normal}.type-csharp .highlight .nc{color:#2B91AF}.type-csharp .highlight .nn{color:#000}.type-csharp .highlight .s,.type-csharp .highlight .sc{color:#A31515}
+
+</style>
+</head>
+
+  <body class="normal">
+    <div id="wrapper">
+      <style>
+	.white {
+		border-bottom:1px solid black;
+		color:white;
+	}
+	.white:hover {
+		color:black;
+	}
+</style>
+
+<h2 id="week-2-review">Week 2 Review</h2>
+<ol>
+  <li>Selectors, selectors, selectors!
+    <ol>
+      <li>How do I select the body element?
+        <ul>
+          <li><span class="white">body {…}</span></li>
+        </ul>
+      </li>
+      <li>Why would someone select the body element?
+        <ul>
+          <li><span class="white">We often set default color and and font styles on the body because it is the highest element</span></li>
+        </ul>
+      </li>
+      <li>How do I select all paragraphs within <code>&lt;div class="content"&gt;...&lt;/div&gt;</code>
+        <ul>
+          <li><span class="white">.content p {…}</span></li>
+        </ul>
+      </li>
+      <li>How do I select all divs with <strong>both</strong> the class of food and human?
+        <ul>
+          <li><span class="white">div.food.human</span></li>
+        </ul>
+      </li>
+      <li>How do I select divs with the class of human <strong>and</strong> list items with the class of warning?
+        <ul>
+          <li><span class="white">div.human, li.warning {…}</span></li>
+        </ul>
+      </li>
+      <li>Why do we sometimes forgo putting the element name infront of something like <code>.sidebar { ... }</code> verses <code>div.sidebar {...}</code>
+        <ul>
+          <li><span class="white">We either want to select all elements with the class of sidebar <strong>or</strong> we are sure we won’t have anything else with the class of sidebar so we are confident in leaving it off</span></li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>Borders
+ How do I add a 1px border around my div that is dotted and black?
+     * <span class="white">div.className { border: 1px dotted black; }</span></li>
+  <li>Margin and padding
+    <ol>
+      <li>What is margin?
+        <ul>
+          <li><span class="white">Spacing on the <em>outside</em> of elements</span></li>
+        </ul>
+      </li>
+      <li>What is padding?
+        <ul>
+          <li><span class="white">Spacing on the <em>inside</em> of elements</span></li>
+        </ul>
+      </li>
+      <li>Explain the traditional box model
+        <ul>
+          <li><span class="white"><strong>padding</strong> and <strong>border</strong> add to the size of a box.</span></li>
+        </ul>
+      </li>
+      <li>If I want my div to be 800px wide TOTAL with 20px of padding, and 2px of border. What should I use for width?
+        <ul>
+          <li><span class="white">Let’s figure it out..</span></li>
+        </ul>
+      </li>
+      <li>What CSS3 feature can we use to avoid this weird box model?
+        <ul>
+          <li><span class="white">{ -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }</span></li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="this-week">This Week</h2>
+<p>Today we are going to floats and CSS Typography and finish it off with a typography exercise.</p>
+
+<p>Next class will review some advanced CSS3 typography techniques and then we will spend most of the class working on a small project that you build from the ground up.</p>
+
+<h2 id="developer-tools">Developer Tools!</h2>
+<p>Developer Tools are the secret weapon of any web designer or developer, without them the web would look a whole lot worse.</p>
+
+<p>Every browser has their own set of dev tools - Chrome has dev tools, Firefox has firebug (separate addon install) as well as their recent native tools. Safari has webkit dev tools, Opera has dragonfly and IE has F12 developer tools. They are all a little different but they all do generally the same thing, you’ll probably have to learn how to use them all at one point when debugging in other browsers. We will be using the Chrome Dev tools at HackerYou because they are the absolute best. (IMHO!)</p>
+
+<p>Chrome dev tools are packed with tons of helpful little tools for developing a website, we are going to take a look at the most common use of inspecting elements. By now you may be pulling your hair out wondering how someone can know which CSS rule applies to which element(s). The good news is that we aren’t <em>that smart</em> - we use dev tools to help us with this.</p>
+
+<h3 id="trying-dev-tools">Trying Dev Tools</h3>
+<p>Open up <code>devtools-testing.html</code> in Google Chrome. You’ll notice this is the same markup and CSS from our selector exercise.</p>
+
+<p>Let’s left click our page and select <strong>inspect element</strong>. This brings up two panels:</p>
+
+<p><img src="http://wes.io/JOER/Screen%20Shot%202012-09-11%20at%201.37.32%20PM.png" alt="" /></p>
+
+<p>On the left you will see the markup from earlier and on the right you will see the CSS that applies to the element you selected.</p>
+
+<h3 id="editing-a-selector">Editing a Selector</h3>
+<p>Remember we wrote the selector to make all h1 tags red? Click the <strong>magnifying glass</strong> icon and then click the red “HackerYou CSS Testing” title. You’ll see the CSS Rule we wrote! Go ahead and try change the colour or font size. You can even add new properties like <code>border:2px solid green;</code></p>
+
+<h3 id="playing-with-dev-tools">Playing with Dev tools</h3>
+<p>The only way to get awesome at dev tools is to play with it. Here are a bunch of tasks to get comfortable with dev tools. After you are done, we will go through some of the ones you had trouble with.</p>
+
+<ol>
+  <li>Decrease the padding on the white <code>&lt;div class="wrapper"&gt;</code> and add a black border</li>
+  <li>Change the <code>&lt;body&gt;</code> colour to something you like better <small><strong>Hint: You can click the red square to reveal the colour picker</strong></small></li>
+  <li>Increase the padding of the <code>&lt;div class="description"&gt;</code> and add 20px of margin to the top of it</li>
+  <li>Select any <code>&lt;p&gt;</code> (any text black text inside the blue) and make the font size 25px</li>
+  <li>Double click any text element and change the text!</li>
+  <li>Go to Google.com and change the colour of three things</li>
+</ol>
+
+<p>As you can see, Dev tools are very helpful for figuring out which styles are being applied to which elements as well as quickly testing new styles on existing elements. We will be using dev tools throughout the entire course to please don’t hesitate to ask questions about it!</p>
+
+<h2 id="css-normalize">CSS Normalize</h2>
+
+<p>One other tool that web designers and developers have in their toolbelt is something called a CSS Normalize or a CSS Reset.</p>
+
+<p>We need a CSS Normalize because not all browsers start on the same playing field. All browsers come with ‘css defaults’, such as making all h1-h6 elements escalating sizes as well as adding padding and margins to elements such as the body. This is great, however they aren’t consistent across all the browsers, and that will lead to problems down the road because we want our websites to look fairly consistent in all the browsers!</p>
+
+<p>CSS Normalize fixes this. Its a chunk of CSS code that we can insert into the top of our CSS Document that does exactly what it says - <strong>normalize the default styling of all elements across all browsers</strong>.</p>
+
+<p>You can download normalize at <a href="http://necolas.github.com/normalize.css/">http://necolas.github.com/normalize.css/</a>. We won’t be using it for out examples, but any public facing sites (including our final project) should use it.</p>
+
+<h2 id="floats">Floats</h2>
+
+<p>Floats are a really important part of CSS that help you align your elements to either the right or the left.</p>
+
+<p>So far all of our exercises have had elements stacked vertically, what if we want them to be side by side? What if we want text to wrap around an image? Let’s look at a few example to wrap our heads around floats. <strong>open up <code>css-floats1.html</code> in your editor and browser.</strong></p>
+
+<p>We have a document with a bunch of text, two pictures and a little styling. Whats the deal with the text not wrapping around the pictures of the puppies?</p>
+
+<p><img src="http://wes.io/JHGH/Screen%20Shot%202012-09-06%20at%204.46.19%20PM.png" alt="" /></p>
+
+<h3 id="floating-images">Floating Images</h3>
+<p>This is where floats come in. If we float an image to the right, the text will wrap around its self (and vice versa). Write a selector for the first dog image and float it left. We will also add some margin so the text isn’t squished right up against the picture.</p>
+
+<pre><code>img.dog1 {
+	float:left;
+	margin-right:20px;
+}
+</code></pre>
+
+<p>Go ahead and write the CSS to float the other one right. The end result should look like this:</p>
+
+<p><img src="http://wes.io/JGvc/Screen%20Shot%202012-09-06%20at%204.51.21%20PM.png" alt="" /></p>
+
+<p><strong>Note: If you take a look at the exercise we did last class with <code>css-selector-exercises.html</code> you’ll see that I’m using multiple image floats so the team pictures all line up beside each other</strong></p>
+
+<h3 id="floating-other-elements-in-a-layout">Floating other elements in a layout</h3>
+<p>Let’s take a look at a basic HTML layout and see how floats make it happen.</p>
+
+<p>Open up <code>css-floats2.html</code> and we will take a look at the markup</p>
+
+<p>We have Four main divs: <strong>header</strong>, <strong>content</strong>, <strong>sidebar</strong> and <strong>footer</strong>. We want to make them look like a normal website.</p>
+
+<p>We want the content and sidebar divs to be side by side, so their widths together, need to make up 100% of the wrapper.</p>
+
+<p>so naturally, we would use CSS to make content 75% and the sidebar 25%:</p>
+
+<pre><code>.content {
+	float:left;
+	background:red;
+	width:75%;
+}
+
+.sidebar {
+	background:green;
+	width:25%;
+	float:left;
+}
+</code></pre>
+
+<p><strong>Problems?</strong> What do you spot right away?</p>
+
+<p><img src="http://wes.io/Jkwi/Screen%20Shot%202012-09-27%20at%201.20.25%20PM.png" alt="" /></p>
+
+<ol>
+  <li>The red content extends past the wrapper</li>
+  <li>The footer is all up in the sidebar</li>
+  <li>We cant add padding or a border or it will break! Lets try</li>
+</ol>
+
+<p>Let’s go through and fix each issue.</p>
+
+<h4 id="problem-1-the-red-content-extends-past-the-wrapper">Problem #1: The red content extends past the wrapper!</h4>
+
+<p>This is a quirk with CSS where the parent (the wrapper) doesn’t know how big it actually is!</p>
+
+<p>There are two fixes for this:</p>
+
+<h4 id="hide-overflow">Hide overflow</h4>
+<p>This is a cheat but a quick fix. If you tell the element to hide its overflows, it automatically smartens up.</p>
+
+<pre><code>.wrapper {
+	overflow:hidden;
+}
+</code></pre>
+
+<p>This works great but the downside is that you often don’t want to hide the overflow of something because you want to overlap or extend elements outside the wrapper.</p>
+
+<h4 id="clearfix">Clearfix</h4>
+<p>The better alternative is to apply something called a clearfix, which is a CSS hack that targets elements with the class of ‘clearfix’</p>
+
+<p>The clearfix CSS looks like this:</p>
+
+<pre><code>.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+</code></pre>
+
+<p>And you should add it to every project you do.</p>
+
+<p>Then when we apply it, we just add the class clearfix to our <code>.wrapper</code></p>
+
+<h4 id="problem-2-footer-is-in-the-sidebar">Problem #2: Footer is in the sidebar</h4>
+
+<p>This is a common problem with CSS, since the sidebar is only so high, the footer snugs up against the smallest child - the sidebar.</p>
+
+<p>We solve this with clearing the footer. This means that we tell the footer to clear all elements before it and start on a new line.</p>
+
+<p>Simple css:</p>
+
+<pre><code>.footer {
+	clear:both;
+}
+</code></pre>
+
+<h4 id="problem-3---if-we-add-padding-or-a-border-to-any-of-the-boxes-the-layout-breaks">Problem #3 - If we add padding or a border to any of the boxes, the layout breaks!</h4>
+
+<p>This is because of the box model that we talked about ealier. The width of a box includes its padding and borders!</p>
+
+<p>There are two fixes for this:
+1. Adjusting the width of the box to include the borders and padding
+2. Set the box sizing to <code>border-box</code></p>
+
+<h2 id="exercise-creating-layouts-with-floats">Exercise: Creating Layouts with Floats</h2>
+
+<p>This exercise will throw you into the deep end. We will be using widths, floats, clearing, margin and padding.</p>
+
+<p>Open <code>css-layout-exercise.html</code> in your editor and browser.</p>
+
+<p>Write the selectors and the CSS code to make it look like <code>css-layout-exercise-ANSWER.html</code></p>
+
+<p>Work with eachother to write the selectors and please ask questions to me and the mentors. This one is a tough one so you may need to sneak a peak at the answer code every now and then.</p>
+
+<h2 id="css-typography">CSS Typography</h2>
+<p>Having good CSS Typography is one of the best ways to make your site look amazing. With CSS we have complete control over how our text looks and feels. We will spend the next while going through some of the available properties to style your text, but first we let’s review a few different ways we can mark up text:</p>
+
+<p>For the next couple examples, open up the file <code>typography.html</code></p>
+
+<h3 id="text-markup">Text Markup</h3>
+
+<h4 id="headings">Headings</h4>
+<pre><code>&lt;h1&gt;Heading 1, for the most important / title of the document&lt;/h1&gt;
+&lt;h2&gt;Heading 2, for the main titles of your document&lt;/h2&gt;
+...
+&lt;h6&gt;Heading 6, the smallest of headings&lt;/h6&gt;
+</code></pre>
+
+<h4 id="paragraphs-spans-strong-and-emphasis">Paragraphs, spans, strong and emphasis</h4>
+<pre><code>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;p&gt;Hey there my name is &lt;strong&gt;Wes Bos&lt;/strong&gt; and I &lt;em&gt;really&lt;/em&gt; like to code HTML and CSS.&lt;/p&gt;
+
+&lt;p&gt;My birthday party is on &lt;span class="date"&gt;February 18&lt;/span&gt;, please come with presents!&lt;/p&gt;
+</code></pre>
+
+<h2 id="fonts-font-stacks-and-font-family">Fonts, font-stacks and font-family</h2>
+<p>Perhaps the first thing you will want to do with CSS is change the font of either the entire document or of certain elements.</p>
+
+<p>With CSS we can set the font with the <strong>font family name</strong>:</p>
+
+<pre><code>body {
+	font-family: "Helvetica";
+}
+</code></pre>
+
+<p>Or a <strong>generic name</strong>:</p>
+
+<pre><code>body {
+	font-family:sans-serif;
+}
+</code></pre>
+
+<p>The difference being that with a font family, you assume/hope the end user has that specific font on their computer. With a <strong>Generic name</strong> you let the browser/computer supply the best font. In the case of <code>sans-serif</code> a windows computer will deliver <strong>arial</strong> while a mac will deliver <strong>helvetica</strong>.</p>
+
+<p>Available Generic names are:</p>
+
+<ul>
+  <li>‘serif’ (e.g., Times)</li>
+  <li>‘sans-serif’ (e.g., Helvetica)</li>
+  <li>‘cursive’ (e.g., Zapf-Chancery)</li>
+  <li>‘fantasy’ (e.g., Western)</li>
+  <li>‘monospace’ (e.g., Courier)</li>
+</ul>
+
+<h3 id="font-stacks">Font Stacks</h3>
+<p>What if a user doesn’t have the font you want installed? What will the font turn to?</p>
+
+<p>Lets say we have a special font called <code>lobster</code> that I have downloaded and installed and then wrote the code below:</p>
+
+<pre><code>body {
+	font-family:'lobster';
+}
+</code></pre>
+
+<p>When I view the page, the font looks great, but if anyone else who doesn’t have the font installed they wont see it and <strong>the browser defaults to times new roman</strong> (or another serif font).</p>
+
+<p>Thats kind of crappy, so to prevent that we use <strong>font stacks</strong> which allows us to supply a list of desired fonts for the browser to fallback on:</p>
+
+<pre><code>body {
+	font-family:'lobster','wedding',cursive;
+}
+</code></pre>
+
+<p>The code above checks for lobster, if it isn’t found, it checks for ‘wedding’, if that isn’t found, we go to the default cursive font for that computer.</p>
+
+<p>An excellent resource for building your fail-proof font stacks is <a href="http://cssfontstack.com/">http://cssfontstack.com/</a> Lets take a look.</p>
+
+<h2 id="font-size">font-size</h2>
+<p>Next up is font-size. This one is pretty self explanatory and something we covered last week. We are going to be working in pixels.</p>
+
+<p>If you set the font-size on the <code>body</code>, it is inherited by all the <code>&lt;p&gt;</code> tags on the page:</p>
+
+<pre><code>body {
+	font-size:15px;
+}
+</code></pre>
+
+<p>If we then want to target just the second paragraph with the class of <code>text2</code>, we can overide that last rule with the following:</p>
+
+<pre><code>p.text2 {
+	font-size:20px;
+}
+</code></pre>
+
+<h2 id="font-weight">font-weight</h2>
+
+<p>If any of you are designers, you will know that fonts come with a variety of weights. The weight of a font controls how bold it is. Most fonts just have <strong>normal</strong> and <strong>bold</strong>, but some can have up to 9 different weights. There are two different ways to specify the font weight:
+### By keyword
+	p.text3 {
+		font-weight: bold; /* Also accepted: bold | bolder | lighter | normal | inherit <em>/
+	}
+### By Value
+	p.text3 {
+		font-weight:600; /</em> From 100 to 900 in increments of 100 */
+	}</p>
+
+<p>The most important things to remember here are <code>font-weight:normal;</code> and <code>font-weight:bold;</code></p>
+
+<h2 id="font-style">font-style</h2>
+<p>Similar to <code>font-weight</code>, <code>font-style</code> allows you to change the style of the font if that family permits.</p>
+
+<p>The most common use case for this is for making your font italicized.</p>
+
+<pre><code>p.text4 {
+	font-style:italic; /* Also accepts normal, oblique, and inherit */
+}
+</code></pre>
+
+<h2 id="line-height">line-height</h2>
+
+<p>Line height lets you explicitly set the height of a line of text as it appears in the browser. Designer types know this as <strong>leading</strong>. This can dramatically help the readability of large blocks of text.</p>
+
+<p>Just as other values, we can set it in a variety of measurements including px, ems and %. We can also set it as a <strong>number</strong> and since font sizes can change, its recommended that set line height as a multiple of itself.</p>
+
+<p>By default most fonts have line height of 1.2x its font size, so a font-size of 10, would have a line height of 12.</p>
+
+<pre><code>p.text5 {
+	line-height:2.2;
+}
+</code></pre>
+
+<h2 id="text-align">text-align</h2>
+
+<p>text-align is another property that does exactly what you think it does, align text.</p>
+
+<pre><code>p.text5 {
+	text-align:right; /* Also accepted: left, center, justify */
+}
+</code></pre>
+
+<h2 id="letter-spacing">Letter Spacing</h2>
+
+<p>Letter spacing allows you to control the amount of space inbetween letters.</p>
+
+<pre><code>h3.spacing {
+	letter-spacing:4px;
+}
+</code></pre>
+
+<p>A little trick I like to use with sans-serif fonts is set the letter spacing to -1px on all headings. It makes for a much more appealing header.</p>
+
+<pre><code>h1,h2,h3,h4,h5,h6 {
+	letter-spacing:-1px;
+}
+</code></pre>
+
+<h3 style="color:red; font-size:40px;">Normal letter spacing on a heading</h3>
+<h3 style="color:red; letter-spacing:-1px; font-size:40px;">-1px Spacing on a heading</h3>
+
+<h2 id="text-transform">text-transform</h2>
+<p>Text transform is an extremely handy property that doesn’t get used as often as it should As we talked about in the first few courses, your HTML should only describe the content and not worry about the style.</p>
+
+<p>So if you have a design that relies on either all uppercase or all lowercase characters, you can still go ahead and type it with proper capitalization and then use <code>text-transform</code> to change the look of it.</p>
+
+<pre><code>&lt;h3 class="uppercase"&gt;I'm all uppercase&lt;/h3&gt;
+&lt;h3 class="lowercase"&gt;I'M ALL LOWERCASE&lt;/h3&gt;
+&lt;h3 class="capitalize"&gt;capitalized&lt;/h3&gt;
+</code></pre>
+
+<p>Our CSS:</p>
+
+<pre><code>.uppercase {
+	text-transform:uppercase;
+}
+.lowercase {
+	text-transform:lowercase;
+}
+.capitalize {
+	text-transform:capitalize;
+}
+</code></pre>
+
+<h2 id="color-and-background-color">color and background color</h2>
+
+<p>You have probably caught onto this one already, but lets take a second to talk about CSS color.</p>
+
+<p>The first thing to note is that the property is <strong>color</strong> not <strong>colour</strong>. Although the spellings of both <strong>grey</strong> and <strong>gray</strong> are accepted.</p>
+
+<h3 id="ways-to-specify-color">Ways to Specify Color</h3>
+<p>In CSS there are 6 different ways to supply colour to a property:</p>
+
+<p><strong>name</strong> - you can use the straight up name of the colour - for most basic colours (red, green, blue, pink…) as well as a few exotic ones like <code>papayaWhip</code> and <code>paleGoldenrod</code>.</p>
+
+<p><strong>Hex Value</strong> - the most common way to specify a colour is with a hex code made up of the number sign <code>#</code> and a 6 digit alphanumeric code. The easiest way is to use a colour picker such as the one at <a href="http://www.colorpicker.com/">http://www.colorpicker.com/</a> or use the photoshop eydropper tool.</p>
+
+<p><img src="http://wes.io/JNPt/Screen%20Shot%202012-09-11%20at%205.06.28%20PM.png" alt="" /></p>
+
+<p>Some hex values are: <span style="font-size:17px; color:#fff; padding:4px; background:#000000; ">#000000 (black)</span>, <span style="font-size:17px; color:#000; padding:4px; background:#fff; ">#ffffff (white) (black)</span>, <span style="font-size:17px; color:#000; padding:4px; background:#BADA55; ">#BADA55</span>, <span style="font-size:17px; color:#fff; padding:4px; background:#D12026; ">#D12026 (HY Red)</span>, <span style="font-size:17px; color:#000; padding:4px; background:#c0ffee; ">#COFFEE</span></p>
+
+<p><small><strong>Note:</strong> You may sometimes see hex values of only three like <code>#000</code>, <code>#fff</code> or <code>#944</code>. This is because the first three values are exactly the same as the last three, so we can use three digit shorthand.</small></p>
+
+<p><strong>RGB/RGBa and HSL/HSLa</strong> - These are the two/four most recent guys to the party and make working with colours much easier, especially for designers who are comfortable with RGB. These two aren’t 100% supported in all the browsers yet because of some older version of Internet Explorer. Regardless, its helpful to learn them because we will be using them in the future.</p>
+
+<p>RGB means <strong>red, green, blue</strong>. In CSS we can pass a value for each channel from 0 to 255.</p>
+
+<pre><code>.somethingWhite {
+	color:rgb(255,255,255);
+}
+.somethingBlue {
+	color:rgb(21, 33, 99);
+}
+.somethingBlack {
+	color:rgb(0,0,0);
+}
+</code></pre>
+
+<p>RGBA is exactly the same but it adds a 4th <strong>alpha channel</strong> or transparency channel. We pass it a value between 0 and 1, 0 being totally transparent.</p>
+
+<pre><code>.somethingWhite {
+	background-color:rgba(255,255,255,0.5); /* 50% transparent */
+}
+</code></pre>
+
+<p><strong>HSL and HSLA</strong> work the same way except we pass in <strong>Hue, saturation, and lightness</strong> instead. This is very new and not very well supported. For more make sure to check out <a href="http://mothereffinghsl.com/">http://mothereffinghsl.com/</a></p>
+
+<h3 id="background-images">Background Images</h3>
+<p>We are also able to set images as our background. - both on text as well as any other element.</p>
+
+<p>The CSS Property we use is called <code>background-image</code>. Now specifying the value is a little different because we have to tell the CSS where the image is located on our hard drive. For this we use the value <code>url()</code> and pass in the image path.</p>
+
+<p>Just like the <code>&lt;img&gt;</code> tag, we can use absolute or relative tags.</p>
+
+<pre><code>body {
+	background-image:url(images/dog2.jpg)
+}
+</code></pre>
+
+<p>OR</p>
+
+<pre><code>body {
+	background-image:url(https://www.google.com/images/srpr/logo3w.png)
+}
+</code></pre>
+
+<p>Open <code>bg-images.html</code> in your editor and give these two a try.</p>
+
+<h4 id="background-repeating">Background Repeating</h4>
+<p>You have probably noticed that the background image repeats over and over by default, what if we don’t want that functionality? We can specify the <code>background-repeat</code> property:</p>
+
+<p><strong>No Repeat, show only once</strong></p>
+
+<pre><code>background-repeat: no-repeat;
+</code></pre>
+
+<p><strong>Repeat along the X axis</strong></p>
+
+<pre><code>background-repeat: repeat-x;
+</code></pre>
+
+<p><strong>Repeat along the Y axis</strong></p>
+
+<pre><code>background-repeat: repeat-y;
+</code></pre>
+
+<h4 id="background-positioning">Background Positioning</h4>
+
+<p>Now we may also want to specify where the the image is when we are repeating it, for this we use <code>background-position</code>. We pass it <strong>two values</strong> which specify the x and y centering. Available values are <strong>top, left, right, bottom</strong> and <strong>center</strong>. By default the browser is <strong>top left</strong></p>
+
+<pre><code>background-position: bottom left;
+
+background-position: center;
+
+background-position: top right;
+</code></pre>
+
+<p><strong>Note: <code>background-repeat</code> and <code>background-position</code> can be used together to specify where you would like a pattern to anchor from</strong></p>
+
+<p>We can also specify <code>px</code> or <code>%</code> in place of these keywords</p>
+
+<pre><code>background-position: 100px 10%;
+</code></pre>
+
+<h4 id="background-attachment">Background Attachment</h4>
+<p>Finally, what if we want our background image to stay in place while the text scrolls? Easy, we simply tell the <code>background-attachment</code> to be fixed</p>
+
+<pre><code>background-attachment: fixed;
+</code></pre>
+
+<h3 id="too-much-typing">TOO MUCH TYPING</h3>
+<p>No kidding! Lucky for us we can specify everything in the <code>background</code> single keyword with <strong>shorthand</strong>. This includes an optional background color.</p>
+
+<pre><code>background: red url(images/dog2.jpg) top right repeat-y fixed;
+</code></pre>
+
+<p>Woah, thats:</p>
+
+<p><code>[background-color] [background-image] [background-position] [background-repeat] [background-attachment]</code></p>
+
+<h4 id="background-patterns">Background Patterns</h4>
+
+<p>Background image patterns can make a website look really slick.</p>
+
+<p>We learned about <a href="http://colourLovers.com">ColourLovers</a> already, and you should check out their pattern section when working on your projects.</p>
+
+<p>Another great site for background patterns is <a href="http://subtlepatterns.com/">http://subtlepatterns.com/</a> which lets you preview them before you download them all.</p>
+
+<h4 id="background-gradients">Background Gradients</h4>
+<p>Another really cool feature of CSS3 is the ability to create gradients in pure CSS. Previously a gradient needed to be exported from something like photoshop.</p>
+
+<p><a href="http://www.colorzilla.com/gradient-editor/">http://www.colorzilla.com/gradient-editor/</a> is an excellent site for creating gradients, it even has an image uploader.</p>
+
+<p>Writing gradients by hand isn’t advised as the syntax is very long and different for each browser, so the tool at ColorZilla is a great resources.</p>
+
+<h4 id="exercise">Exercise</h4>
+<p>Its time to flex our typography muscles. Open <code>typography-exercise1.html</code> in your browser and editor.</p>
+
+<p>You can have some fun with this one and pick your own colours, patterns, fonts, widths and whatnot. Match the ruleBox stylings to the answer key.</p>
+
+
+
+    </div>
+
+
+  </body>
+
+</html>

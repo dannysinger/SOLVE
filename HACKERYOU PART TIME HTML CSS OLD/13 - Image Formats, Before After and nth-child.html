@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>13 - Image Formats, Before/After and nth-child</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+html,body{color:black}*:not('#mkdbuttons'){margin:0;padding:0}#wrapper{font:15px helvetica,arial,freesans,clean,sans-serif;-webkit-font-smoothing:subpixel-antialiased;line-height:1.7;padding:3px;background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px}p{margin:1em 0}a{color:#4183c4;text-decoration:none}#wrapper{background-color:#fff;padding:30px;margin:15px;font-size:15px;line-height:1.6}#wrapper>*:first-child{margin-top:0 !important}#wrapper>*:last-child{margin-bottom:0 !important}@media screen{#wrapper{box-shadow:0 0 0 1px #cacaca, 0 0 0 4px #eee}}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.7;cursor:text;position:relative;margin:1em 0 15px;padding:0}h1{font-size:2.5em;border-bottom:1px solid #ddd}h2{font-size:2em;border-bottom:1px solid #eee}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{color:#777;font-size:1em}p,blockquote,table,pre{margin:15px 0}ul{padding-left:30px}ol{padding-left:30px}ol li ul:first-of-type{margin-top:0px}hr{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;border:0 none;color:#ccc;height:4px;margin:15px 0;padding:0}#wrapper>h2:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child{margin-top:0;padding-top:0}#wrapper>h1:first-child+h2{margin-top:0;padding-top:0}#wrapper>h3:first-child,#wrapper>h4:first-child,#wrapper>h5:first-child,#wrapper>h6:first-child{margin-top:0;padding-top:0}a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0}h1+p,h2+p,h3+p,h4+p,h5+p,h6+p,ul li>:first-child,ol li>:first-child{margin-top:0}dl{padding:0}dl dt{font-size:14px;font-weight:bold;font-style:italic;padding:0;margin:15px 0 5px}dl dt:first-child{padding:0}dl dt>:first-child{margin-top:0}dl dt>:last-child{margin-bottom:0}dl dd{margin:0 0 15px;padding:0 15px}dl dd>:first-child{margin-top:0}dl dd>:last-child{margin-bottom:0}blockquote{border-left:4px solid #DDD;padding:0 15px;color:#777}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table{border-collapse:collapse;border-spacing:0;font-size:100%;font:inherit}table th{font-weight:bold;border:1px solid #ccc;padding:6px 13px}table td{border:1px solid #ccc;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}img{max-width:100%}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px;font-family:Consolas, 'Liberation Mono', Courier, monospace;font-size:12px;color:#333}pre>code{margin:0;padding:0;white-space:pre;border:none;background:transparent}.highlight pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:14px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px;margin:26px 0}pre code,pre tt{background-color:transparent;border:none}.poetry pre{font-family:Georgia, Garamond, serif !important;font-style:italic;font-size:110% !important;line-height:1.6em;display:block;margin-left:1em}.poetry pre code{font-family:Georgia, Garamond, serif !important;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;white-space:pre-wrap}sup,sub,a.footnote{font-size:1.4ex;height:0;line-height:1;vertical-align:super;position:relative}sub{vertical-align:sub;top:-1px}@media print{body{background:#fff}img,pre,blockquote,table,figure{page-break-inside:avoid}#wrapper{background:#fff;border:none}code{background-color:#fff;color:#333 !important;padding:0 .2em;border:1px solid #DEDEDE}pre{background:#fff}pre code{background-color:#fff !important;overflow:visible}}@media screen{body.inverted{color:#eee !important;border-color:#555;box-shadow:none}.inverted #wrapper,.inverted hr,.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt,.inverted blockquote{color:#eee !important;border-color:#555;box-shadow:none}.inverted td,.inverted th{background:#333}.inverted pre,.inverted code,.inverted tt{background:#eee !important;color:#111}.inverted h2{border-color:#555555}.inverted hr{border-color:#777;border-width:1px !important}::selection{background:rgba(157,193,200,0.5)}h1::selection{background-color:rgba(45,156,208,0.3)}h2::selection{background-color:rgba(90,182,224,0.3)}h3::selection,h4::selection,h5::selection,h6::selection,li::selection,ol::selection{background-color:rgba(133,201,232,0.3)}code::selection{background-color:rgba(0,0,0,0.7);color:#eeeeee}code span::selection{background-color:rgba(0,0,0,0.7) !important;color:#eeeeee !important}a::selection{background-color:rgba(255,230,102,0.2)}.inverted a::selection{background-color:rgba(255,230,102,0.6)}td::selection,th::selection,caption::selection{background-color:rgba(180,237,95,0.5)}.inverted{background:#0b2531;background:#252a2a}.inverted #wrapper{background:#252a2a}.inverted a{color:#acd1d5}}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k,.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#800080;font-weight:bold}.highlight .gt{color:#a00}.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne,.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#099}.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc,.highlight .vg,.highlight .vi{color:#008080}.highlight .il{color:#099}.highlight .gc{color:#999;background-color:#EAF2F5}.type-csharp .highlight .k,.type-csharp .highlight .kt{color:#00F}.type-csharp .highlight .nf{color:#000;font-weight:normal}.type-csharp .highlight .nc{color:#2B91AF}.type-csharp .highlight .nn{color:#000}.type-csharp .highlight .s,.type-csharp .highlight .sc{color:#A31515}
+
+</style>
+</head>
+
+  <body class="normal">
+    <div id="wrapper">
+      <h1 id="image-formats-beforeafter-and-nth-child">13 - Image Formats, Before/After and nth-child</h1>
+
+<p>We have covered a majority of HTML and CSS so far! We are in the final stretch but don’t relax just yet! Here is how the rest of the course is going to play out:</p>
+
+<p><strong>Today</strong> will be our final work day for our current project. Please hand it in by the date we establish.</p>
+
+<p><strong>Thursday</strong> will be a full lesson on responsive design and media queries. There is no new CSS to learn except for how to target different screen sizes (which is about 4 lines of CSS).</p>
+
+<p><strong>Please plan to be in class the next two classes. These classes are crucial to your understanding of responsive design and modern web development.</strong></p>
+
+<p><strong>The following three weeks</strong> will be project work sessions as well as starting off each class with some smaller teachings / answers to questions. I will show techniques and touch on some advaned CSS topics (animations and transforms) and tools that I use each class. </p>
+
+<p>Its important that you come to class with your questions ready. You will need to put at least 30 hours into this project, so get ready for some serious coding!</p>
+
+<!-- 
+## Design Assets
+
+Getting assets for your design is also a great idea. We have already shown you colourlovers.com and subtlepatterns.com for layout graphics, but it can be nice to download UI elements such as social media buttons or general site layouts.
+
+There are a million sites that do this, and you can find them but searching "Free PSD + YOUR_SEARCH_TERM" but here are a few:
+
+[http://dribbble.com](http://dribbble.com) is a gallery for design inspiration but designers often post the source of their PSDs for free download.
+
+[http://pixelsdaily.com/](http://pixelsdaily.com/)
+
+[http://365psd.com/](http://365psd.com/) -->
+
+<h2 id="keeping-up-with-the-latest">Keeping up with the latest</h2>
+
+<p>The web changes <strong>fast</strong>. This is both great because you are able to define yourself in a certain niche really quickly, but can be not to great if you don’t keep up with the latest.</p>
+
+<p>Here are a few resources that I use to keep up to date on the latest in the web development world:</p>
+
+<p><a href="http://css-tricks.com/">http://css-tricks.com/</a></p>
+
+<p><a href="http://net.tutsplus.com/">http://net.tutsplus.com/</a></p>
+
+<p><a href="http://webdesign.tutsplus.com/">http://webdesign.tutsplus.com/</a></p>
+
+<p><a href="http://www.smashingmagazine.com/">http://www.smashingmagazine.com/</a></p>
+
+<p><a href="http://www.webdesignerdepot.com/">http://www.webdesignerdepot.com/</a></p>
+
+<p><a href="http://webdesignerwall.com/">http://webdesignerwall.com/</a></p>
+
+<p><a href="https://news.layervault.com/">https://news.layervault.com/</a></p>
+
+<p><a href="http://www.reddit.com/r/web_design">http://www.reddit.com/r/web_design</a></p>
+
+<h2 id="working-with-images">Working with images</h2>
+
+<p>When creating sites, we work with many different types of images. Choosing the right format of image is based on the needs of the design.</p>
+
+<h3 id="jpgjpeg">JPG/JPEG</h3>
+
+<p>The most common image format within websites, JPG’s are used for a large majority of images that appear as background images, inline images and more. A lossy format, JPG’s can be optimized to small sizes and cannot include transparencies.</p>
+
+<p><strong>Fun fact</strong> 
+JPEG stands for Joint Photographic Experts Group. What?</p>
+
+<h3 id="gif">GIF</h3>
+
+<p>Graphic Interchange Format, commonly known in it’s animated form, GIF’s can be used to simulate transparencies, however the cleanliness of GIF’s is limited and may lead to designs with pixelated images with a larger file size.</p>
+
+<h3 id="png">PNG</h3>
+
+<p>Portable Network Graphics, or PNG is a relatively new addition to the field of development. Best utilized for images that require transparencies, PNG’s have a smaller image size than GIF’s and have browser support back to IE7.</p>
+
+<h3 id="using-photoshop-to-optimize-images">Using Photoshop to optimize images</h3>
+
+<p>Open your file in Photoshop and go to File&gt;Save For Web</p>
+
+<p><img src="http://drewminns.com/sandbox/hackeryou/sfwdialog.jpg" alt="Save For Web Dialog" /></p>
+
+<p>Choose the format, quality and set the dimensions of your image within the Save For Web Dialog.</p>
+
+<p><img src="http://drewminns.com/sandbox/hackeryou/saveforweb.jpg" alt="Save For Web Dialog" /></p>
+
+<h3 id="but-i-dont-want-to-buy-photoshop">But, I don’t want to buy Photoshop</h3>
+
+<p>So Photoshop costs a lot and for a lot of uses, is overkill. Enter the replacements.</p>
+
+<ul>
+  <li>Sketch is the biggest competitor entering the field. It is being adopted widely through the industry. $79 - <a href="http://bohemiancoding.com/sketch/">http://bohemiancoding.com/sketch/</a></li>
+  <li>Adobe has offered a tool called Project Parfait to help people without Photoshop view PSD’s online <a href="https://projectparfait.adobe.com/">https://projectparfait.adobe.com/</a></li>
+  <li>Gimp is a free alternative to Photoshop that has many of the main features of Photoshop <a href="http://www.gimp.org/">http://www.gimp.org/</a></li>
+  <li>Pixlr is a free online alternative to Photoshop that works right in the browser <a href="http://pixlr.com/">http://pixlr.com/</a></li>
+</ul>
+
+<h2 id="before-and-after-elements">::before and ::after elements</h2>
+
+<p>We have already learned that we have pseudo selectors: <code>:hover</code>, <code>:focus</code> etc..</p>
+
+<p>We also have  ::before<code> and </code>::after<code> - they are what we call </code>pesudo elements`. These are added in CSS and create elements before or after that can be used to add stylistic/cosmetic touches.</p>
+
+<p>These elements take a <code>content</code> property:</p>
+
+<pre><code>&lt;span class="name"&gt;Drew Minns&lt;/span&gt;
+
+&lt;style&gt;
+	span.name::before {
+		content : '☃';	
+	}
+&lt;/style&gt;
+</code></pre>
+
+<p><span class="name">Drew Minns</span></p>
+
+<style>
+	span.name::before {
+		content : '☃';	
+	}
+</style>
+
+<p>A very common usecase for <code>::before</code> and <code>::after</code> is to add “smart quotes” around a block quote.</p>
+
+<p>Let’s walk through an example on how to use before and after with a blockquote.</p>
+
+<p>Create a blank <code>before-and-after.html</code> file to work in.</p>
+
+<h2 id="nth-child-review">nth-child review</h2>
+
+<p>Let’s work through another example of how nth-child, first-child and last-child work.</p>
+
+<p>Create a blank <code>nth-child.html</code> file to work in.</p>
+
+
+
+
+    </div>
+
+
+  </body>
+
+</html>
