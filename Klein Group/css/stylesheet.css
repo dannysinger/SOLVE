@@ -109,7 +109,7 @@ section .Inner-Skeleton{
 
 @media screen and (min-width:320px){
 
-.Inner-Skeleton .top-logo-menu-container{
+.Inner-Skeleton .Top-Control-Panel{
 
         height:5em;
 	
@@ -120,7 +120,7 @@ section .Inner-Skeleton{
 
 @media screen and (min-width:482px){
 	
-    .Inner-Skeleton .top-logo-menu-container{
+    .Inner-Skeleton .Top-Control-Panel{
 		
         height:9.063em;
     }
@@ -175,9 +175,9 @@ bottom:1.05em;color:white;
 }@media screen and (min-width:482px){.down-sort-div>.fa-sort-desc{bottom:2em;}}
 
 
-/*<DIV.top-logo-menu-container>*/
+/*<DIV.Top-Control-Panel>*/
     /*<DIV.mobile-menu-box>*/
-.top-logo-menu-container .mobile-menu-box{
+.Top-Control-Panel .mobile-menu-box{
     
 	float:right; 
     
@@ -187,7 +187,7 @@ bottom:1.05em;color:white;
     
 	width:10%;   
 }
-/*<DIV.top-logo-menu-container>*/
+/*<DIV.Top-Control-Panel>*/
     /*<DIV.mobile-menu-box>*/
         /*<I.fa-bars>*/
 .mobile-menu-box .fa-bars{
