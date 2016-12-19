@@ -1,8 +1,7 @@
-/*@font-face{font-family:"Leaguecon"; src:url("../fonts/leaguegothic-condensed-regular-webfont.woff") format("woff");
-}/*Erase this note before final release, but I think this version (mobile)is nearly good to go.Beside em fallbacks, small visual stuff, eemm i dunno ... 
-Seems pretty good. Issue now seems to be flex integration margin 0 auto and normalizing paddings and margins a lil bit*/
+
 /*Dealing with design conscious hipsters is more of a social perceptual thing. Fonts. Visual experience is a thing. Seems that with phones load time has to be huge. CrawlBots has to be Something.*/
-/*?px=?em=?rem=?vw=?vmin=?vmax=?vh*/
+/*16px=parent font size *x = 1em*/
+/*rem=relative to root element... good for certain styles of layout*/
 /*Vw = 1/100 of viewp. width*/
 /*Vmax (or vm)= Adapts to landscape or portrait?*/
 /*(body-font-size)*/
@@ -11,6 +10,7 @@ Seems pretty good. Issue now seems to be flex integration margin 0 auto and norm
 /*Vws are very good for text apparently, fluid, vector based*/
 /*Fallback order for lengths: v, %, em, px*/
 /*Fallback order for texts: v, em, px, is % a thing here*/
+Seems pretty good. Issue now seems to be flex integration margin 0 auto and normalizing paddings and margins a lil bit*/
 /*html canvas*/
 /*Make sure to put all fonts in em, or %, probably em, or VW? Kyle Schaffer's article was written in 2010*/
 /*PsdToHTML*/
