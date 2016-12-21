@@ -1,104 +1,69 @@
 
 /*Dealing with design conscious hipsters is more of a social perceptual thing. Fonts. Visual experience is a thing. Seems that with phones load time has to be huge. CrawlBots has to be Something.*/
 /*16px=parent font size *x = 1em*/
-/*rem=relative to root element... good for certain styles of layout*/
+/*rem=relative to root element / html... good for certain styles of layout*/
 /*Vw = 1/100 of viewp. width*/
-/*Vmax (or vm)= Adapts to landscape or portrait?*/
-/*(body-font-size)*/
-/*rem is relative to :root what is that*/
-/* 1em = bodyfont x 1 etc.*/
+/*Vmax (or vm)= Adapts to landscape or 
 /*Vws are very good for text apparently, fluid, vector based*/
-/*Fallback order for lengths: v, %, em, px*/
+/*Fallback order for lengths: v, %, em, px???*/
 /*Fallback order for texts: v, em, px, is % a thing here*/
-Seems pretty good. Issue now seems to be flex integration margin 0 auto and normalizing paddings and margins a lil bit*/
+/*Flex, Responsive integration*/
 /*html canvas*/
 /*Make sure to put all fonts in em, or %, probably em, or VW? Kyle Schaffer's article was written in 2010*/
 /*PsdToHTML*/
 @font-face{font-family:"League";src:url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
-/*League Gothic... Do we have anything to say aout this, or about fonts in general?*/
 }
-/*Make FITC available offline (Responsive Niche)
-*//*-------*/
-/*<HTML5>*/
-/*header, 
-section, 
-footer, 
-aside, 
-nav, 
-main, 
-article, 
-figure {
-display: block; width:100%;
-}
-/*</HTML5>*/ 
+/*Make FITC available offline (Responsive Niche)*/
 /*CrawlBots*/
-/*I notice the chrome user agent takes care of this already....? That's chrome though, and it's new*/
+/*user agent styelesheet*/ 
 
 div{ border:1px solid lightgrey;}
 
-/*<------->*/
-/*<GENERAL>*/
-/*<------->*/
-
-/*Fixing a problem that made a vertical whitespace down at smaller widths closer to 320. Taken from StackOverFlow*//*html,body{width: 100%;height: 100%;margin: 0px;padding: 0px;overflow-x: hidden;}
-/*-----*/
-body{margin: 0; 
--webkit-font-smoothing:antialiased !important; background-color:white;}
-/*1.30208333333%*/
-
+html,body{overflow-x: hidden;}
+/*This helps this supersmall mobile versions (58px??)*/
+body{
+	margin: 0; 
+	-webkit-font-smoothing:antialiased !important;
+	background-color:white;
+	/*What is the body font size memories of that little pancake crepe shop on the corner of princess street, that burger joint , wow Lots of shit*/
+}
+		/*1.30208333333%*/
+img{width:100%;height:inherit;}/*Why*/
 
 header{
-border-top:0.313em solid #1d4782; 
-	/*0.3*16px=16px/3= "5.3px", actually is 4.5px, 4.5*3=13.5???*/
-	
+	border-top:0.313em solid #1d4782; /*Get it*/
 }
-
-
-img{width:100%;height:inherit;}
-/*Why*/
-
-/*.get-in-touch, .message-form{
-	
-    position:relative;/
-	
-    overflow:hidden;
-}*/
-/*----------------------*/
-/*<HEADER>
-    <DIV.generic-info-box>*/
-/*----------------------*/
-
-
 header .Inner-Skeleton{
-	padding:0 7% 0; /*Could I have done this with margin as well?*/
+	padding:0 7% 0; /*Ok so this is the padding on the inner skeleton itself. Any class with inner-skeleton*/	
 }
 /*----------------------*/
 /*<section (residential, commerical, project)>
-    <DIV.generic-info-box>*/
+    <DIV.Inner-Skeleton>*/
 /*----------------------*/
-
-
 section .Inner-Skeleton{
-	height:20em; 
+	height:20em;
+	/*20em*16px=200px+120px=320px */
+	/*64px=1vw*/
+	/*320px/64px=almost 6 ok... so fuckin the inner skeleton is approx. 6vw*/
 	
 	margin:5% auto; /*ANCIENT CENTERING TACTICS*/
+	/*so, a 320px object in the middle of a 640px layout*/
+	/*5% on the verticals*/
+	/*5% = I think, 5% of the viewport or 5% of whatever data the computer sends as representing 100%, Don't remember*/
 
-	width:90.78125%; 
+	width:90.78125%; /*viewport or other thing*/ 
 	
-	background-color:paleturquoise;}
-
-
-
-	
+	background-color:paleturquoise;
 }
 @media 
 	screen and (min-width:448px){
 		section .Inner-Skeleton{
         	height:33.813em;
 			height:84.4vw; /*Should be using vmax or should just switch?*/
-			background-color:yellowgreen;}
-		
-		/*What are we using in terms of units and shit ? Let's get consistent, mathematical, and UX friendly. We're going to go a la true organical musical, waiting for the fuckin invitation like yaa*/
+			background-color:yellowgreen;
+		}
+}
+/*What are we using in terms of units and shit ? Let's get consistent, mathematical, and UX friendly. We're going to go a la true organical musical, waiting for the fuckin invitation like yaa*/
 }
 
 /*------*/
@@ -108,49 +73,28 @@ section .Inner-Skeleton{
 /*Logo & Mobile Menu (fa-bars)*/
 
 @media screen and (min-width:320px){
-
-.Inner-Skeleton .Top-Control-Panel{
-
-        height:5em;
-	
-        margin-bottom:2.5em;}}
-
-
-
-
+	.Inner-Skeleton .Top-Control-Panel{
+		 height:5em; /*So, 5*16px*/
+		 margin-bottom:2.5em;
+	}
+}
 @media screen and (min-width:482px){
-	
     .Inner-Skeleton .Top-Control-Panel{
-		
-        height:9.063em;
+        height:9.063em; /*So, 9.063*16px*/
     }
 }
-
-
-
-/*<div.top-left-corner-logo-box>*/
-
 .top-left-corner-logo-box{ 
-
- 	float:left; position:relative;/*Probably doesn't matter*/
-	
+ 	float:left; 
+	position:relative;/*Probably doesn't matter*/
     height:inherit; /*Is this necessary*/
-	
     margin-left:1.30208333333%;/*Will there not be a day with a standard Grid System?*/
-	
     width:100px;
-	
 	/*However this section fits in nicely, I think it's just mathematically simpler a bit based on a grid in your head sensibility*/
 	/*Somehow I think this should be simplified... Mabye With FlexBox*/
 }
-
-
-
 @media screen and (min-width:482px){
-	
     .top-left-corner-logo-box{
-		
-        width:164px; /*Straight up pixels*/
+        width:164px; 
     }
 }
 
@@ -164,7 +108,7 @@ top:0;right:0;
 
 display:inline;/*why*/
 	
-width:12%;height:inherit; /*Man too much shit for such a small thing?*/
+width:12%/*of the parent*/;height:inherit; /*Man too much shit for such a small thing?*/
 }
 
 
@@ -178,82 +122,50 @@ bottom:1.05em;color:white;
 /*<DIV.Top-Control-Panel>*/
     /*<DIV.mobile-menu-box>*/
 .Top-Control-Panel .mobile-menu-box{
-    
-	float:right; 
-    
+	float:right;
 	padding-right:1.30208333333%;
-    =
 	height:inherit;/*Isn't this automatic*/
-    
-	width:10%;   
+	width:10% /*Of the parents width, just as a reference*/;   
 }
 /*<DIV.Top-Control-Panel>*/
     /*<DIV.mobile-menu-box>*/
         /*<I.fa-bars>*/
 .mobile-menu-box .fa-bars{
-    
-	margin-top:5px; 
-    
+	font-size:1.6em; font-weight:bolder; /*Always put this at the top if using em*/
+	margin-top:5px;  /*placement from the top down*/
 	display:block; 
-    
-	text-align:right; 
-    
-	font-size:1.6em; 
-    
-	font-weight:bolder;
-    
+	text-align:right; /*Font awesome [vector] advantages*/
 	color:white;
 }
 
 /*Header Itself*/
 /*GRADIENT EFFECT*/
 header{ 
-
-    background:linear-gradient(#003980 0%, black 90%), 
-        linear-gradient(to right, green 0%, red 150%),
-        url("../images/KGPSDlayer_046.png")30px,
-        url("../images/KGPSDlayer_046.png")20px; 
-    background-blend-mode: screen, difference, lighten; 
-    background-position:bottom right;
+	background:
+	linear-gradient(#003980 0%, black 90%),linear-gradient(to right, green 0%, red 150%),url("../images/KGPSDlayer_046.png")30px,url("../images/KGPSDlayer_046.png")20px; 
+	background-blend-mode: screen, difference, lighten; 
+	background-position:bottom right;
 }
 
 header h1{ 
-	
+		
+	font-size:2.3em;letter-spacing:0.03em;
+	font-family:League;font-weight:100;
+	text-align:right;color:white;
     line-height:0.25em; /*Is this drawn from the center of the text*/
-    
-	font-size:2.3em;
-    
-	letter-spacing:0.03em;
-    
-	font-family:League;
-    
-	font-weight:100;
-    
-	color:white;
-    
-	text-align:right;
+    		
 }
-
-    /*<@HEADER h1>*/
 @media screen and (min-width:482px){
     header h1{
-        font-size:3.5em;}
+        font-size:3.5em;/*This would start a cascading scale of alterations if you fucked up*/}
 }
-    /*</@HEADER h1>*/
-
 header h2{ 
-    
-	line-height:1.3em;
-    
-	color:white;
-    
-	font-family:helvetica;
-    
-	text-align:right;
-    
 	font-size:1.3em;
-    
 	font-weight:400;
+	font-family:helvetica;
+  	text-align:right;
+	color:white;
+	line-height:1.3em;	
 }
 
     /*<@HEADER h2>*/
@@ -269,14 +181,14 @@ header h2{
 /*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*//*-------*/
 
 .divider-a, .divider-b, .divider-c{ 
-    
+    width:95%; 
 	position:relative; 
-    
-	width:95%; 
+    margin:2vw auto;/*So this is an autoscaling margin, similar to %*/
+	
     
 	height:50%;  /*The top half*/
     
-	margin:2vw auto;
+	
     
 	margin-bottom:0;
     
@@ -284,81 +196,66 @@ header h2{
 	/*What the fuck does this actually do?*/
 }
 .divider-a{
-    
 	background:url(../images/KGPSDlayer_026.png);
-    
 	background-position:-254px -55px;
-	/*Art Direction*/
+	/*Art Direction, for responsive, better imagings*/
 }
 .divider-b{
-    
 	background:url(../images/KGPSDlayer_034.png);
-    
 	background-position:-259px -36px;
 	/*Art Direction*/
 }
 
 .divider-c{
-	
-    background:url(../images/KGPSDlayer_042.png);
-    
+	background:url(../images/KGPSDlayer_042.png);
 	background-position:0px 269px;
 	/*Art Direction*/
 }
 /*<DIV.generic-info.box>*/
     /*<DIV.pic-box>*/
         /*<DIV.heading-and-logo-container>*/
-
 .heading-and-logo-container{ 
-   
-	position:absolute; 
-    
+	width:100%;
+	
+	height:38%;
+	
+	position:absolute; /*probably would be better to not do it this way?*/
 	bottom:0; 
-    
 	left:0; /*line-height:259%;*/
-    
-	display:flex; 
-    
-	align-items:center; vertical-align:middle;height:38%;width:100%;
-	/*Hack-y?*/
+	display:flex; /*What will support what, and phones?*/
+	align-items:center; vertical-align:middle;
     /*background-color:magenta;*/
 }
         /*<DIV.heading-and-logo-container>*/
             /*<DIV.logo-left-corner>*/
-.heading-and-logo-container .logo-left-corner{
+.logo-left-corner{
     height:100%;
-    width:12.8vw; 
+    width:12.8vw;  /*12.8*64px*/
 	/*vw units as a thing, aspect ratios*/
 }
 @media screen and (max-width:448px){
     .heading-and-logo-container .logo-left-corner{
-        width:10%;
-/*A vw goes to a %, why not keep it consistent?*/
+        width:10%;/*10% of what though*/
     }
 }
 
         /*<DIV.heading-and-logo-container>*/
             /*<h2>*/
 .heading-and-logo-container h2{ 
-	
     font-size:7.5vw; 
-    
+	font-family:league;
 	font-weight:100; 
     
 	letter-spacing:0.06em;
     
-	margin:1% 2% 0;
-    
-	font-family:league;
-    
+	margin:1% 2% 0; /*Cool*/
+  
 	color:white;
 }
 
 .commercial-text-img, .residential-text-img, .project-text-img{
 	/*Text-Images? Are you a cheap chinese manufacturer?*/
-    
 	width:89vw;
-    
 	height:8em;
     
 	margin:10px 3px;
@@ -366,22 +263,17 @@ header h2{
 
 @media screen and (min-width:448px){
     .commercial-text-img, .residential-text-img, .project-text-img{
-        
 		width:80vw;
-        
 		height:30vw;
-        
 		margin:24px 25px;
     }
 }
-
 .project .heading-and-logo-container{
     display:inline-block;
 }
 .project .project-heading{
     margin:-20% 16%;
 }
-
 .project .project-heading h2:nth-child(2){
     margin-top: -0.5vw;
 }
@@ -410,78 +302,34 @@ header h2{
 /*------------------Slider CSS
                             ---------------------*/ 
 .slider{
-	
     height:77vw;
-    
 	background-color:#44658D;
 }
 .slideme {
-    
-	max-width: 76%; width:100%;
-    
-	max-height: 320px; height:100%;
-    
+    width:100%;
+	height:100%;
+	max-width: 76%;
+	max-height: 320px;
 	margin:0 auto !important;
-    
 	padding-top:7vw !important;
 }
 .pagination{
-	
-    text-align:center;
-    
-	position:absolute;
-    
-	top:63vw;
-    
-	left:0;
-    
 	width:100%;
+    text-align:center;
+    position:absolute;top:63vw;left:0;	
 }
 /*.pagination li{
     -webkit-transition:background-position .33s cubic-bezier(0.47,0,0.745,0.715);
 }*/
-.numbers {
-	
-    width:100%;
-    
-	margin:25px auto 0 !important;
-    
-	display:flex;
-    
-	justify-content:center;
-    
-	align-items:center;
-}
-.numbers li {
-	
-	background: #999;
-	
-	border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;
-	
-	margin:0 19px;
-	
-	display:flex;
-	
-	flex-direction:row;
-	
-	width:3vw;height:3vw; 
-	
-	box-shadow: inset 1px 1px 1px rgba(0, 0 ,0, 0.4);
-    
-    text-indent:-10000px; /*Knocks the numbers off the screen, hack.*/
-}
-ol li.current {background: #668CFF; width:4vw; height:4vw; border-radius: 4vw;     
--moz-border-radius: 4vw; -webkit-border-radius: 4vw;}
+
 /*Does this shit have to be this complicated?*/
 /*-----------------Get in touch & Form Section
                         -----------------------*/
 /*Need to adjust below the heading @ 640*/
 .get-in-touch{
-	
+	/*No Width, or width of parent?*/
     background-color:white;
-    
 	height:0;
-    
 	padding-bottom:280px;
 	/*Simple*/
 }
@@ -494,48 +342,31 @@ ol li.current {background: #668CFF; width:4vw; height:4vw; border-radius: 4vw;
 
 
 .Inner-Skeleton>.contact-small{ 
-    
 	font-size:2em;
-    
 	line-height:19px;
-    
 	font-family:League;
-    
 	font-weight:100;
-    
 	letter-spacing:0.03em;
-    
 	text-transform:uppercase;
-    
 	text-align:center;
 }
 .Inner-Skeleton>.contact-heading{
-	
     display:none; /*visibility:hidden, transform, translate xy to avoid DOM reflows*/
     margin-top:9.35vw;
-    
 	margin-bottom:3vw;
 }
 @media screen and (min-width:427px){
     .get-in-touch{
         padding-bottom:307px;
 }
-    .Inner-Skeleton>.contact-heading{
-        
-		display:block;
-        
+    .Inner-Skeleton>.contact-heading{  
 		font-size:2.5em;
-        
+		display:block;
 		line-height:37px;
-        
 		font-family:League;
-        
 		font-weight:100;
-        
 		letter-spacing:0.03em;
-        
 		text-transform:uppercase;
-        
 		text-align:center;
 		/*Necessary*/
     }
@@ -548,29 +379,20 @@ ol li.current {background: #668CFF; width:4vw; height:4vw; border-radius: 4vw;
         font-size:3em;
     }
 }
-
-.get-in-touch>.Inner-Skeleton>p{ 
-	
+.get-in-touch>.Inner-Skeleton>p{
 	line-height:6.5vw;
-	
 	font-family:helvetica;
-    
 	text-align:center;
-    
 	font-size:1.3em;
-    
 	font-weight:200;
-    
 	color:grey;
 }
 /*Why All this verbose nameage shit*/
 
 section.message-form{
-	
-	background-color:white;
-    
+	/*Width,  structure?*/
+	background-color:white;  
 	height:94vw;
-    
 	border-bottom:2px solid #D7D7D8;
 }
 /*@media screen and (min-width:450px){
@@ -578,70 +400,47 @@ section.message-form{
         height:90vw;
     }
 }*/
-.form-font-size-span{
-	
+.form-font-size-span{/*Spanning the <form>*/
     font-size:1em;
-    
 	font-family:verdana;
-    
 	position:relative;
 }
 /*I can guess what that is*/
-
 .message-form div.Inner-Skeleton{
-    
 	margin-top:0;
-    
 	background-color:white;
 }
 .message-form div.Inner-Skeleton input{
-	
-	width:80%;height:3vw;padding:2.6vw 3.6vw;margin:3vw auto;
-    
+	/*on the <input>s*/
+	font-size: 1.4em;/*Fuckin em multiplication chains dog*/
+	width:80%;
+	font-family:helvetica;font-weight:100;
 	display:block;
-    
-	font-size: 1.4em;
-    
-	font-family:helvetica;
-    
-	font-weight:100;
-    
+	height:3vw;
+	padding:2.6vw 3.6vw;
+	margin:3vw auto;
 	background-color:#F5F5F5;
-    
 	border:1px solid #E7E7E7;
     }
 
 .message-form div.Inner-Skeleton input:nth-child(4){
-    
 	height:1vw;
-    
 	padding:4vw 3.75vw 28vw;
 }
 .message-form div.Inner-Skeleton input:nth-child(6){
-    
 	height:7.5vw;
-    
 	padding:10vw 4vw 7vw 4vw;
-    
 	width:88%;
 }
-
 @media screen and (min-width:450px){
-    
 	.message-form div.Inner-Skeleton input:nth-child(6){
-    
 		padding-bottom:5vw;
     }
 }
-
 .fa-arrow-circle-o-right{
-    
 	margin:2vw 42vw;
-    
 	font-size:7.5vw;
-    
 	position:absolute;
-    
 	z-index:1;
 }
 
@@ -651,71 +450,47 @@ section.message-form{
 /*<footer>
 /*----------------------*/
 footer .Inner-Skeleton:nth-child(2){
-    
 	padding:0 7% 0;
-    
 	max-width:100%;
-    
 	height:3em;
 }
 
 .footer-nav, .logos-container, .social{
-    
 	list-style:none;
-    
 	text-decoration:none;
-    
 	text-align:center; margin:0; padding:0;
 }
 footer p{
-	
-    font-family:"verdana";
-    
+    font-family:verdana;
 	font-size:10px;
-    }
+}
 
 /*------------------<FOOTER> NavBar
                         -----------------------------*/
 
-
-    /*<ul.footer-nav>*/
-/*---------------*/
-    /*<ul.logos-container>*/
-/*---------------*/
-/*<ul.social>*/
-/*---------------*/
-
 nav.Inner-Skeleton{
-	
     margin: 1.938em auto;
-    
 	margin-top:35px;
-    
 	margin-bottom:40px;
 }
-
 .footer-nav>li, .logos-container>li, .social>li{
     display:inline-block;
 }
-
-
     /*<ul.footer-nav>*/
-
 .footer-nav>li{
     margin-right:0.3em;
     font-size:0.7em;
 }
-
 .social{
     font-size:2.5em;
     margin:1em auto;
     color:#777a7e;
-    }
+}
 
 .social i{
     margin-left:0.75em;
     margin-right:0.75em;
-    }
+}
 
 /*----------------<FOOTER> Logos
                     ----------------------*/
@@ -740,30 +515,20 @@ nav.Inner-Skeleton{
             /*<DIV (logo1box, logo2box, logo3box)>*/
                 /*<img>*/
 .logos-container img{
-   
 	width:80%; 
-    
 	height:14px; 
-    
 	padding:5px 0; /*Redundancies!!!!!*/
-    
 	margin:0 auto;
 }
 .logo1box img{
-   
 	width:142px;
-    
 	height:31px;
-
 	margin:-12px auto;
 }
 
 .logo2box img{/*Notice the Ems To vw change*/
-    
 	height:1.5em;
-    
 	width:91px;
-    
 	padding:0;
 }
 /*<DIV.generic-info-box>*/
@@ -771,21 +536,23 @@ nav.Inner-Skeleton{
         /*<li>*/
             /*<logo3box>*/
 .logo3box{ 
-    
 	height:1.5em;
-    
 	width:120%;
-    
 	margin-top:2%;
 }
-.logo3box p{ font-size:0.5em; font-weight:100; margin:0; text-align:left;
+.logo3box p{ 
+	font-size:0.5em; 
+	font-weight:100; margin:0; text-align:left;
 }
 footer>p{ /*Where is this located*/
     text-align:center;
     color:#777a7e;
 }
-.footer-nav{font-family:"verdana"; font-size:larger; color:#777a7e;
-    }
+.footer-nav{
+	font-family:verdana; 
+	font-size:larger; 
+	color:#777a7e;
+}
 
 /*-------------------Clearfix
                     ----------------*/
