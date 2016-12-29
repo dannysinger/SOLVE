@@ -512,7 +512,7 @@
                 if (this.settings.css3) {
                     this.dom.current.off('otransitionend webkitTransitionEnd transitionend');
                     this.dom.slideme.removeClass(this.animation);
-                } else {
+				} else {
                     this.dom.slideme.children().removeAttr('style');
                 }
                 this.getReadyForNewAnimation();
