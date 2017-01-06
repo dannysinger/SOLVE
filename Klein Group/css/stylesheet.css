@@ -49,9 +49,9 @@ section .Inner-Skeleton{
 	margin:5% auto; /*ANCIENT CENTERING TACTICS*/
 	/*so, a 320px object in the middle of a 640px layout*/
 	/*5% on the verticals*/
-	/*5% = I think, 5% of the viewport or 5% of whatever data the computer sends as representing 100%, Don't remember*/
+	/*5% = I think, 5% of the parent (width?)*/
 
-	width:90.78125%; /*viewport or other thing*/ 
+	width:90.78125%; /*of parent*/ 
 	
 	background-color:paleturquoise;
 }
