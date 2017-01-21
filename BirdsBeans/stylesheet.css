@@ -34,13 +34,23 @@ li{
     display:inline-block;
 }
 a{
-    color:rgba(10, 90, 200, 0.76);
-    font-family:helvetica;
+    color:#8686f9;
+    font-family:candy;
+    font-size:4em;
     text-decoration:none;
 }
+@font-face{
+    font-family:"candy";
+    src:url(fonts/candy_inc/CANDY___.otf);
+}
+a:hover{
+    border:1px solid hsla(240, -39%, 75%, 1)
+}
 .button{
-    border:1px solid rgba(239, 90, 180, 0.76);
-    padding:3px;
+    padding:3px;  
+}
+.button:hover{
+    background-color:greenyellow
 }
 @media screen and (min-width:715px){
     .background{
@@ -63,6 +73,9 @@ a{
     }
 @media screen and (min-width:1000px){
     ul{
-        padding:2% 30%;
+        padding:0% 16%;
+    }
+    li{
+        margin:13px;
     }
 }
