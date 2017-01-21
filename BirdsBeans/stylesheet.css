@@ -1,0 +1,68 @@
+body{
+    margin:0;
+    height:100%;
+    width:100%;
+    -webkit-font-smoothing:antialiased;
+}
+.background{
+    background:url(BirdsBeansFront.jpg);
+    background-size:219%;
+    background-position-x:22%;
+    background-position-y:356%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    filter:hue-rotate(-76deg);
+}
+nav{
+box-shadow: 50px 50px 300px 102px orangered;
+    width: 100%;
+    height:0px;
+}
+ul{
+    width:100%;
+    padding:0% 6%;
+    font-size:26px;
+    font-weight:100;
+    padding:4% 25%;
+    display:inline-block;
+}
+li{
+    display:inline-block;
+}
+a{
+    color:rgba(10, 90, 200, 0.76);
+    font-family:helvetica;
+    text-decoration:none;
+}
+.button{
+    border:1px solid rgba(239, 90, 180, 0.76);
+    padding:3px;
+}
+@media screen and (min-width:715px){
+    .background{
+        background:url(BirdsBeansFront.jpg);
+        background-size: 216%;
+        background-position-y: 39%;
+        background-position-x: 0%;
+    }
+    ul{
+        padding:2% 19%;
+    }
+}
+@media screen and (min-width:856px){
+    .background{
+        background:url(BirdsBeansFront.jpg);
+        background-size:120%;
+        background-position-y:0%;
+        background-position-x:54%;
+        /*preference for colors that are softer on the eyes with just a hint of blue, magenta is painfully bright*/
+    }
+@media screen and (min-width:1000px){
+    ul{
+        padding:2% 30%;
+    }
+}
