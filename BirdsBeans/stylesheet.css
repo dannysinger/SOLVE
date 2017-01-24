@@ -1,3 +1,15 @@
+@font-face{
+    font-family:"Roboto Slab";
+    src:url(fonts/Slab2.woff2);
+}
+@font-face{
+    font-family:"Roboto Slab 1";
+    src:url(fonts/Slab1.woff2);
+}
+@font-face{
+    font-family:"Roboto Slab 3";
+    src:url(fonts/Slab3.woff2);
+}
 body{
     margin:0;
     height:100%;
@@ -53,17 +65,22 @@ a:hover{
 h1{
     margin-top: 10vw;
     text-align: center;
-    line-height:12vw;
+    line-height:6vw;
+    font-family:"Roboto Slab";
+    color:#1b9b9f;
 }
 h2{
     text-align:center;
     line-height:2vw;
+    font-family:"Roboto Slab 1";
+    color:#1b9b9f;
 }
 h3{
     text-align: center;
     color: #e91e63;
     line-height:2vw;
     margin-bottom:7vw;
+    font-family:"Roboto Slab 3";
 }
 p{
     line-height:2vw;
