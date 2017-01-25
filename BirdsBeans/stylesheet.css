@@ -89,6 +89,7 @@ h3{
 p{
     line-height:5vw;
     width:100%;
+    margin-top:-25vw;
 }
 .mp{
     font-size:1.5em;
@@ -102,6 +103,9 @@ p{
 .ff{
     font-size:3em;
 }
+.boutique{
+        color:#8bf2ff;
+    }
 
 @media screen and (min-width:460px){
     ul{
@@ -143,9 +147,10 @@ p{
         margin-left:0;
         margin-right:0;
     }
-    .boutique{
-        color:#8bf2ff;
+    p{
+        margin-top:0;
     }
+    
 }
 @media screen and (min-width:715px){
     .background{
