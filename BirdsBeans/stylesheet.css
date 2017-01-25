@@ -44,6 +44,7 @@ ul{
     /*padding:0% 2%;*/
     display:inline-block;
     text-align:center;
+    margin:45px 0;
 }
 li{
     display:inline-block;
@@ -63,27 +64,31 @@ a:hover{
     color:#3F51B5;
 }
 h1{
-    margin-top: 10vw;
     text-align: center;
-    line-height:6vw;
     font-family:"Roboto Slab";
     color:#1b9b9f;
+    width:100%;
+    line-height:0;
 }
 h2{
     text-align:center;
-    line-height:2vw;
     font-family:"Roboto Slab 1";
-    color:#1b9b9f;
+    color:#1bc91b;
+    width:100%;
+    display:none;
 }
 h3{
     text-align: center;
     color: #e91e63;
-    line-height:2vw;
+    line-height:8vw;
     margin-bottom:7vw;
     font-family:"Roboto Slab 3";
+    width:100%;
+    margin:141px 0;
 }
 p{
-    line-height:2vw;
+    line-height:5vw;
+    width:100%;
 }
 .mp{
     font-size:1.5em;
@@ -97,21 +102,60 @@ p{
 .ff{
     font-size:3em;
 }
+
 @media screen and (min-width:460px){
     ul{
-        text-align:left;
+        text-align:center;
+        margin-top:10px;
+        margin-left:0;
+        margin-right:0;
+        margin-bottom:0;
     }
     li{
         display:inline-block;
-        }
     }
-
+    h1{
+        margin-top:10vw;
+        line-height:6vw;
+        width:80%;
+    }
+    h2{
+        display:inline-block;
+        width:78%;
+        line-height:10vw;
+    }
+    h1{
+        margin-top:15vw;
+        line-height:18vw;
+        width:100%;
+        color:crimson;
+        text-align:center;
+    }
+    h2{
+        width:100%;
+        color:crimson;
+        text-align:center;
+    }
+    h3{
+        color:#5a4913;
+        margin-bottom:7vw;
+        margin-top:0;
+        margin-left:0;
+        margin-right:0;
+    }
+    .boutique{
+        color:#8bf2ff;
+    }
+}
 @media screen and (min-width:715px){
     .background{
         background:url(BirdsBeansFront.jpg);
         background-size: 216%;
         background-position-y: 39%;
         background-position-x: 0%;
+    }
+    nav{
+        width:78%;
     }
     ul{
         padding:0% 2%;
@@ -120,15 +164,55 @@ p{
     li{
         display:inline;
     }
+    h1{
+        margin-top:10vw;
+        line-height:6vw;
+        width:100%;
+        color:crimson;
+        text-align:center;
+    }
+    h2{
+        width:100%;
+        color:crimson;
+        text-align:center;
+    }
+    h3{
+        line-height:2vw;
+        color:#5d3c16;
+        
+    }
+    p{
+        margin-top:4vw;
+        line-height:3vw;
+        font-size:1.25em;
+    }
 }
+
+  
 @media screen and (min-width:856px){
     .background{
         background:url(BirdsBeansFront.jpg);
         background-size:120%;
         background-position-y:0%;
         background-position-x:54%;
-        /*preference for colors that are softer on the eyes with just a hint of blue, magenta is painfully bright*/
     }
+    /*ul{
+        margin-top:10px;
+    }*/
+    h1,h2{
+        color:#1b9b9f;
+        text-align:center;
+    }
+    h3{
+        color:#e4015c;
+    }
+    p{
+        color:black;
+        font-size:1em;
+        margin-top:0;
+    }
+}/*preference for colors that are softer on the eyes with just a hint of blue, magenta is painfully bright*/
+  
 @media screen and (min-width:1000px){
     ul{
        padding:0% 24%;
@@ -141,4 +225,5 @@ p{
     li{
         margin:2px;
     }
+    
 }
